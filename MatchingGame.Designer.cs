@@ -46,7 +46,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.helppoTimer = new System.Windows.Forms.Timer(this.components);
             this.aloitanappi = new System.Windows.Forms.Button();
             this.normaalinappi = new System.Windows.Forms.Button();
             this.vaikeanappi = new System.Windows.Forms.Button();
@@ -115,6 +115,9 @@
             this.label41 = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
             this.takaisinnappi = new System.Windows.Forms.Button();
+            this.aikaLabel = new System.Windows.Forms.Label();
+            this.normaaliTimer = new System.Windows.Forms.Timer(this.components);
+            this.vaikeaTimer = new System.Windows.Forms.Timer(this.components);
             this.helppopeli.SuspendLayout();
             this.normaaliPeli.SuspendLayout();
             this.vaikeaPeli.SuspendLayout();
@@ -160,216 +163,220 @@
             // 
             this.label16.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label16.Font = new System.Drawing.Font("Webdings", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.label16.Location = new System.Drawing.Point(401, 377);
+            this.label16.Location = new System.Drawing.Point(398, 377);
+            this.label16.Margin = new System.Windows.Forms.Padding(0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(126, 124);
+            this.label16.Size = new System.Drawing.Size(132, 124);
             this.label16.TabIndex = 15;
-            this.label16.Text = "c";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label16.Click += new System.EventHandler(this.label1_Click);
+            this.label16.Click += new System.EventHandler(this.helppoLabel_Click);
             // 
             // label15
             // 
             this.label15.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label15.Font = new System.Drawing.Font("Webdings", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.label15.Location = new System.Drawing.Point(269, 377);
+            this.label15.Location = new System.Drawing.Point(266, 377);
+            this.label15.Margin = new System.Windows.Forms.Padding(0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(124, 124);
+            this.label15.Size = new System.Drawing.Size(130, 124);
             this.label15.TabIndex = 14;
-            this.label15.Text = "c";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label15.Click += new System.EventHandler(this.label1_Click);
+            this.label15.Click += new System.EventHandler(this.helppoLabel_Click);
             // 
             // label14
             // 
             this.label14.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label14.Font = new System.Drawing.Font("Webdings", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.label14.Location = new System.Drawing.Point(137, 377);
+            this.label14.Location = new System.Drawing.Point(134, 377);
+            this.label14.Margin = new System.Windows.Forms.Padding(0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(124, 124);
+            this.label14.Size = new System.Drawing.Size(130, 124);
             this.label14.TabIndex = 13;
-            this.label14.Text = "c";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label14.Click += new System.EventHandler(this.label1_Click);
+            this.label14.Click += new System.EventHandler(this.helppoLabel_Click);
             // 
             // label13
             // 
             this.label13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label13.Font = new System.Drawing.Font("Webdings", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.label13.Location = new System.Drawing.Point(5, 377);
+            this.label13.Location = new System.Drawing.Point(2, 377);
+            this.label13.Margin = new System.Windows.Forms.Padding(0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(124, 124);
+            this.label13.Size = new System.Drawing.Size(130, 124);
             this.label13.TabIndex = 12;
-            this.label13.Text = "c";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label13.Click += new System.EventHandler(this.label1_Click);
+            this.label13.Click += new System.EventHandler(this.helppoLabel_Click);
             // 
             // label12
             // 
             this.label12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label12.Font = new System.Drawing.Font("Webdings", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.label12.Location = new System.Drawing.Point(401, 252);
+            this.label12.Location = new System.Drawing.Point(398, 252);
+            this.label12.Margin = new System.Windows.Forms.Padding(0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(126, 123);
+            this.label12.Size = new System.Drawing.Size(132, 123);
             this.label12.TabIndex = 11;
-            this.label12.Text = "c";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label12.Click += new System.EventHandler(this.label1_Click);
+            this.label12.Click += new System.EventHandler(this.helppoLabel_Click);
             // 
             // label11
             // 
             this.label11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label11.Font = new System.Drawing.Font("Webdings", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.label11.Location = new System.Drawing.Point(269, 252);
+            this.label11.Location = new System.Drawing.Point(266, 252);
+            this.label11.Margin = new System.Windows.Forms.Padding(0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(124, 123);
+            this.label11.Size = new System.Drawing.Size(130, 123);
             this.label11.TabIndex = 10;
-            this.label11.Text = "c";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label11.Click += new System.EventHandler(this.label1_Click);
+            this.label11.Click += new System.EventHandler(this.helppoLabel_Click);
             // 
             // label10
             // 
             this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label10.Font = new System.Drawing.Font("Webdings", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.label10.Location = new System.Drawing.Point(137, 252);
+            this.label10.Location = new System.Drawing.Point(134, 252);
+            this.label10.Margin = new System.Windows.Forms.Padding(0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(124, 123);
+            this.label10.Size = new System.Drawing.Size(130, 123);
             this.label10.TabIndex = 9;
-            this.label10.Text = "c";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label10.Click += new System.EventHandler(this.label1_Click);
+            this.label10.Click += new System.EventHandler(this.helppoLabel_Click);
             // 
             // label9
             // 
             this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label9.Font = new System.Drawing.Font("Webdings", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.label9.Location = new System.Drawing.Point(5, 252);
+            this.label9.Location = new System.Drawing.Point(2, 252);
+            this.label9.Margin = new System.Windows.Forms.Padding(0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(124, 123);
+            this.label9.Size = new System.Drawing.Size(130, 123);
             this.label9.TabIndex = 8;
-            this.label9.Text = "c";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label9.Click += new System.EventHandler(this.label1_Click);
+            this.label9.Click += new System.EventHandler(this.helppoLabel_Click);
             // 
             // label8
             // 
             this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label8.Font = new System.Drawing.Font("Webdings", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.label8.Location = new System.Drawing.Point(401, 127);
+            this.label8.Location = new System.Drawing.Point(398, 127);
+            this.label8.Margin = new System.Windows.Forms.Padding(0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(126, 123);
+            this.label8.Size = new System.Drawing.Size(132, 123);
             this.label8.TabIndex = 7;
-            this.label8.Text = "c";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label8.Click += new System.EventHandler(this.label1_Click);
+            this.label8.Click += new System.EventHandler(this.helppoLabel_Click);
             // 
             // label7
             // 
             this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label7.Font = new System.Drawing.Font("Webdings", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.label7.Location = new System.Drawing.Point(269, 127);
+            this.label7.Location = new System.Drawing.Point(266, 127);
+            this.label7.Margin = new System.Windows.Forms.Padding(0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(124, 123);
+            this.label7.Size = new System.Drawing.Size(130, 123);
             this.label7.TabIndex = 6;
-            this.label7.Text = "c";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label7.Click += new System.EventHandler(this.label1_Click);
+            this.label7.Click += new System.EventHandler(this.helppoLabel_Click);
             // 
             // label6
             // 
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label6.Font = new System.Drawing.Font("Webdings", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.label6.Location = new System.Drawing.Point(137, 127);
+            this.label6.Location = new System.Drawing.Point(134, 127);
+            this.label6.Margin = new System.Windows.Forms.Padding(0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(124, 123);
+            this.label6.Size = new System.Drawing.Size(130, 123);
             this.label6.TabIndex = 5;
-            this.label6.Text = "c";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label6.Click += new System.EventHandler(this.label1_Click);
+            this.label6.Click += new System.EventHandler(this.helppoLabel_Click);
             // 
             // label5
             // 
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label5.Font = new System.Drawing.Font("Webdings", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.label5.Location = new System.Drawing.Point(5, 127);
+            this.label5.Location = new System.Drawing.Point(2, 127);
+            this.label5.Margin = new System.Windows.Forms.Padding(0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(124, 123);
+            this.label5.Size = new System.Drawing.Size(130, 123);
             this.label5.TabIndex = 4;
-            this.label5.Text = "c";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label5.Click += new System.EventHandler(this.label1_Click);
+            this.label5.Click += new System.EventHandler(this.helppoLabel_Click);
             // 
             // label4
             // 
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label4.Font = new System.Drawing.Font("Webdings", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.label4.Location = new System.Drawing.Point(401, 2);
+            this.label4.Location = new System.Drawing.Point(398, 2);
+            this.label4.Margin = new System.Windows.Forms.Padding(0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(126, 123);
+            this.label4.Size = new System.Drawing.Size(132, 123);
             this.label4.TabIndex = 3;
-            this.label4.Text = "c";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label4.Click += new System.EventHandler(this.label1_Click);
+            this.label4.Click += new System.EventHandler(this.helppoLabel_Click);
             // 
             // label3
             // 
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Font = new System.Drawing.Font("Webdings", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.label3.Location = new System.Drawing.Point(269, 2);
+            this.label3.Location = new System.Drawing.Point(266, 2);
+            this.label3.Margin = new System.Windows.Forms.Padding(0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(124, 123);
+            this.label3.Size = new System.Drawing.Size(130, 123);
             this.label3.TabIndex = 2;
-            this.label3.Text = "c";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label3.Click += new System.EventHandler(this.label1_Click);
+            this.label3.Click += new System.EventHandler(this.helppoLabel_Click);
             // 
             // label2
             // 
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Font = new System.Drawing.Font("Webdings", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.label2.Location = new System.Drawing.Point(137, 2);
+            this.label2.Location = new System.Drawing.Point(134, 2);
+            this.label2.Margin = new System.Windows.Forms.Padding(0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(124, 123);
+            this.label2.Size = new System.Drawing.Size(130, 123);
             this.label2.TabIndex = 1;
-            this.label2.Text = "c";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label2.Click += new System.EventHandler(this.label1_Click);
+            this.label2.Click += new System.EventHandler(this.helppoLabel_Click);
             // 
             // label1
             // 
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Webdings", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.label1.Location = new System.Drawing.Point(5, 2);
+            this.label1.Location = new System.Drawing.Point(2, 2);
+            this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(124, 123);
+            this.label1.Size = new System.Drawing.Size(130, 123);
             this.label1.TabIndex = 0;
-            this.label1.Text = "c";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.label1.Click += new System.EventHandler(this.helppoLabel_Click);
             // 
-            // timer1
+            // helppoTimer
             // 
-            this.timer1.Interval = 750;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.helppoTimer.Interval = 750;
+            this.helppoTimer.Tick += new System.EventHandler(this.helppoTimer_Tick);
             // 
             // aloitanappi
             // 
-            this.aloitanappi.Location = new System.Drawing.Point(638, 214);
+            this.aloitanappi.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.aloitanappi.Location = new System.Drawing.Point(622, 214);
             this.aloitanappi.Name = "aloitanappi";
-            this.aloitanappi.Size = new System.Drawing.Size(187, 102);
+            this.aloitanappi.Size = new System.Drawing.Size(232, 102);
             this.aloitanappi.TabIndex = 1;
             this.aloitanappi.Text = "ALOITA PELI";
+            this.aloitanappi.UseCompatibleTextRendering = true;
             this.aloitanappi.UseVisualStyleBackColor = true;
             this.aloitanappi.Click += new System.EventHandler(this.aloitanappi_Click);
             // 
             // normaalinappi
             // 
-            this.normaalinappi.Location = new System.Drawing.Point(638, 214);
+            this.normaalinappi.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.normaalinappi.Location = new System.Drawing.Point(622, 214);
             this.normaalinappi.Name = "normaalinappi";
-            this.normaalinappi.Size = new System.Drawing.Size(187, 102);
+            this.normaalinappi.Size = new System.Drawing.Size(232, 102);
             this.normaalinappi.TabIndex = 2;
             this.normaalinappi.Text = "NORMAALI";
+            this.normaalinappi.UseCompatibleTextRendering = true;
             this.normaalinappi.UseVisualStyleBackColor = true;
             this.normaalinappi.Visible = false;
             this.normaalinappi.Click += new System.EventHandler(this.normaalinappi_Click);
@@ -378,11 +385,13 @@
             // 
             // vaikeanappi
             // 
-            this.vaikeanappi.Location = new System.Drawing.Point(638, 322);
+            this.vaikeanappi.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vaikeanappi.Location = new System.Drawing.Point(622, 322);
             this.vaikeanappi.Name = "vaikeanappi";
-            this.vaikeanappi.Size = new System.Drawing.Size(187, 102);
+            this.vaikeanappi.Size = new System.Drawing.Size(232, 102);
             this.vaikeanappi.TabIndex = 3;
             this.vaikeanappi.Text = "BDSM";
+            this.vaikeanappi.UseCompatibleTextRendering = true;
             this.vaikeanappi.UseVisualStyleBackColor = true;
             this.vaikeanappi.Visible = false;
             this.vaikeanappi.Click += new System.EventHandler(this.vaikeanappi_Click);
@@ -391,11 +400,13 @@
             // 
             // helpponappi
             // 
-            this.helpponappi.Location = new System.Drawing.Point(638, 106);
+            this.helpponappi.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.helpponappi.Location = new System.Drawing.Point(622, 106);
             this.helpponappi.Name = "helpponappi";
-            this.helpponappi.Size = new System.Drawing.Size(187, 102);
+            this.helpponappi.Size = new System.Drawing.Size(232, 102);
             this.helpponappi.TabIndex = 4;
             this.helpponappi.Text = "HELPPO";
+            this.helpponappi.UseCompatibleTextRendering = true;
             this.helpponappi.UseVisualStyleBackColor = true;
             this.helpponappi.Visible = false;
             this.helpponappi.Click += new System.EventHandler(this.helpponappi_Click);
@@ -404,11 +415,13 @@
             // 
             // tilastotnappi
             // 
-            this.tilastotnappi.Location = new System.Drawing.Point(638, 322);
+            this.tilastotnappi.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tilastotnappi.Location = new System.Drawing.Point(622, 322);
             this.tilastotnappi.Name = "tilastotnappi";
-            this.tilastotnappi.Size = new System.Drawing.Size(187, 102);
+            this.tilastotnappi.Size = new System.Drawing.Size(232, 102);
             this.tilastotnappi.TabIndex = 5;
             this.tilastotnappi.Text = "TILASTOT";
+            this.tilastotnappi.UseCompatibleTextRendering = true;
             this.tilastotnappi.UseVisualStyleBackColor = true;
             this.tilastotnappi.Click += new System.EventHandler(this.tilastotnappi_Click);
             // 
@@ -468,6 +481,7 @@
             this.label39.Size = new System.Drawing.Size(88, 124);
             this.label39.TabIndex = 23;
             this.label39.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label39.Click += new System.EventHandler(this.normaaliLabel_Click);
             // 
             // label38
             // 
@@ -480,6 +494,7 @@
             this.label38.Size = new System.Drawing.Size(86, 124);
             this.label38.TabIndex = 22;
             this.label38.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label38.Click += new System.EventHandler(this.normaaliLabel_Click);
             // 
             // label37
             // 
@@ -492,6 +507,7 @@
             this.label37.Size = new System.Drawing.Size(86, 124);
             this.label37.TabIndex = 21;
             this.label37.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label37.Click += new System.EventHandler(this.normaaliLabel_Click);
             // 
             // label36
             // 
@@ -504,6 +520,7 @@
             this.label36.Size = new System.Drawing.Size(86, 124);
             this.label36.TabIndex = 20;
             this.label36.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label36.Click += new System.EventHandler(this.normaaliLabel_Click);
             // 
             // label35
             // 
@@ -516,6 +533,7 @@
             this.label35.Size = new System.Drawing.Size(86, 124);
             this.label35.TabIndex = 19;
             this.label35.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label35.Click += new System.EventHandler(this.normaaliLabel_Click);
             // 
             // label34
             // 
@@ -528,6 +546,7 @@
             this.label34.Size = new System.Drawing.Size(86, 124);
             this.label34.TabIndex = 18;
             this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label34.Click += new System.EventHandler(this.normaaliLabel_Click);
             // 
             // label33
             // 
@@ -540,6 +559,7 @@
             this.label33.Size = new System.Drawing.Size(88, 123);
             this.label33.TabIndex = 17;
             this.label33.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label33.Click += new System.EventHandler(this.normaaliLabel_Click);
             // 
             // label32
             // 
@@ -552,6 +572,7 @@
             this.label32.Size = new System.Drawing.Size(86, 123);
             this.label32.TabIndex = 16;
             this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label32.Click += new System.EventHandler(this.normaaliLabel_Click);
             // 
             // label31
             // 
@@ -564,6 +585,7 @@
             this.label31.Size = new System.Drawing.Size(86, 123);
             this.label31.TabIndex = 15;
             this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label31.Click += new System.EventHandler(this.normaaliLabel_Click);
             // 
             // label30
             // 
@@ -576,6 +598,7 @@
             this.label30.Size = new System.Drawing.Size(86, 123);
             this.label30.TabIndex = 14;
             this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label30.Click += new System.EventHandler(this.normaaliLabel_Click);
             // 
             // label29
             // 
@@ -588,6 +611,7 @@
             this.label29.Size = new System.Drawing.Size(86, 123);
             this.label29.TabIndex = 13;
             this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label29.Click += new System.EventHandler(this.normaaliLabel_Click);
             // 
             // label28
             // 
@@ -600,6 +624,7 @@
             this.label28.Size = new System.Drawing.Size(86, 123);
             this.label28.TabIndex = 12;
             this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label28.Click += new System.EventHandler(this.normaaliLabel_Click);
             // 
             // label27
             // 
@@ -612,6 +637,7 @@
             this.label27.Size = new System.Drawing.Size(88, 123);
             this.label27.TabIndex = 11;
             this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label27.Click += new System.EventHandler(this.normaaliLabel_Click);
             // 
             // label26
             // 
@@ -624,6 +650,7 @@
             this.label26.Size = new System.Drawing.Size(86, 123);
             this.label26.TabIndex = 10;
             this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label26.Click += new System.EventHandler(this.normaaliLabel_Click);
             // 
             // label25
             // 
@@ -636,6 +663,7 @@
             this.label25.Size = new System.Drawing.Size(86, 123);
             this.label25.TabIndex = 9;
             this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label25.Click += new System.EventHandler(this.normaaliLabel_Click);
             // 
             // label24
             // 
@@ -648,6 +676,7 @@
             this.label24.Size = new System.Drawing.Size(86, 123);
             this.label24.TabIndex = 8;
             this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label24.Click += new System.EventHandler(this.normaaliLabel_Click);
             // 
             // label23
             // 
@@ -660,6 +689,7 @@
             this.label23.Size = new System.Drawing.Size(86, 123);
             this.label23.TabIndex = 7;
             this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label23.Click += new System.EventHandler(this.normaaliLabel_Click);
             // 
             // label22
             // 
@@ -672,6 +702,7 @@
             this.label22.Size = new System.Drawing.Size(86, 123);
             this.label22.TabIndex = 6;
             this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label22.Click += new System.EventHandler(this.normaaliLabel_Click);
             // 
             // label21
             // 
@@ -684,6 +715,7 @@
             this.label21.Size = new System.Drawing.Size(88, 123);
             this.label21.TabIndex = 5;
             this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label21.Click += new System.EventHandler(this.normaaliLabel_Click);
             // 
             // label20
             // 
@@ -696,6 +728,7 @@
             this.label20.Size = new System.Drawing.Size(86, 123);
             this.label20.TabIndex = 4;
             this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label20.Click += new System.EventHandler(this.normaaliLabel_Click);
             // 
             // label19
             // 
@@ -708,6 +741,7 @@
             this.label19.Size = new System.Drawing.Size(86, 123);
             this.label19.TabIndex = 3;
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label19.Click += new System.EventHandler(this.normaaliLabel_Click);
             // 
             // label18
             // 
@@ -720,6 +754,7 @@
             this.label18.Size = new System.Drawing.Size(86, 123);
             this.label18.TabIndex = 2;
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label18.Click += new System.EventHandler(this.normaaliLabel_Click);
             // 
             // label17
             // 
@@ -732,6 +767,7 @@
             this.label17.Size = new System.Drawing.Size(86, 123);
             this.label17.TabIndex = 1;
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label17.Click += new System.EventHandler(this.normaaliLabel_Click);
             // 
             // normaaliKortti
             // 
@@ -744,6 +780,7 @@
             this.normaaliKortti.Size = new System.Drawing.Size(86, 123);
             this.normaaliKortti.TabIndex = 0;
             this.normaaliKortti.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.normaaliKortti.Click += new System.EventHandler(this.normaaliLabel_Click);
             // 
             // vaikeaPeli
             // 
@@ -790,7 +827,7 @@
             this.vaikeaPeli.Controls.Add(this.label42, 2, 0);
             this.vaikeaPeli.Controls.Add(this.label41, 1, 0);
             this.vaikeaPeli.Controls.Add(this.label40, 0, 0);
-            this.vaikeaPeli.Location = new System.Drawing.Point(12, 12);
+            this.vaikeaPeli.Location = new System.Drawing.Point(12, 13);
             this.vaikeaPeli.Name = "vaikeaPeli";
             this.vaikeaPeli.RowCount = 6;
             this.vaikeaPeli.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
@@ -807,7 +844,7 @@
             // label75
             // 
             this.label75.AutoSize = true;
-            this.label75.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label75.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label75.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label75.Font = new System.Drawing.Font("Webdings", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.label75.Location = new System.Drawing.Point(176, 415);
@@ -816,11 +853,12 @@
             this.label75.Size = new System.Drawing.Size(88, 88);
             this.label75.TabIndex = 35;
             this.label75.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label75.Click += new System.EventHandler(this.vaikeaLabel_Click);
             // 
             // label74
             // 
             this.label74.AutoSize = true;
-            this.label74.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label74.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label74.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label74.Font = new System.Drawing.Font("Webdings", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.label74.Location = new System.Drawing.Point(88, 415);
@@ -829,11 +867,12 @@
             this.label74.Size = new System.Drawing.Size(88, 88);
             this.label74.TabIndex = 34;
             this.label74.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label74.Click += new System.EventHandler(this.vaikeaLabel_Click);
             // 
             // label73
             // 
             this.label73.AutoSize = true;
-            this.label73.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label73.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label73.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label73.Font = new System.Drawing.Font("Webdings", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.label73.Location = new System.Drawing.Point(0, 415);
@@ -842,11 +881,12 @@
             this.label73.Size = new System.Drawing.Size(88, 88);
             this.label73.TabIndex = 33;
             this.label73.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label73.Click += new System.EventHandler(this.vaikeaLabel_Click);
             // 
             // label72
             // 
             this.label72.AutoSize = true;
-            this.label72.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label72.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label72.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label72.Font = new System.Drawing.Font("Webdings", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.label72.Location = new System.Drawing.Point(440, 415);
@@ -855,11 +895,12 @@
             this.label72.Size = new System.Drawing.Size(92, 88);
             this.label72.TabIndex = 32;
             this.label72.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label72.Click += new System.EventHandler(this.vaikeaLabel_Click);
             // 
             // label71
             // 
             this.label71.AutoSize = true;
-            this.label71.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label71.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label71.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label71.Font = new System.Drawing.Font("Webdings", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.label71.Location = new System.Drawing.Point(352, 415);
@@ -868,11 +909,12 @@
             this.label71.Size = new System.Drawing.Size(88, 88);
             this.label71.TabIndex = 31;
             this.label71.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label71.Click += new System.EventHandler(this.vaikeaLabel_Click);
             // 
             // label70
             // 
             this.label70.AutoSize = true;
-            this.label70.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label70.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label70.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label70.Font = new System.Drawing.Font("Webdings", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.label70.Location = new System.Drawing.Point(264, 415);
@@ -881,11 +923,12 @@
             this.label70.Size = new System.Drawing.Size(88, 88);
             this.label70.TabIndex = 30;
             this.label70.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label70.Click += new System.EventHandler(this.vaikeaLabel_Click);
             // 
             // label69
             // 
             this.label69.AutoSize = true;
-            this.label69.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label69.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label69.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label69.Font = new System.Drawing.Font("Webdings", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.label69.Location = new System.Drawing.Point(440, 332);
@@ -894,11 +937,12 @@
             this.label69.Size = new System.Drawing.Size(92, 83);
             this.label69.TabIndex = 29;
             this.label69.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label69.Click += new System.EventHandler(this.vaikeaLabel_Click);
             // 
             // label68
             // 
             this.label68.AutoSize = true;
-            this.label68.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label68.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label68.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label68.Font = new System.Drawing.Font("Webdings", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.label68.Location = new System.Drawing.Point(352, 332);
@@ -907,11 +951,12 @@
             this.label68.Size = new System.Drawing.Size(88, 83);
             this.label68.TabIndex = 28;
             this.label68.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label68.Click += new System.EventHandler(this.vaikeaLabel_Click);
             // 
             // label67
             // 
             this.label67.AutoSize = true;
-            this.label67.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label67.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label67.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label67.Font = new System.Drawing.Font("Webdings", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.label67.Location = new System.Drawing.Point(264, 332);
@@ -920,11 +965,12 @@
             this.label67.Size = new System.Drawing.Size(88, 83);
             this.label67.TabIndex = 27;
             this.label67.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label67.Click += new System.EventHandler(this.vaikeaLabel_Click);
             // 
             // label66
             // 
             this.label66.AutoSize = true;
-            this.label66.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label66.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label66.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label66.Font = new System.Drawing.Font("Webdings", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.label66.Location = new System.Drawing.Point(176, 332);
@@ -933,11 +979,12 @@
             this.label66.Size = new System.Drawing.Size(88, 83);
             this.label66.TabIndex = 26;
             this.label66.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label66.Click += new System.EventHandler(this.vaikeaLabel_Click);
             // 
             // label65
             // 
             this.label65.AutoSize = true;
-            this.label65.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label65.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label65.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label65.Font = new System.Drawing.Font("Webdings", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.label65.Location = new System.Drawing.Point(88, 332);
@@ -946,11 +993,12 @@
             this.label65.Size = new System.Drawing.Size(88, 83);
             this.label65.TabIndex = 25;
             this.label65.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label65.Click += new System.EventHandler(this.vaikeaLabel_Click);
             // 
             // label64
             // 
             this.label64.AutoSize = true;
-            this.label64.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label64.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label64.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label64.Font = new System.Drawing.Font("Webdings", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.label64.Location = new System.Drawing.Point(0, 332);
@@ -959,11 +1007,12 @@
             this.label64.Size = new System.Drawing.Size(88, 83);
             this.label64.TabIndex = 24;
             this.label64.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label64.Click += new System.EventHandler(this.vaikeaLabel_Click);
             // 
             // label63
             // 
             this.label63.AutoSize = true;
-            this.label63.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label63.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label63.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label63.Font = new System.Drawing.Font("Webdings", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.label63.Location = new System.Drawing.Point(440, 249);
@@ -972,11 +1021,12 @@
             this.label63.Size = new System.Drawing.Size(92, 83);
             this.label63.TabIndex = 23;
             this.label63.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label63.Click += new System.EventHandler(this.vaikeaLabel_Click);
             // 
             // label62
             // 
             this.label62.AutoSize = true;
-            this.label62.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label62.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label62.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label62.Font = new System.Drawing.Font("Webdings", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.label62.Location = new System.Drawing.Point(352, 249);
@@ -985,11 +1035,12 @@
             this.label62.Size = new System.Drawing.Size(88, 83);
             this.label62.TabIndex = 22;
             this.label62.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label62.Click += new System.EventHandler(this.vaikeaLabel_Click);
             // 
             // label61
             // 
             this.label61.AutoSize = true;
-            this.label61.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label61.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label61.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label61.Font = new System.Drawing.Font("Webdings", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.label61.Location = new System.Drawing.Point(264, 249);
@@ -998,11 +1049,12 @@
             this.label61.Size = new System.Drawing.Size(88, 83);
             this.label61.TabIndex = 21;
             this.label61.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label61.Click += new System.EventHandler(this.vaikeaLabel_Click);
             // 
             // label60
             // 
             this.label60.AutoSize = true;
-            this.label60.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label60.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label60.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label60.Font = new System.Drawing.Font("Webdings", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.label60.Location = new System.Drawing.Point(176, 249);
@@ -1011,11 +1063,12 @@
             this.label60.Size = new System.Drawing.Size(88, 83);
             this.label60.TabIndex = 20;
             this.label60.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label60.Click += new System.EventHandler(this.vaikeaLabel_Click);
             // 
             // label59
             // 
             this.label59.AutoSize = true;
-            this.label59.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label59.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label59.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label59.Font = new System.Drawing.Font("Webdings", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.label59.Location = new System.Drawing.Point(88, 249);
@@ -1024,11 +1077,12 @@
             this.label59.Size = new System.Drawing.Size(88, 83);
             this.label59.TabIndex = 19;
             this.label59.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label59.Click += new System.EventHandler(this.vaikeaLabel_Click);
             // 
             // label58
             // 
             this.label58.AutoSize = true;
-            this.label58.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label58.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label58.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label58.Font = new System.Drawing.Font("Webdings", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.label58.Location = new System.Drawing.Point(0, 249);
@@ -1037,11 +1091,12 @@
             this.label58.Size = new System.Drawing.Size(88, 83);
             this.label58.TabIndex = 18;
             this.label58.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label58.Click += new System.EventHandler(this.vaikeaLabel_Click);
             // 
             // label57
             // 
             this.label57.AutoSize = true;
-            this.label57.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label57.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label57.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label57.Font = new System.Drawing.Font("Webdings", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.label57.Location = new System.Drawing.Point(440, 166);
@@ -1050,11 +1105,12 @@
             this.label57.Size = new System.Drawing.Size(92, 83);
             this.label57.TabIndex = 17;
             this.label57.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label57.Click += new System.EventHandler(this.vaikeaLabel_Click);
             // 
             // label56
             // 
             this.label56.AutoSize = true;
-            this.label56.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label56.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label56.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label56.Font = new System.Drawing.Font("Webdings", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.label56.Location = new System.Drawing.Point(352, 166);
@@ -1063,11 +1119,12 @@
             this.label56.Size = new System.Drawing.Size(88, 83);
             this.label56.TabIndex = 16;
             this.label56.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label56.Click += new System.EventHandler(this.vaikeaLabel_Click);
             // 
             // label55
             // 
             this.label55.AutoSize = true;
-            this.label55.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label55.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label55.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label55.Font = new System.Drawing.Font("Webdings", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.label55.Location = new System.Drawing.Point(264, 166);
@@ -1076,11 +1133,12 @@
             this.label55.Size = new System.Drawing.Size(88, 83);
             this.label55.TabIndex = 15;
             this.label55.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label55.Click += new System.EventHandler(this.vaikeaLabel_Click);
             // 
             // label54
             // 
             this.label54.AutoSize = true;
-            this.label54.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label54.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label54.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label54.Font = new System.Drawing.Font("Webdings", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.label54.Location = new System.Drawing.Point(176, 166);
@@ -1089,11 +1147,12 @@
             this.label54.Size = new System.Drawing.Size(88, 83);
             this.label54.TabIndex = 14;
             this.label54.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label54.Click += new System.EventHandler(this.vaikeaLabel_Click);
             // 
             // label53
             // 
             this.label53.AutoSize = true;
-            this.label53.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label53.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label53.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label53.Font = new System.Drawing.Font("Webdings", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.label53.Location = new System.Drawing.Point(88, 166);
@@ -1102,11 +1161,12 @@
             this.label53.Size = new System.Drawing.Size(88, 83);
             this.label53.TabIndex = 13;
             this.label53.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label53.Click += new System.EventHandler(this.vaikeaLabel_Click);
             // 
             // label52
             // 
             this.label52.AutoSize = true;
-            this.label52.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label52.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label52.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label52.Font = new System.Drawing.Font("Webdings", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.label52.Location = new System.Drawing.Point(0, 166);
@@ -1115,11 +1175,12 @@
             this.label52.Size = new System.Drawing.Size(88, 83);
             this.label52.TabIndex = 12;
             this.label52.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label52.Click += new System.EventHandler(this.vaikeaLabel_Click);
             // 
             // label51
             // 
             this.label51.AutoSize = true;
-            this.label51.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label51.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label51.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label51.Font = new System.Drawing.Font("Webdings", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.label51.Location = new System.Drawing.Point(440, 83);
@@ -1128,11 +1189,12 @@
             this.label51.Size = new System.Drawing.Size(92, 83);
             this.label51.TabIndex = 11;
             this.label51.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label51.Click += new System.EventHandler(this.vaikeaLabel_Click);
             // 
             // label50
             // 
             this.label50.AutoSize = true;
-            this.label50.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label50.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label50.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label50.Font = new System.Drawing.Font("Webdings", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.label50.Location = new System.Drawing.Point(352, 83);
@@ -1141,11 +1203,12 @@
             this.label50.Size = new System.Drawing.Size(88, 83);
             this.label50.TabIndex = 10;
             this.label50.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label50.Click += new System.EventHandler(this.vaikeaLabel_Click);
             // 
             // label49
             // 
             this.label49.AutoSize = true;
-            this.label49.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label49.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label49.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label49.Font = new System.Drawing.Font("Webdings", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.label49.Location = new System.Drawing.Point(264, 83);
@@ -1154,11 +1217,12 @@
             this.label49.Size = new System.Drawing.Size(88, 83);
             this.label49.TabIndex = 9;
             this.label49.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label49.Click += new System.EventHandler(this.vaikeaLabel_Click);
             // 
             // label48
             // 
             this.label48.AutoSize = true;
-            this.label48.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label48.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label48.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label48.Font = new System.Drawing.Font("Webdings", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.label48.Location = new System.Drawing.Point(176, 83);
@@ -1167,11 +1231,12 @@
             this.label48.Size = new System.Drawing.Size(88, 83);
             this.label48.TabIndex = 8;
             this.label48.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label48.Click += new System.EventHandler(this.vaikeaLabel_Click);
             // 
             // label47
             // 
             this.label47.AutoSize = true;
-            this.label47.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label47.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label47.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label47.Font = new System.Drawing.Font("Webdings", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.label47.Location = new System.Drawing.Point(88, 83);
@@ -1180,11 +1245,12 @@
             this.label47.Size = new System.Drawing.Size(88, 83);
             this.label47.TabIndex = 7;
             this.label47.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label47.Click += new System.EventHandler(this.vaikeaLabel_Click);
             // 
             // label46
             // 
             this.label46.AutoSize = true;
-            this.label46.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label46.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label46.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label46.Font = new System.Drawing.Font("Webdings", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.label46.Location = new System.Drawing.Point(0, 83);
@@ -1193,11 +1259,12 @@
             this.label46.Size = new System.Drawing.Size(88, 83);
             this.label46.TabIndex = 6;
             this.label46.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label46.Click += new System.EventHandler(this.vaikeaLabel_Click);
             // 
             // label45
             // 
             this.label45.AutoSize = true;
-            this.label45.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label45.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label45.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label45.Font = new System.Drawing.Font("Webdings", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.label45.Location = new System.Drawing.Point(440, 0);
@@ -1206,11 +1273,12 @@
             this.label45.Size = new System.Drawing.Size(92, 83);
             this.label45.TabIndex = 5;
             this.label45.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label45.Click += new System.EventHandler(this.vaikeaLabel_Click);
             // 
             // label44
             // 
             this.label44.AutoSize = true;
-            this.label44.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label44.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label44.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label44.Font = new System.Drawing.Font("Webdings", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.label44.Location = new System.Drawing.Point(352, 0);
@@ -1219,11 +1287,12 @@
             this.label44.Size = new System.Drawing.Size(88, 83);
             this.label44.TabIndex = 4;
             this.label44.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label44.Click += new System.EventHandler(this.vaikeaLabel_Click);
             // 
             // label43
             // 
             this.label43.AutoSize = true;
-            this.label43.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label43.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label43.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label43.Font = new System.Drawing.Font("Webdings", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.label43.Location = new System.Drawing.Point(264, 0);
@@ -1232,11 +1301,12 @@
             this.label43.Size = new System.Drawing.Size(88, 83);
             this.label43.TabIndex = 3;
             this.label43.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label43.Click += new System.EventHandler(this.vaikeaLabel_Click);
             // 
             // label42
             // 
             this.label42.AutoSize = true;
-            this.label42.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label42.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label42.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label42.Font = new System.Drawing.Font("Webdings", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.label42.Location = new System.Drawing.Point(176, 0);
@@ -1245,11 +1315,12 @@
             this.label42.Size = new System.Drawing.Size(88, 83);
             this.label42.TabIndex = 2;
             this.label42.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label42.Click += new System.EventHandler(this.vaikeaLabel_Click);
             // 
             // label41
             // 
             this.label41.AutoSize = true;
-            this.label41.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label41.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label41.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label41.Font = new System.Drawing.Font("Webdings", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.label41.Location = new System.Drawing.Point(88, 0);
@@ -1258,11 +1329,12 @@
             this.label41.Size = new System.Drawing.Size(88, 83);
             this.label41.TabIndex = 1;
             this.label41.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label41.Click += new System.EventHandler(this.vaikeaLabel_Click);
             // 
             // label40
             // 
             this.label40.AutoSize = true;
-            this.label40.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label40.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label40.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label40.Font = new System.Drawing.Font("Webdings", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.label40.Location = new System.Drawing.Point(0, 0);
@@ -1271,17 +1343,42 @@
             this.label40.Size = new System.Drawing.Size(88, 83);
             this.label40.TabIndex = 0;
             this.label40.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label40.Click += new System.EventHandler(this.vaikeaLabel_Click);
             // 
             // takaisinnappi
             // 
-            this.takaisinnappi.Location = new System.Drawing.Point(776, 472);
+            this.takaisinnappi.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.takaisinnappi.Location = new System.Drawing.Point(732, 472);
             this.takaisinnappi.Name = "takaisinnappi";
-            this.takaisinnappi.Size = new System.Drawing.Size(136, 49);
+            this.takaisinnappi.Size = new System.Drawing.Size(180, 49);
             this.takaisinnappi.TabIndex = 7;
             this.takaisinnappi.Text = "TAKAISIN";
+            this.takaisinnappi.UseCompatibleTextRendering = true;
             this.takaisinnappi.UseVisualStyleBackColor = true;
             this.takaisinnappi.Visible = false;
             this.takaisinnappi.Click += new System.EventHandler(this.takaisinnappi_Click);
+            // 
+            // aikaLabel
+            // 
+            this.aikaLabel.AutoSize = true;
+            this.aikaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.aikaLabel.Location = new System.Drawing.Point(847, 9);
+            this.aikaLabel.Name = "aikaLabel";
+            this.aikaLabel.Size = new System.Drawing.Size(65, 31);
+            this.aikaLabel.TabIndex = 8;
+            this.aikaLabel.Text = "time";
+            this.aikaLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.aikaLabel.Visible = false;
+            // 
+            // normaaliTimer
+            // 
+            this.normaaliTimer.Interval = 450;
+            this.normaaliTimer.Tick += new System.EventHandler(this.normaaliTimer_Tick);
+            // 
+            // vaikeaTimer
+            // 
+            this.vaikeaTimer.Interval = 200;
+            this.vaikeaTimer.Tick += new System.EventHandler(this.vaikeaTimer_Tick);
             // 
             // MatchingGame
             // 
@@ -1289,6 +1386,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CornflowerBlue;
             this.ClientSize = new System.Drawing.Size(924, 528);
+            this.Controls.Add(this.aikaLabel);
             this.Controls.Add(this.takaisinnappi);
             this.Controls.Add(this.tilastotnappi);
             this.Controls.Add(this.vaikeaPeli);
@@ -1307,6 +1405,7 @@
             this.vaikeaPeli.ResumeLayout(false);
             this.vaikeaPeli.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -1329,7 +1428,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer helppoTimer;
         private System.Windows.Forms.Button aloitanappi;
         private System.Windows.Forms.Button normaalinappi;
         private System.Windows.Forms.Button vaikeanappi;
@@ -1398,6 +1497,9 @@
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.Button takaisinnappi;
+        private System.Windows.Forms.Label aikaLabel;
+        private System.Windows.Forms.Timer normaaliTimer;
+        private System.Windows.Forms.Timer vaikeaTimer;
     }
 }
 

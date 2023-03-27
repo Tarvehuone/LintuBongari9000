@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,35 +16,98 @@ namespace MatchingGame
     {
         Label firstClicked = null;
         Label secondClicked = null;
+
+        PrivateFontCollection omaFontti = new PrivateFontCollection();
+
         private bool helppopeliPelaa = false;
         private bool normaalipeliPelaa = false;
         private bool vaikeapeliPelaa = false;
-        
+
         Random random = new Random();
 
-        List<string> icons = new List<string>()
+        List<string> helppoIcons = new List<string>()
         {
-            "!", "!", "N", "N", ",", ",", "k", "k",
-            "b", "b", "v", "v", "w", "w", "z", "z"
+            "a", "a", "b", "b", "c", "c", "d", "d",
+            "e", "e", "f", "f", "g", "g", "h", "h"
         };
+
+        List<string> normaaliIcons = new List<string>()
+        {
+            "a", "a", "b", "b", "c", "c", "d", "d",
+            "e", "e", "f", "f", "g", "g", "h", "h",
+            "i", "i", "j", "j", "k", "k", "l", "l"
+        };
+
+        List<string> vaikeaIcons = new List<string>()
+        {
+            "a", "a", "b", "b", "c", "c", "d", "d",
+            "e", "e", "f", "f", "g", "g", "h", "h",
+            "i", "i", "j", "j", "k", "k", "l", "l",
+            "m", "m", "n", "n", "o", "o", "p", "p",
+            "q", "q", "r", "r"
+        };
+
         public MatchingGame()
         {
             InitializeComponent();
+            OmaFont();
+        }
+        private void OmaFont()
+        {
+            int fontLength = Properties.Resources.NewRocker_Regular.Length;
+            byte[] fontdata = Properties.Resources.NewRocker_Regular;
+            System.IntPtr data = Marshal.AllocCoTaskMem(fontLength);
+            Marshal.Copy(fontdata, 0, data, fontLength);
+            omaFontti.AddMemoryFont(data, fontLength);
 
-            AssignIconsToSquares();
+            aloitanappi.Font = new Font(omaFontti.Families[0], aloitanappi.Font.Size);
+            helpponappi.Font = new Font(omaFontti.Families[0], helpponappi.Font.Size);
+            normaalinappi.Font = new Font(omaFontti.Families[0], normaalinappi.Font.Size);
+            vaikeanappi.Font = new Font(omaFontti.Families[0], vaikeanappi.Font.Size);
+            takaisinnappi.Font = new Font(omaFontti.Families[0], takaisinnappi.Font.Size);
+            tilastotnappi.Font = new Font(omaFontti.Families[0], tilastotnappi.Font.Size);
+            aikaLabel.Font = new Font(omaFontti.Families[0], aikaLabel.Font.Size);
         }
 
-        private void AssignIconsToSquares()
+        private void JaaHelpotKortit()
         {
             foreach (Control control in helppopeli.Controls)
             {
                 Label iconLabel = control as Label;
-                if(iconLabel != null)
+                if (iconLabel != null)
                 {
-                    int randomNumber = random.Next(icons.Count);
-                    iconLabel.Text = icons[randomNumber];
+                    int randomNumber = random.Next(helppoIcons.Count);
+                    iconLabel.Text = helppoIcons[randomNumber];
                     iconLabel.ForeColor = iconLabel.BackColor;
-                    icons.RemoveAt(randomNumber);
+                    helppoIcons.RemoveAt(randomNumber);
+                }
+            }
+        }
+        private void JaaNormaalitKortit()
+        {
+            foreach (Control control in normaaliPeli.Controls)
+            {
+                Label iconLabel = control as Label;
+                if (iconLabel != null)
+                {
+                    int randomNumber = random.Next(normaaliIcons.Count);
+                    iconLabel.Text = normaaliIcons[randomNumber];
+                    iconLabel.ForeColor = iconLabel.BackColor;
+                    normaaliIcons.RemoveAt(randomNumber);
+                }
+            }
+        }
+        private void JaaVaikeatKortit()
+        {
+            foreach (Control control in vaikeaPeli.Controls)
+            {
+                Label iconLabel = control as Label;
+                if (iconLabel != null)
+                {
+                    int randomNumber = random.Next(vaikeaIcons.Count);
+                    iconLabel.Text = vaikeaIcons[randomNumber];
+                    iconLabel.ForeColor = iconLabel.BackColor;
+                    vaikeaIcons.RemoveAt(randomNumber);
                 }
             }
         }
@@ -52,21 +117,22 @@ namespace MatchingGame
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+
+        private void helppoLabel_Click(object sender, EventArgs e)
         {
-            if (timer1.Enabled == true)
+            if (helppoTimer.Enabled == true)
                 return;
 
             Label clickedLabel = sender as Label;
 
-            if(clickedLabel != null)
+            if (clickedLabel != null)
             {
                 if (clickedLabel.ForeColor == Color.Black)
                 {
                     return;
                 }
 
-                if(firstClicked == null)
+                if (firstClicked == null)
                 {
                     firstClicked = clickedLabel;
                     firstClicked.ForeColor = Color.Black;
@@ -77,22 +143,98 @@ namespace MatchingGame
                 secondClicked = clickedLabel;
                 secondClicked.ForeColor = Color.Black;
 
-                CheckForWinner();
+                CheckForEasyWinner();
 
-                if(firstClicked.Text == secondClicked.Text)
+                if (firstClicked.Text == secondClicked.Text)
                 {
                     firstClicked = null;
                     secondClicked = null;
                     return;
                 }
 
-                timer1.Start();
+                helppoTimer.Start();
             }
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void normaaliLabel_Click(object sender, EventArgs e)
         {
-            timer1.Stop();
+            if (normaaliTimer.Enabled == true)
+                return;
+
+            Label clickedLabel = sender as Label;
+
+            if (clickedLabel != null)
+            {
+                if (clickedLabel.ForeColor == Color.Black)
+                {
+                    return;
+                }
+
+                if (firstClicked == null)
+                {
+                    firstClicked = clickedLabel;
+                    firstClicked.ForeColor = Color.Black;
+
+                    return;
+                }
+
+                secondClicked = clickedLabel;
+                secondClicked.ForeColor = Color.Black;
+
+                CheckForNormalWinner();
+
+                if (firstClicked.Text == secondClicked.Text)
+                {
+                    firstClicked = null;
+                    secondClicked = null;
+                    return;
+                }
+
+                normaaliTimer.Start();
+            }
+        }
+
+        private void vaikeaLabel_Click(object sender, EventArgs e)
+        {
+            if (vaikeaTimer.Enabled == true)
+                return;
+
+            Label clickedLabel = sender as Label;
+
+            if (clickedLabel != null)
+            {
+                if (clickedLabel.ForeColor == Color.Black)
+                {
+                    return;
+                }
+
+                if (firstClicked == null)
+                {
+                    firstClicked = clickedLabel;
+                    firstClicked.ForeColor = Color.Black;
+
+                    return;
+                }
+
+                secondClicked = clickedLabel;
+                secondClicked.ForeColor = Color.Black;
+
+                CheckForHardWinner();
+
+                if (firstClicked.Text == secondClicked.Text)
+                {
+                    firstClicked = null;
+                    secondClicked = null;
+                    return;
+                }
+
+                vaikeaTimer.Start();
+            }
+        }
+
+        private void helppoTimer_Tick(object sender, EventArgs e)
+        {
+            helppoTimer.Stop();
 
             firstClicked.ForeColor = firstClicked.BackColor;
             secondClicked.ForeColor = secondClicked.BackColor;
@@ -101,13 +243,66 @@ namespace MatchingGame
             secondClicked = null;
         }
 
-        private void CheckForWinner()
+        private void normaaliTimer_Tick(object sender, EventArgs e)
         {
-            foreach(Control control in helppopeli.Controls)
+            normaaliTimer.Stop();
+
+            firstClicked.ForeColor = firstClicked.BackColor;
+            secondClicked.ForeColor = secondClicked.BackColor;
+
+            firstClicked = null;
+            secondClicked = null;
+        }
+        private void vaikeaTimer_Tick(object sender, EventArgs e)
+        {
+            vaikeaTimer.Stop();
+
+            firstClicked.ForeColor = firstClicked.BackColor;
+            secondClicked.ForeColor = secondClicked.BackColor;
+
+            firstClicked = null;
+            secondClicked = null;
+        }
+
+        private void CheckForEasyWinner()
+        {
+            foreach (Control control in helppopeli.Controls)
             {
                 Label iconLabel = control as Label;
 
-                if(iconLabel  != null)
+                if (iconLabel != null)
+                {
+                    if (iconLabel.ForeColor == iconLabel.BackColor)
+                        return;
+                }
+            }
+
+            MessageBox.Show("You won!", "Congratulations");
+            Close();
+        }
+        private void CheckForNormalWinner()
+        {
+            foreach (Control control in normaaliPeli.Controls)
+            {
+                Label iconLabel = control as Label;
+
+                if (iconLabel != null)
+                {
+                    if (iconLabel.ForeColor == iconLabel.BackColor)
+                        return;
+                }
+            }
+
+            MessageBox.Show("You won!", "Congratulations");
+            Close();
+        }
+        private void CheckForHardWinner()
+        {
+            foreach (Control control in vaikeaPeli.Controls)
+            {
+                Label iconLabel = control as Label;
+
+                if (iconLabel != null)
                 {
                     if (iconLabel.ForeColor == iconLabel.BackColor)
                         return;
@@ -130,32 +325,38 @@ namespace MatchingGame
 
         private void helpponappi_Click(object sender, EventArgs e)
         {
+            aikaLabel.Visible = true;
             helpponappi.Visible = false;
             normaalinappi.Visible = false;
             vaikeanappi.Visible = false;
             helppopeli.Visible = true;
             helppopeliPelaa = true;
             takaisinnappi.Visible = false;
+            JaaHelpotKortit();
         }
 
         private void normaalinappi_Click(object sender, EventArgs e)
         {
+            aikaLabel.Visible = true;
             helpponappi.Visible = false;
             normaalinappi.Visible = false;
             vaikeanappi.Visible = false;
             normaaliPeli.Visible = true;
             normaalipeliPelaa = true;
             takaisinnappi.Visible = false;
+            JaaNormaalitKortit();
         }
 
         private void vaikeanappi_Click(object sender, EventArgs e)
         {
+            aikaLabel.Visible = true;
             helpponappi.Visible = false;
             normaalinappi.Visible = false;
             vaikeanappi.Visible = false;
             vaikeaPeli.Visible = true;
             vaikeapeliPelaa = true;
             takaisinnappi.Visible = false;
+            JaaVaikeatKortit();
         }
 
         private void helpponappi_MouseHover(object sender, EventArgs e)
@@ -165,8 +366,8 @@ namespace MatchingGame
 
         private void helpponappi_MouseLeave(object sender, EventArgs e)
         {
-            if(helppopeliPelaa == false)
-                {
+            if (helppopeliPelaa == false)
+            {
                 helppopeli.Visible = false;
             }
         }
