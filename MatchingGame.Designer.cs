@@ -51,6 +51,7 @@
             this.normaalinappi = new System.Windows.Forms.Button();
             this.vaikeanappi = new System.Windows.Forms.Button();
             this.helpponappi = new System.Windows.Forms.Button();
+            this.tilastotnappi = new System.Windows.Forms.Button();
             this.helppopeli.SuspendLayout();
             this.normaaliPeli = new System.Windows.Forms.TableLayoutPanel();
             this.normaaliKortti = new System.Windows.Forms.Label();
@@ -393,6 +394,18 @@
             this.helpponappi.UseVisualStyleBackColor = true;
             this.helpponappi.Visible = false;
             this.helpponappi.Click += new System.EventHandler(this.helpponappi_Click);
+            this.helpponappi.MouseLeave += new System.EventHandler(this.helpponappi_MouseLeave);
+            this.helpponappi.MouseHover += new System.EventHandler(this.helpponappi_MouseHover);
+            // 
+            // tilastotnappi
+            // 
+            this.tilastotnappi.Location = new System.Drawing.Point(638, 322);
+            this.tilastotnappi.Name = "tilastotnappi";
+            this.tilastotnappi.Size = new System.Drawing.Size(187, 102);
+            this.tilastotnappi.TabIndex = 5;
+            this.tilastotnappi.Text = "TILASTOT";
+            this.tilastotnappi.UseVisualStyleBackColor = true;
+            this.tilastotnappi.Click += new System.EventHandler(this.tilastotnappi_Click);
             // 
             // normaaliPeli
             // 
@@ -1259,6 +1272,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CornflowerBlue;
             this.ClientSize = new System.Drawing.Size(924, 528);
+            this.Controls.Add(this.tilastotnappi);
             this.Controls.Add(this.vaikeaPeli);
             this.Controls.Add(this.normaaliPeli);
             this.Controls.Add(this.helpponappi);
@@ -1303,6 +1317,7 @@
         private System.Windows.Forms.Button normaalinappi;
         private System.Windows.Forms.Button vaikeanappi;
         private System.Windows.Forms.Button helpponappi;
+        private System.Windows.Forms.Button tilastotnappi;
         private System.Windows.Forms.TableLayoutPanel normaaliPeli;
         private System.Windows.Forms.Label normaaliKortti;
         private System.Windows.Forms.Label label39;
