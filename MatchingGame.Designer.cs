@@ -114,7 +114,6 @@
             this.label73 = new System.Windows.Forms.Label();
             this.label74 = new System.Windows.Forms.Label();
             this.label75 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel1.SuspendLayout();
             this.normaaliPeli.SuspendLayout();
             this.vaikeaPeli.SuspendLayout();
             this.SuspendLayout();
