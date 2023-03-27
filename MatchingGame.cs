@@ -114,5 +114,34 @@ namespace MatchingGame
             MessageBox.Show("You won!", "Congratulations");
             Close();
         }
+
+        private void aloitanappi_Click(object sender, EventArgs e)
+        {
+            helpponappi.Visible = true;
+            normaalinappi.Visible = true;
+            vaikeanappi.Visible = true;
+            aloitanappi.Visible = false;
+        }
+
+        private void helpponappi_Click(object sender, EventArgs e)
+        {
+            helpponappi.Visible = false;
+            normaalinappi.Visible = false;
+            vaikeanappi.Visible = false;
+        }
+
+        private void normaalinappi_Click(object sender, EventArgs e)
+        {
+            helpponappi.Visible = false;
+            normaalinappi.Visible = false;
+            vaikeanappi.Visible = false;
+        }
+
+        private void vaikeanappi_Click(object sender, EventArgs e)
+        {
+            helpponappi.Visible = false;
+            normaalinappi.Visible = false;
+            vaikeanappi.Visible = false;
+        }
     }
 }
