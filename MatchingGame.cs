@@ -31,7 +31,7 @@ namespace MatchingGame
 
         private void AssignIconsToSquares()
         {
-            foreach (Control control in tableLayoutPanel1.Controls)
+            foreach (Control control in helppopeli.Controls)
             {
                 Label iconLabel = control as Label;
                 if(iconLabel != null)
@@ -100,7 +100,7 @@ namespace MatchingGame
 
         private void CheckForWinner()
         {
-            foreach(Control control in tableLayoutPanel1.Controls)
+            foreach(Control control in helppopeli.Controls)
             {
                 Label iconLabel = control as Label;
 
@@ -128,6 +128,7 @@ namespace MatchingGame
             helpponappi.Visible = false;
             normaalinappi.Visible = false;
             vaikeanappi.Visible = false;
+            helppopeli.Visible = true;
         }
 
         private void normaalinappi_Click(object sender, EventArgs e)
