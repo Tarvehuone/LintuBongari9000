@@ -144,5 +144,21 @@ namespace MatchingGame
             normaalinappi.Visible = false;
             vaikeanappi.Visible = false;
         }
+
+        private void helpponappi_MouseHover(object sender, EventArgs e)
+        {
+            helppopeli.Visible = true;
+        }
+
+        private void helpponappi_MouseLeave(object sender, EventArgs e)
+        {
+            helppopeli.Visible = false;
+        }
+
+        private void tilastotnappi_Click(object sender, EventArgs e)
+        {
+            aloitanappi.Visible = false;
+            tilastotnappi.Visible = false;
+        }
     }
 }
