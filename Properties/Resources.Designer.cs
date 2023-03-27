@@ -59,5 +59,15 @@ namespace MatchingGame.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] NewRocker_Regular {
+            get {
+                object obj = ResourceManager.GetObject("NewRocker_Regular", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
     }
 }
