@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.helppopeli = new System.Windows.Forms.TableLayoutPanel();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -51,6 +51,7 @@
             this.normaalinappi = new System.Windows.Forms.Button();
             this.vaikeanappi = new System.Windows.Forms.Button();
             this.helpponappi = new System.Windows.Forms.Button();
+            this.helppopeli.SuspendLayout();
             this.normaaliPeli = new System.Windows.Forms.TableLayoutPanel();
             this.normaaliKortti = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
@@ -118,40 +119,41 @@
             this.vaikeaPeli.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tableLayoutPanel1
+            // helppopeli
             // 
-            this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset;
-            this.tableLayoutPanel1.ColumnCount = 4;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.Controls.Add(this.label16, 3, 3);
-            this.tableLayoutPanel1.Controls.Add(this.label15, 2, 3);
-            this.tableLayoutPanel1.Controls.Add(this.label14, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.label13, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.label12, 3, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label11, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label10, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label9, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label8, 3, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label7, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label6, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label5, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label4, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label3, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label2, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 12);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 4;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(532, 503);
-            this.tableLayoutPanel1.TabIndex = 0;
+            this.helppopeli.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset;
+            this.helppopeli.ColumnCount = 4;
+            this.helppopeli.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.helppopeli.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.helppopeli.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.helppopeli.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.helppopeli.Controls.Add(this.label16, 3, 3);
+            this.helppopeli.Controls.Add(this.label15, 2, 3);
+            this.helppopeli.Controls.Add(this.label14, 1, 3);
+            this.helppopeli.Controls.Add(this.label13, 0, 3);
+            this.helppopeli.Controls.Add(this.label12, 3, 2);
+            this.helppopeli.Controls.Add(this.label11, 2, 2);
+            this.helppopeli.Controls.Add(this.label10, 1, 2);
+            this.helppopeli.Controls.Add(this.label9, 0, 2);
+            this.helppopeli.Controls.Add(this.label8, 3, 1);
+            this.helppopeli.Controls.Add(this.label7, 2, 1);
+            this.helppopeli.Controls.Add(this.label6, 1, 1);
+            this.helppopeli.Controls.Add(this.label5, 0, 1);
+            this.helppopeli.Controls.Add(this.label4, 3, 0);
+            this.helppopeli.Controls.Add(this.label3, 2, 0);
+            this.helppopeli.Controls.Add(this.label2, 1, 0);
+            this.helppopeli.Controls.Add(this.label1, 0, 0);
+            this.helppopeli.Location = new System.Drawing.Point(12, 12);
+            this.helppopeli.Name = "helppopeli";
+            this.helppopeli.RowCount = 4;
+            this.helppopeli.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.helppopeli.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.helppopeli.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.helppopeli.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.helppopeli.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.helppopeli.Size = new System.Drawing.Size(532, 503);
+            this.helppopeli.TabIndex = 0;
+            this.helppopeli.Visible = false;
             // 
             // label16
             // 
@@ -1264,11 +1266,12 @@
             this.Controls.Add(this.vaikeanappi);
             this.Controls.Add(this.normaalinappi);
             this.Controls.Add(this.aloitanappi);
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.helppopeli);
             this.Name = "MatchingGame";
             this.Text = "Matching Game";
             this.Load += new System.EventHandler(this.MatchingGame_Load);
-            this.tableLayoutPanel1.ResumeLayout(false);
+
+            this.helppopeli.ResumeLayout(false);
             this.normaaliPeli.ResumeLayout(false);
             this.normaaliPeli.PerformLayout();
             this.vaikeaPeli.ResumeLayout(false);
@@ -1279,7 +1282,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel helppopeli;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
