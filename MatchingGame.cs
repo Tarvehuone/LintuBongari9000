@@ -14,7 +14,10 @@ namespace MatchingGame
     {
         Label firstClicked = null;
         Label secondClicked = null;
-
+        private bool helppopeliPelaa = false;
+        private bool normaalipeliPelaa = false;
+        private bool vaikeapeliPelaa = false;
+        
         Random random = new Random();
 
         List<string> icons = new List<string>()
@@ -121,6 +124,8 @@ namespace MatchingGame
             normaalinappi.Visible = true;
             vaikeanappi.Visible = true;
             aloitanappi.Visible = false;
+            tilastotnappi.Visible = false;
+            takaisinnappi.Visible = true;
         }
 
         private void helpponappi_Click(object sender, EventArgs e)
@@ -129,6 +134,8 @@ namespace MatchingGame
             normaalinappi.Visible = false;
             vaikeanappi.Visible = false;
             helppopeli.Visible = true;
+            helppopeliPelaa = true;
+            takaisinnappi.Visible = false;
         }
 
         private void normaalinappi_Click(object sender, EventArgs e)
@@ -136,6 +143,9 @@ namespace MatchingGame
             helpponappi.Visible = false;
             normaalinappi.Visible = false;
             vaikeanappi.Visible = false;
+            normaaliPeli.Visible = true;
+            normaalipeliPelaa = true;
+            takaisinnappi.Visible = false;
         }
 
         private void vaikeanappi_Click(object sender, EventArgs e)
@@ -143,6 +153,9 @@ namespace MatchingGame
             helpponappi.Visible = false;
             normaalinappi.Visible = false;
             vaikeanappi.Visible = false;
+            vaikeaPeli.Visible = true;
+            vaikeapeliPelaa = true;
+            takaisinnappi.Visible = false;
         }
 
         private void helpponappi_MouseHover(object sender, EventArgs e)
@@ -152,13 +165,58 @@ namespace MatchingGame
 
         private void helpponappi_MouseLeave(object sender, EventArgs e)
         {
-            helppopeli.Visible = false;
+            if(helppopeliPelaa == false)
+                {
+                helppopeli.Visible = false;
+            }
         }
 
         private void tilastotnappi_Click(object sender, EventArgs e)
         {
             aloitanappi.Visible = false;
             tilastotnappi.Visible = false;
+            takaisinnappi.Visible = true;
+        }
+
+        private void normaalinappi_MouseHover(object sender, EventArgs e)
+        {
+            normaaliPeli.Visible = true;
+        }
+
+        private void normaalinappi_MouseLeave(object sender, EventArgs e)
+        {
+            if (normaalipeliPelaa == false)
+            {
+                normaaliPeli.Visible = false;
+            }
+        }
+
+        private void vaikeanappi_MouseHover(object sender, EventArgs e)
+        {
+            vaikeaPeli.Visible = true;
+        }
+
+        private void vaikeanappi_MouseLeave(object sender, EventArgs e)
+        {
+            if (vaikeapeliPelaa == false)
+            {
+                vaikeaPeli.Visible = false;
+            }
+        }
+
+        private void takaisinnappi_Click(object sender, EventArgs e)
+        {
+            takaisinnappi.Visible = false;
+            aloitanappi.Visible = true;
+            tilastotnappi.Visible = true;
+            if (helpponappi.Visible == true)
+            {
+                takaisinnappi.Visible = false;
+                aloitanappi.Visible = true;
+                helpponappi.Visible = false;
+                normaalinappi.Visible = false;
+                vaikeanappi.Visible = false;
+            }
         }
     }
 }
