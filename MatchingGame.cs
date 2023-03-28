@@ -339,7 +339,8 @@ namespace MatchingGame
             MessageBox.Show("You won!\nYritykset: " + yritykset + "\nScore: " + score, "Congratulations!");
             yritykset = 0;
             score = 0;
-            Close();
+
+            // LISÄÄ TÄHÄN KOODI, JOKA VIE PELAAJAN TAKAISIN ALOITUSRUUTUUN
         }
         private void CheckForNormalWinner()
         {
@@ -369,7 +370,8 @@ namespace MatchingGame
             MessageBox.Show("You won!", "Congratulations");
             yritykset = 0;
             score = 0;
-            Close();
+
+            // LISÄÄ TÄHÄN KOODI, JOKA VIE PELAAJAN TAKAISIN ALOITUSRUUTUUN
         }
         private void CheckForHardWinner()
         {
@@ -400,7 +402,8 @@ namespace MatchingGame
             MessageBox.Show("You won!", "Congratulations");
             yritykset = 0;
             score = 0;
-            Close();
+
+            // LISÄÄ TÄHÄN KOODI, JOKA VIE PELAAJAN TAKAISIN ALOITUSRUUTUUN
         }
 
         private void aloitanappi_Click(object sender, EventArgs e)
@@ -528,6 +531,6 @@ namespace MatchingGame
             parhaatPisteet3.Visible = false;
         }
 
-        
+
     }
 }
