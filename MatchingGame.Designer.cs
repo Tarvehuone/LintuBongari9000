@@ -118,6 +118,15 @@
             this.aikaLabel = new System.Windows.Forms.Label();
             this.normaaliTimer = new System.Windows.Forms.Timer(this.components);
             this.vaikeaTimer = new System.Windows.Forms.Timer(this.components);
+            this.helppoOtsikko = new System.Windows.Forms.Label();
+            this.normaaliOtsikko = new System.Windows.Forms.Label();
+            this.vaikeaOtsikko = new System.Windows.Forms.Label();
+            this.voitot1 = new System.Windows.Forms.Label();
+            this.voitot2 = new System.Windows.Forms.Label();
+            this.voitot3 = new System.Windows.Forms.Label();
+            this.parhaatPisteet3 = new System.Windows.Forms.Label();
+            this.parhaatPisteet2 = new System.Windows.Forms.Label();
+            this.parhaatPisteet1 = new System.Windows.Forms.Label();
             this.helppopeli.SuspendLayout();
             this.normaaliPeli.SuspendLayout();
             this.vaikeaPeli.SuspendLayout();
@@ -1362,12 +1371,13 @@
             // 
             this.aikaLabel.AutoSize = true;
             this.aikaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.aikaLabel.Location = new System.Drawing.Point(815, 14);
+            this.aikaLabel.Location = new System.Drawing.Point(622, 9);
             this.aikaLabel.Name = "aikaLabel";
-            this.aikaLabel.Size = new System.Drawing.Size(82, 31);
+            this.aikaLabel.Size = new System.Drawing.Size(61, 37);
             this.aikaLabel.TabIndex = 8;
             this.aikaLabel.Text = "00:00";
             this.aikaLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.aikaLabel.UseCompatibleTextRendering = true;
             this.aikaLabel.Visible = false;
             // 
             // normaaliTimer
@@ -1380,12 +1390,111 @@
             this.vaikeaTimer.Interval = 200;
             this.vaikeaTimer.Tick += new System.EventHandler(this.vaikeaTimer_Tick);
             // 
+            // helppoOtsikko
+            // 
+            this.helppoOtsikko.Location = new System.Drawing.Point(361, 16);
+            this.helppoOtsikko.Name = "helppoOtsikko";
+            this.helppoOtsikko.Size = new System.Drawing.Size(200, 20);
+            this.helppoOtsikko.TabIndex = 9;
+            this.helppoOtsikko.Text = "Helppojen pelien tulokset:";
+            this.helppoOtsikko.UseCompatibleTextRendering = true;
+            this.helppoOtsikko.Visible = false;
+            // 
+            // normaaliOtsikko
+            // 
+            this.normaaliOtsikko.Location = new System.Drawing.Point(361, 186);
+            this.normaaliOtsikko.Name = "normaaliOtsikko";
+            this.normaaliOtsikko.Size = new System.Drawing.Size(200, 20);
+            this.normaaliOtsikko.TabIndex = 10;
+            this.normaaliOtsikko.Text = "Normaalien pelien tulokset:";
+            this.normaaliOtsikko.UseCompatibleTextRendering = true;
+            this.normaaliOtsikko.Visible = false;
+            // 
+            // vaikeaOtsikko
+            // 
+            this.vaikeaOtsikko.Location = new System.Drawing.Point(361, 356);
+            this.vaikeaOtsikko.Name = "vaikeaOtsikko";
+            this.vaikeaOtsikko.Size = new System.Drawing.Size(200, 20);
+            this.vaikeaOtsikko.TabIndex = 11;
+            this.vaikeaOtsikko.Text = "Vaikeiden pelien tulokset:";
+            this.vaikeaOtsikko.UseCompatibleTextRendering = true;
+            this.vaikeaOtsikko.Visible = false;
+            // 
+            // voitot1
+            // 
+            this.voitot1.Location = new System.Drawing.Point(664, 44);
+            this.voitot1.Name = "voitot1";
+            this.voitot1.Size = new System.Drawing.Size(100, 30);
+            this.voitot1.TabIndex = 12;
+            this.voitot1.Text = "Voitot:";
+            this.voitot1.UseCompatibleTextRendering = true;
+            this.voitot1.Visible = false;
+            // 
+            // voitot2
+            // 
+            this.voitot2.Location = new System.Drawing.Point(664, 215);
+            this.voitot2.Name = "voitot2";
+            this.voitot2.Size = new System.Drawing.Size(100, 30);
+            this.voitot2.TabIndex = 13;
+            this.voitot2.Text = "Voitot:";
+            this.voitot2.UseCompatibleTextRendering = true;
+            this.voitot2.Visible = false;
+            // 
+            // voitot3
+            // 
+            this.voitot3.Location = new System.Drawing.Point(664, 378);
+            this.voitot3.Name = "voitot3";
+            this.voitot3.Size = new System.Drawing.Size(100, 30);
+            this.voitot3.TabIndex = 14;
+            this.voitot3.Text = "Voitot:";
+            this.voitot3.UseCompatibleTextRendering = true;
+            this.voitot3.Visible = false;
+            // 
+            // parhaatPisteet3
+            // 
+            this.parhaatPisteet3.Location = new System.Drawing.Point(412, 378);
+            this.parhaatPisteet3.Name = "parhaatPisteet3";
+            this.parhaatPisteet3.Size = new System.Drawing.Size(150, 30);
+            this.parhaatPisteet3.TabIndex = 17;
+            this.parhaatPisteet3.Text = "Parhaat pisteet:";
+            this.parhaatPisteet3.UseCompatibleTextRendering = true;
+            this.parhaatPisteet3.Visible = false;
+            // 
+            // parhaatPisteet2
+            // 
+            this.parhaatPisteet2.Location = new System.Drawing.Point(412, 215);
+            this.parhaatPisteet2.Name = "parhaatPisteet2";
+            this.parhaatPisteet2.Size = new System.Drawing.Size(150, 30);
+            this.parhaatPisteet2.TabIndex = 16;
+            this.parhaatPisteet2.Text = "Parhaat pisteet:";
+            this.parhaatPisteet2.UseCompatibleTextRendering = true;
+            this.parhaatPisteet2.Visible = false;
+            // 
+            // parhaatPisteet1
+            // 
+            this.parhaatPisteet1.Location = new System.Drawing.Point(412, 44);
+            this.parhaatPisteet1.Name = "parhaatPisteet1";
+            this.parhaatPisteet1.Size = new System.Drawing.Size(150, 30);
+            this.parhaatPisteet1.TabIndex = 15;
+            this.parhaatPisteet1.Text = "Parhaat pisteet:";
+            this.parhaatPisteet1.UseCompatibleTextRendering = true;
+            this.parhaatPisteet1.Visible = false;
+            // 
             // MatchingGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CornflowerBlue;
             this.ClientSize = new System.Drawing.Size(924, 528);
+            this.Controls.Add(this.parhaatPisteet3);
+            this.Controls.Add(this.parhaatPisteet2);
+            this.Controls.Add(this.parhaatPisteet1);
+            this.Controls.Add(this.voitot3);
+            this.Controls.Add(this.voitot2);
+            this.Controls.Add(this.voitot1);
+            this.Controls.Add(this.vaikeaOtsikko);
+            this.Controls.Add(this.normaaliOtsikko);
+            this.Controls.Add(this.helppoOtsikko);
             this.Controls.Add(this.aikaLabel);
             this.Controls.Add(this.takaisinnappi);
             this.Controls.Add(this.tilastotnappi);
@@ -1500,6 +1609,15 @@
         private System.Windows.Forms.Label aikaLabel;
         private System.Windows.Forms.Timer normaaliTimer;
         private System.Windows.Forms.Timer vaikeaTimer;
+        private System.Windows.Forms.Label helppoOtsikko;
+        private System.Windows.Forms.Label normaaliOtsikko;
+        private System.Windows.Forms.Label vaikeaOtsikko;
+        private System.Windows.Forms.Label voitot1;
+        private System.Windows.Forms.Label voitot2;
+        private System.Windows.Forms.Label voitot3;
+        private System.Windows.Forms.Label parhaatPisteet3;
+        private System.Windows.Forms.Label parhaatPisteet2;
+        private System.Windows.Forms.Label parhaatPisteet1;
     }
 }
 

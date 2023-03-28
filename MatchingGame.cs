@@ -26,6 +26,21 @@ namespace MatchingGame
         private bool normaalipeliPelaa = false;
         private bool vaikeapeliPelaa = false;
 
+        int score = 0;
+        int yritykset = 0;
+
+        int parhaatHelpotYritykset = 9999999;
+        int helppoHighScore = 0;
+        int helpotVoitot = 0;
+
+        int parhaatNormaalitYritykset = 9999999;
+        int normaaliHighScore = 0;
+        int normaalitVoitot = 0;
+
+        int parhaatVaikeatYritykset = 9999999;
+        int vaikeaHighScore = 0;
+        int vaikeatVoitot = 0;
+
         Random random = new Random();
 
         List<string> helppoIcons = new List<string>()
@@ -86,6 +101,15 @@ namespace MatchingGame
             takaisinnappi.Font = new Font(omaFontti.Families[0], takaisinnappi.Font.Size);
             tilastotnappi.Font = new Font(omaFontti.Families[0], tilastotnappi.Font.Size);
             aikaLabel.Font = new Font(omaFontti.Families[0], aikaLabel.Font.Size);
+            helppoOtsikko.Font = new Font(omaFontti.Families[0], helppoOtsikko.Font.Size);
+            normaaliOtsikko.Font = new Font(omaFontti.Families[0], normaaliOtsikko.Font.Size);
+            vaikeaOtsikko.Font = new Font(omaFontti.Families[0], vaikeaOtsikko.Font.Size);
+            voitot1.Font = new Font(omaFontti.Families[0], voitot1.Font.Size);
+            voitot2.Font = new Font(omaFontti.Families[0], voitot2.Font.Size);
+            voitot3.Font = new Font(omaFontti.Families[0], voitot3.Font.Size);
+            parhaatPisteet1.Font = new Font(omaFontti.Families[0], parhaatPisteet1.Font.Size);
+            parhaatPisteet2.Font = new Font(omaFontti.Families[0], parhaatPisteet2.Font.Size);
+            parhaatPisteet3.Font = new Font(omaFontti.Families[0], parhaatPisteet3.Font.Size);
         }
 
         private void JaaHelpotKortit()
@@ -136,7 +160,6 @@ namespace MatchingGame
 
         }
 
-
         private void helppoLabel_Click(object sender, EventArgs e)
         {
             if (helppoTimer.Enabled == true)
@@ -163,10 +186,18 @@ namespace MatchingGame
                 secondClicked = clickedLabel;
                 secondClicked.ForeColor = Color.Black;
 
+                yritykset++;
+
                 CheckForEasyWinner();
+
+                if (firstClicked.Text != secondClicked.Text)
+                {
+                    score -= 25;
+                }
 
                 if (firstClicked.Text == secondClicked.Text)
                 {
+                    score += 100;
                     firstClicked = null;
                     secondClicked = null;
                     return;
@@ -201,10 +232,18 @@ namespace MatchingGame
                 secondClicked = clickedLabel;
                 secondClicked.ForeColor = Color.Black;
 
+                yritykset++;
+
                 CheckForNormalWinner();
+
+                if (firstClicked.Text != secondClicked.Text)
+                {
+                    score -= 25;
+                }
 
                 if (firstClicked.Text == secondClicked.Text)
                 {
+                    score += 100;
                     firstClicked = null;
                     secondClicked = null;
                     return;
@@ -239,10 +278,18 @@ namespace MatchingGame
                 secondClicked = clickedLabel;
                 secondClicked.ForeColor = Color.Black;
 
+                yritykset++;
+
                 CheckForHardWinner();
+
+                if (firstClicked.Text != secondClicked.Text)
+                {
+                    score -= 25;
+                }
 
                 if (firstClicked.Text == secondClicked.Text)
                 {
+                    score += 100;
                     firstClicked = null;
                     secondClicked = null;
                     return;
@@ -296,9 +343,25 @@ namespace MatchingGame
                         return;
                 }
             }
+            
             timer.Stop();
-            MessageBox.Show("You won!", "Congratulations");
-            Close();
+            helpotVoitot++;
+            score += 200;
+
+            if (yritykset < parhaatHelpotYritykset)
+            {
+                parhaatHelpotYritykset = yritykset;
+            }
+            if (score > helppoHighScore)
+            {
+                helppoHighScore = score;
+            }
+
+            MessageBox.Show("You won!\nYritykset: " + yritykset + "\nScore: " + score, "Congratulations!");
+            yritykset = 0;
+            score = 0;
+
+            // LISÄÄ TÄHÄN KOODI, JOKA VIE PELAAJAN TAKAISIN ALOITUSRUUTUUN
         }
         private void CheckForNormalWinner()
         {
@@ -313,8 +376,23 @@ namespace MatchingGame
                 }
             }
 
+            normaalitVoitot++;
+            score += 200;
+
+            if (yritykset < parhaatNormaalitYritykset)
+            {
+                parhaatNormaalitYritykset = yritykset;
+            }
+            if (score > normaaliHighScore)
+            {
+                normaaliHighScore = score;
+            }
+
             MessageBox.Show("You won!", "Congratulations");
-            Close();
+            yritykset = 0;
+            score = 0;
+
+            // LISÄÄ TÄHÄN KOODI, JOKA VIE PELAAJAN TAKAISIN ALOITUSRUUTUUN
         }
         private void CheckForHardWinner()
         {
@@ -329,8 +407,24 @@ namespace MatchingGame
                 }
             }
 
+            vaikeatVoitot++;
+            score += 200;
+
+            if (yritykset < parhaatVaikeatYritykset)
+            {
+                parhaatVaikeatYritykset = yritykset;
+            }
+
+            if (score > vaikeaHighScore)
+            {
+                vaikeaHighScore = score;
+            }
+
             MessageBox.Show("You won!", "Congratulations");
-            Close();
+            yritykset = 0;
+            score = 0;
+
+            // LISÄÄ TÄHÄN KOODI, JOKA VIE PELAAJAN TAKAISIN ALOITUSRUUTUUN
         }
 
         private void aloitanappi_Click(object sender, EventArgs e)
@@ -397,6 +491,15 @@ namespace MatchingGame
             aloitanappi.Visible = false;
             tilastotnappi.Visible = false;
             takaisinnappi.Visible = true;
+            helppoOtsikko.Visible = true;
+            normaaliOtsikko.Visible = true;
+            vaikeaOtsikko.Visible = true;
+            voitot1.Visible = true;
+            voitot2.Visible = true;
+            voitot3.Visible = true;
+            parhaatPisteet1.Visible = true;
+            parhaatPisteet2.Visible = true;
+            parhaatPisteet3.Visible = true;
         }
 
         private void normaalinappi_MouseHover(object sender, EventArgs e)
@@ -438,6 +541,17 @@ namespace MatchingGame
                 normaalinappi.Visible = false;
                 vaikeanappi.Visible = false;
             }
+            helppoOtsikko.Visible = false;
+            normaaliOtsikko.Visible = false;
+            vaikeaOtsikko.Visible = false;
+            voitot1.Visible = false;
+            voitot2.Visible = false;
+            voitot3.Visible = false;
+            parhaatPisteet1.Visible = false;
+            parhaatPisteet2.Visible = false;
+            parhaatPisteet3.Visible = false;
         }
+
+
     }
 }
