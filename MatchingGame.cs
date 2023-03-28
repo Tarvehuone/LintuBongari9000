@@ -122,6 +122,8 @@ namespace MatchingGame
         // Tämä metodi kutsutaan helpponappi_Click metodissa
         private void JaaHelpotKortit()
         {
+            sekunnit = 0;
+            minuutit = 0;
             foreach (Control control in helppopeli.Controls)
             {
                 Label iconLabel = control as Label;
@@ -139,6 +141,9 @@ namespace MatchingGame
         // Tämä metodi kutsutaan normaalinappi_Click metodissa
         private void JaaNormaalitKortit()
         {
+            sekunnit = 0;
+            minuutit = 0;
+
             foreach (Control control in normaaliPeli.Controls)
             {
                 Label iconLabel = control as Label;
@@ -156,6 +161,9 @@ namespace MatchingGame
         // Tämä metodi kutsutaan vaikeanappi_Click metodissa
         private void JaaVaikeatKortit()
         {
+            sekunnit = 0;
+            minuutit = 0;
+
             foreach (Control control in vaikeaPeli.Controls)
             {
                 Label iconLabel = control as Label;
@@ -234,6 +242,7 @@ namespace MatchingGame
 
                 if (firstClicked == null)
                 {
+                    timer.Start();
                     firstClicked = clickedLabel;
                     firstClicked.ForeColor = Color.Black;
 
@@ -281,6 +290,7 @@ namespace MatchingGame
 
                 if (firstClicked == null)
                 {
+                    timer.Start();
                     firstClicked = clickedLabel;
                     firstClicked.ForeColor = Color.Black;
 
@@ -396,7 +406,7 @@ namespace MatchingGame
                         return;
                 }
             }
-
+            timer.Stop();
             normaalitVoitot++;
             score += 200;
 
@@ -430,7 +440,7 @@ namespace MatchingGame
                         return;
                 }
             }
-
+            timer.Stop();
             vaikeatVoitot++;
             score += 200;
 
