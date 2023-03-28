@@ -67,6 +67,15 @@ namespace MatchingGame
             takaisinnappi.Font = new Font(omaFontti.Families[0], takaisinnappi.Font.Size);
             tilastotnappi.Font = new Font(omaFontti.Families[0], tilastotnappi.Font.Size);
             aikaLabel.Font = new Font(omaFontti.Families[0], aikaLabel.Font.Size);
+            helppoOtsikko.Font = new Font(omaFontti.Families[0], helppoOtsikko.Font.Size);
+            normaaliOtsikko.Font = new Font(omaFontti.Families[0], normaaliOtsikko.Font.Size);
+            vaikeaOtsikko.Font = new Font(omaFontti.Families[0], vaikeaOtsikko.Font.Size);
+            voitot1.Font = new Font(omaFontti.Families[0], voitot1.Font.Size);
+            voitot2.Font = new Font(omaFontti.Families[0], voitot2.Font.Size);
+            voitot3.Font = new Font(omaFontti.Families[0], voitot3.Font.Size);
+            parhaatPisteet1.Font = new Font(omaFontti.Families[0], parhaatPisteet1.Font.Size);
+            parhaatPisteet2.Font = new Font(omaFontti.Families[0], parhaatPisteet2.Font.Size);
+            parhaatPisteet3.Font = new Font(omaFontti.Families[0], parhaatPisteet3.Font.Size);
         }
 
         private void JaaHelpotKortit()
@@ -377,6 +386,15 @@ namespace MatchingGame
             aloitanappi.Visible = false;
             tilastotnappi.Visible = false;
             takaisinnappi.Visible = true;
+            helppoOtsikko.Visible = true;
+            normaaliOtsikko.Visible = true;
+            vaikeaOtsikko.Visible = true;
+            voitot1.Visible = true;
+            voitot2.Visible = true;
+            voitot3.Visible = true;
+            parhaatPisteet1.Visible = true;
+            parhaatPisteet2.Visible = true;
+            parhaatPisteet3.Visible = true;
         }
 
         private void normaalinappi_MouseHover(object sender, EventArgs e)
@@ -418,6 +436,17 @@ namespace MatchingGame
                 normaalinappi.Visible = false;
                 vaikeanappi.Visible = false;
             }
+            helppoOtsikko.Visible = false;
+            normaaliOtsikko.Visible = false;
+            vaikeaOtsikko.Visible = false;
+            voitot1.Visible = false;
+            voitot2.Visible = false;
+            voitot3.Visible = false;
+            parhaatPisteet1.Visible = false;
+            parhaatPisteet2.Visible = false;
+            parhaatPisteet3.Visible = false;
         }
+
+        
     }
 }
