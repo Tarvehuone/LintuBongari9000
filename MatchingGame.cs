@@ -14,6 +14,9 @@ namespace MatchingGame
 {
     public partial class MatchingGame : Form
     {
+        private Timer timer;
+        private int sekunnit;
+        private int minuutit;
         Label firstClicked = null;
         Label secondClicked = null;
 
@@ -25,6 +28,9 @@ namespace MatchingGame
 
         int score = 0;
         int yritykset = 0;
+
+        int parasHelppoSekunti = 99;
+        int parasHelppoMinuutti = 99;
 
         int parhaatHelpotYritykset = 9999999;
         int helppoHighScore = 0;
@@ -66,7 +72,26 @@ namespace MatchingGame
         {
             InitializeComponent();
             OmaFont();
+            timer = new Timer();
+            timer.Interval = 1000;
+            timer.Tick += Timer_Tick; 
         }
+        
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            sekunnit++;
+
+            if (sekunnit == 60)
+            {
+                sekunnit = 0;
+                minuutit++;
+            }
+
+            string timeString = $"{minuutit:00}:{sekunnit:00}";
+            aikaLabel.Text = timeString;
+        }
+        
+        // Lisää projektiin custom fontin ja määrittää haluttujen kontrollien fonttia
         private void OmaFont()
         {
             int fontLength = Properties.Resources.NewRocker_Regular.Length;
@@ -95,8 +120,12 @@ namespace MatchingGame
             paavalikkoonNappi.Font = new Font(omaFontti.Families[0], paavalikkoonNappi.Font.Size);
         }
 
+        // Antaa korteille satunnaiset kuvat, kun helppo pelimuoto aloitetaan
+        // Tämä metodi kutsutaan helpponappi_Click metodissa
         private void JaaHelpotKortit()
         {
+            sekunnit = 0;
+            minuutit = 0;
             foreach (Control control in helppopeli.Controls)
             {
                 Label iconLabel = control as Label;
@@ -113,8 +142,14 @@ namespace MatchingGame
                 }
             }
         }
+
+        // Antaa korteille satunnaiset kuvat, kun normaali pelimuoto aloitetaan
+        // Tämä metodi kutsutaan normaalinappi_Click metodissa
         private void JaaNormaalitKortit()
         {
+            sekunnit = 0;
+            minuutit = 0;
+
             foreach (Control control in normaaliPeli.Controls)
             {
                 Label iconLabel = control as Label;
@@ -127,8 +162,14 @@ namespace MatchingGame
                 }
             }
         }
+
+        // Antaa korteille satunnaiset kuvat, kun vaikea pelimuoto aloitetaan
+        // Tämä metodi kutsutaan vaikeanappi_Click metodissa
         private void JaaVaikeatKortit()
         {
+            sekunnit = 0;
+            minuutit = 0;
+
             foreach (Control control in vaikeaPeli.Controls)
             {
                 Label iconLabel = control as Label;
@@ -142,11 +183,7 @@ namespace MatchingGame
             }
         }
 
-        private void MatchingGame_Load(object sender, EventArgs e)
-        {
-
-        }
-
+        // Tämä metodi tekee asioita, kun helpossa pelimuodossa painetaan korttia
         private void helppoLabel_Click(object sender, EventArgs e)
         {
             if (helppoTimer.Enabled == true)
@@ -163,6 +200,7 @@ namespace MatchingGame
 
                 if (firstClicked == null)
                 {
+                    timer.Start();
                     firstClicked = clickedLabel;
                     firstClicked.ForeColor = Color.Black;
 
@@ -193,6 +231,7 @@ namespace MatchingGame
             }
         }
 
+        // Tämä metodi tekee asioita, kun normaalissa pelimuodossa painetaan korttia
         private void normaaliLabel_Click(object sender, EventArgs e)
         {
             if (normaaliTimer.Enabled == true)
@@ -209,6 +248,7 @@ namespace MatchingGame
 
                 if (firstClicked == null)
                 {
+                    timer.Start();
                     firstClicked = clickedLabel;
                     firstClicked.ForeColor = Color.Black;
 
@@ -239,6 +279,7 @@ namespace MatchingGame
             }
         }
 
+        // Tämä metodi tekee asioita, kun vaikeassa pelimuodossa painetaan korttia
         private void vaikeaLabel_Click(object sender, EventArgs e)
         {
             if (vaikeaTimer.Enabled == true)
@@ -255,6 +296,7 @@ namespace MatchingGame
 
                 if (firstClicked == null)
                 {
+                    timer.Start();
                     firstClicked = clickedLabel;
                     firstClicked.ForeColor = Color.Black;
 
@@ -285,6 +327,7 @@ namespace MatchingGame
             }
         }
 
+        // helppoTimer pitää huolen helpon pelimuodon korttien kääntönopeudesta
         private void helppoTimer_Tick(object sender, EventArgs e)
         {
             helppoTimer.Stop();
@@ -296,6 +339,7 @@ namespace MatchingGame
             secondClicked = null;
         }
 
+        // normaaliTimer pitää huolen normaalin pelimuodon korttien kääntönopeudesta
         private void normaaliTimer_Tick(object sender, EventArgs e)
         {
             normaaliTimer.Stop();
@@ -306,6 +350,8 @@ namespace MatchingGame
             firstClicked = null;
             secondClicked = null;
         }
+
+        // vaikeaTimer pitää huolen vaikean pelimuodon korttien kääntönopeudesta
         private void vaikeaTimer_Tick(object sender, EventArgs e)
         {
             vaikeaTimer.Stop();
@@ -317,6 +363,8 @@ namespace MatchingGame
             secondClicked = null;
         }
 
+        // Tämä metodi katsoo, onko helppo pelimuoto voitettu
+        // Metodi kutsutaan helppoLabel_Click metodissa, kun molemmat kortit on käännetty
         private void CheckForEasyWinner()
         {
             foreach (Control control in helppopeli.Controls)
@@ -329,7 +377,8 @@ namespace MatchingGame
                         return;
                 }
             }
-
+            
+            timer.Stop();
             helpotVoitot++;
             score += 200;
 
@@ -350,6 +399,9 @@ namespace MatchingGame
             uusipeliNappi.Visible = true;
               // LISÄÄ TÄHÄN KOODI, JOKA VIE PELAAJAN TAKAISIN ALOITUSRUUTUUN
         }
+
+        // Tämä metodi katsoo, onko normaali pelimuoto voitettu
+        // Metodi kutsutaan normaaliLabel_Click metodissa, kun molemmat kortit on käännetty
         private void CheckForNormalWinner()
         {
             foreach (Control control in normaaliPeli.Controls)
@@ -362,7 +414,7 @@ namespace MatchingGame
                         return;
                 }
             }
-
+            timer.Stop();
             normaalitVoitot++;
             score += 200;
 
@@ -383,6 +435,9 @@ namespace MatchingGame
             uusipeliNappi.Visible = true;
             // LISÄÄ TÄHÄN KOODI, JOKA VIE PELAAJAN TAKAISIN ALOITUSRUUTUUN
         }
+
+        // Tämä metodi katsoo, onko vaikea pelimuoto voitettu
+        // Metodi kutsutaan vaikeaLabel_Click metodissa, kun molemmat kortit on käännetty
         private void CheckForHardWinner()
         {
             foreach (Control control in vaikeaPeli.Controls)
@@ -395,7 +450,7 @@ namespace MatchingGame
                         return;
                 }
             }
-
+            timer.Stop();
             vaikeatVoitot++;
             score += 200;
 
@@ -418,6 +473,7 @@ namespace MatchingGame
             // LISÄÄ TÄHÄN KOODI, JOKA VIE PELAAJAN TAKAISIN ALOITUSRUUTUUN
         }
 
+        // Näyttää pelimuodot, kun "Aloita peli" painiketta painetaan
         private void aloitanappi_Click(object sender, EventArgs e)
         {
             helpponappi.Visible = true;
@@ -428,6 +484,7 @@ namespace MatchingGame
             takaisinnappi.Visible = true;
         }
 
+        // Aloittaa helpon pelimuodon ja piilottaa valikon painikkeet
         private void helpponappi_Click(object sender, EventArgs e)
         {
             aikaLabel.Visible = true;
@@ -440,6 +497,7 @@ namespace MatchingGame
             JaaHelpotKortit();
         }
 
+        // Aloittaa normaalin pelimuodon ja piilottaa valikon painikkeet
         private void normaalinappi_Click(object sender, EventArgs e)
         {
             aikaLabel.Visible = true;
@@ -452,6 +510,7 @@ namespace MatchingGame
             JaaNormaalitKortit();
         }
 
+        // Aloittaa vaikean pelimuodon ja piilottaa valikon painikkeet
         private void vaikeanappi_Click(object sender, EventArgs e)
         {
             aikaLabel.Visible = true;
@@ -464,11 +523,13 @@ namespace MatchingGame
             JaaVaikeatKortit();
         }
 
+        // Tämä metodi näyttää helpon pelimuodon ruudukon koon, kun hiiri laitetaan painikkeen päälle
         private void helpponappi_MouseHover(object sender, EventArgs e)
         {
             helppopeli.Visible = true;
         }
 
+        // Tämä metodi piilottaa helpon pelimuodon ruudukon koon, kun hiiri poistetaan painikkeen päältä
         private void helpponappi_MouseLeave(object sender, EventArgs e)
         {
             if (helppopeliPelaa == false)
@@ -477,6 +538,37 @@ namespace MatchingGame
             }
         }
 
+        // Tämä metodi näyttää normaalin pelimuodon ruudukon koon, kun hiiri laitetaan painikkeen päälle
+        private void normaalinappi_MouseHover(object sender, EventArgs e)
+        {
+            normaaliPeli.Visible = true;
+        }
+
+        // Tämä metodi piilottaa normaalin pelimuodon ruudukon koon, kun hiiri poistetaan painikkeen päältä
+        private void normaalinappi_MouseLeave(object sender, EventArgs e)
+        {
+            if (normaalipeliPelaa == false)
+            {
+                normaaliPeli.Visible = false;
+            }
+        }
+
+        // Tämä metodi näyttää vaikean pelimuodon ruudukon koon, kun hiiri laitetaan painikkeen päälle
+        private void vaikeanappi_MouseHover(object sender, EventArgs e)
+        {
+            vaikeaPeli.Visible = true;
+        }
+
+        // Tämä metodi piilottaa vaikean pelimuodon ruudukon koon, kun hiiri poistetaan painikkeen päältä
+        private void vaikeanappi_MouseLeave(object sender, EventArgs e)
+        {
+            if (vaikeapeliPelaa == false)
+            {
+                vaikeaPeli.Visible = false;
+            }
+        }
+
+        // Tämä metodi vie käyttäjän tilastoihin, piilottaa valikon painikkeet ja näyttää "takaisin" painikkeen
         private void tilastotnappi_Click(object sender, EventArgs e)
         {
             aloitanappi.Visible = false;
@@ -493,32 +585,7 @@ namespace MatchingGame
             parhaatPisteet3.Visible = true;
         }
 
-        private void normaalinappi_MouseHover(object sender, EventArgs e)
-        {
-            normaaliPeli.Visible = true;
-        }
-
-        private void normaalinappi_MouseLeave(object sender, EventArgs e)
-        {
-            if (normaalipeliPelaa == false)
-            {
-                normaaliPeli.Visible = false;
-            }
-        }
-
-        private void vaikeanappi_MouseHover(object sender, EventArgs e)
-        {
-            vaikeaPeli.Visible = true;
-        }
-
-        private void vaikeanappi_MouseLeave(object sender, EventArgs e)
-        {
-            if (vaikeapeliPelaa == false)
-            {
-                vaikeaPeli.Visible = false;
-            }
-        }
-
+        // Tämä metodi vie käyttäjän takaisin edelliseen valikkoon
         private void takaisinnappi_Click(object sender, EventArgs e)
         {
             takaisinnappi.Visible = false;
