@@ -127,6 +127,7 @@
             this.parhaatPisteet3 = new System.Windows.Forms.Label();
             this.parhaatPisteet2 = new System.Windows.Forms.Label();
             this.parhaatPisteet1 = new System.Windows.Forms.Label();
+            this.ParasAikaLabel = new System.Windows.Forms.Label();
             this.helppopeli.SuspendLayout();
             this.normaaliPeli.SuspendLayout();
             this.vaikeaPeli.SuspendLayout();
@@ -1373,7 +1374,7 @@
             this.aikaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.aikaLabel.Location = new System.Drawing.Point(622, 9);
             this.aikaLabel.Name = "aikaLabel";
-            this.aikaLabel.Size = new System.Drawing.Size(61, 37);
+            this.aikaLabel.Size = new System.Drawing.Size(78, 37);
             this.aikaLabel.TabIndex = 8;
             this.aikaLabel.Text = "00:00";
             this.aikaLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1480,12 +1481,26 @@
             this.parhaatPisteet1.UseCompatibleTextRendering = true;
             this.parhaatPisteet1.Visible = false;
             // 
+            // ParasAikaLabel
+            // 
+            this.ParasAikaLabel.AutoSize = true;
+            this.ParasAikaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ParasAikaLabel.Location = new System.Drawing.Point(622, 59);
+            this.ParasAikaLabel.Name = "ParasAikaLabel";
+            this.ParasAikaLabel.Size = new System.Drawing.Size(78, 37);
+            this.ParasAikaLabel.TabIndex = 18;
+            this.ParasAikaLabel.Text = "00:00";
+            this.ParasAikaLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ParasAikaLabel.UseCompatibleTextRendering = true;
+            this.ParasAikaLabel.Visible = false;
+            // 
             // MatchingGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CornflowerBlue;
             this.ClientSize = new System.Drawing.Size(924, 528);
+            this.Controls.Add(this.ParasAikaLabel);
             this.Controls.Add(this.parhaatPisteet3);
             this.Controls.Add(this.parhaatPisteet2);
             this.Controls.Add(this.parhaatPisteet1);
@@ -1617,6 +1632,7 @@
         private System.Windows.Forms.Label parhaatPisteet3;
         private System.Windows.Forms.Label parhaatPisteet2;
         private System.Windows.Forms.Label parhaatPisteet1;
+        private System.Windows.Forms.Label ParasAikaLabel;
     }
 }
 
