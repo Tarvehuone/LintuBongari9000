@@ -1375,7 +1375,7 @@
             this.aikaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.aikaLabel.Location = new System.Drawing.Point(622, 9);
             this.aikaLabel.Name = "aikaLabel";
-            this.aikaLabel.Size = new System.Drawing.Size(61, 37);
+            this.aikaLabel.Size = new System.Drawing.Size(78, 37);
             this.aikaLabel.TabIndex = 8;
             this.aikaLabel.Text = "00:00";
             this.aikaLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
