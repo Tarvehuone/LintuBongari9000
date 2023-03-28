@@ -23,6 +23,21 @@ namespace MatchingGame
         private bool normaalipeliPelaa = false;
         private bool vaikeapeliPelaa = false;
 
+        int score = 0;
+        int yritykset = 0;
+
+        int parhaatHelpotYritykset = 9999999;
+        int helppoHighScore = 0;
+        int helpotVoitot = 0;
+
+        int parhaatNormaalitYritykset = 9999999;
+        int normaaliHighScore = 0;
+        int normaalitVoitot = 0;
+
+        int parhaatVaikeatYritykset = 9999999;
+        int vaikeaHighScore = 0;
+        int vaikeatVoitot = 0;
+
         Random random = new Random();
 
         List<string> helppoIcons = new List<string>()
@@ -126,7 +141,6 @@ namespace MatchingGame
 
         }
 
-
         private void helppoLabel_Click(object sender, EventArgs e)
         {
             if (helppoTimer.Enabled == true)
@@ -152,10 +166,18 @@ namespace MatchingGame
                 secondClicked = clickedLabel;
                 secondClicked.ForeColor = Color.Black;
 
+                yritykset++;
+
                 CheckForEasyWinner();
+
+                if (firstClicked.Text != secondClicked.Text)
+                {
+                    score -= 25;
+                }
 
                 if (firstClicked.Text == secondClicked.Text)
                 {
+                    score += 100;
                     firstClicked = null;
                     secondClicked = null;
                     return;
@@ -190,10 +212,18 @@ namespace MatchingGame
                 secondClicked = clickedLabel;
                 secondClicked.ForeColor = Color.Black;
 
+                yritykset++;
+
                 CheckForNormalWinner();
+
+                if (firstClicked.Text != secondClicked.Text)
+                {
+                    score -= 25;
+                }
 
                 if (firstClicked.Text == secondClicked.Text)
                 {
+                    score += 100;
                     firstClicked = null;
                     secondClicked = null;
                     return;
@@ -228,10 +258,18 @@ namespace MatchingGame
                 secondClicked = clickedLabel;
                 secondClicked.ForeColor = Color.Black;
 
+                yritykset++;
+
                 CheckForHardWinner();
+
+                if (firstClicked.Text != secondClicked.Text)
+                {
+                    score -= 25;
+                }
 
                 if (firstClicked.Text == secondClicked.Text)
                 {
+                    score += 100;
                     firstClicked = null;
                     secondClicked = null;
                     return;
@@ -286,7 +324,21 @@ namespace MatchingGame
                 }
             }
 
-            MessageBox.Show("You won!", "Congratulations");
+            helpotVoitot++;
+            score += 200;
+
+            if (yritykset < parhaatHelpotYritykset)
+            {
+                parhaatHelpotYritykset = yritykset;
+            }
+            if (score > helppoHighScore)
+            {
+                helppoHighScore = score;
+            }
+
+            MessageBox.Show("You won!\nYritykset: " + yritykset + "\nScore: " + score, "Congratulations!");
+            yritykset = 0;
+            score = 0;
             Close();
         }
         private void CheckForNormalWinner()
@@ -302,7 +354,21 @@ namespace MatchingGame
                 }
             }
 
+            normaalitVoitot++;
+            score += 200;
+
+            if (yritykset < parhaatNormaalitYritykset)
+            {
+                parhaatNormaalitYritykset = yritykset;
+            }
+            if (score > normaaliHighScore)
+            {
+                normaaliHighScore = score;
+            }
+
             MessageBox.Show("You won!", "Congratulations");
+            yritykset = 0;
+            score = 0;
             Close();
         }
         private void CheckForHardWinner()
@@ -318,7 +384,22 @@ namespace MatchingGame
                 }
             }
 
+            vaikeatVoitot++;
+            score += 200;
+
+            if (yritykset < parhaatVaikeatYritykset)
+            {
+                parhaatVaikeatYritykset = yritykset;
+            }
+
+            if (score > vaikeaHighScore)
+            {
+                vaikeaHighScore = score;
+            }
+
             MessageBox.Show("You won!", "Congratulations");
+            yritykset = 0;
+            score = 0;
             Close();
         }
 
