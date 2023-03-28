@@ -1507,7 +1507,6 @@
             this.Controls.Add(this.helppopeli);
             this.Name = "MatchingGame";
             this.Text = "Matching Game";
-            this.Load += new System.EventHandler(this.MatchingGame_Load);
             this.helppopeli.ResumeLayout(false);
             this.normaaliPeli.ResumeLayout(false);
             this.normaaliPeli.PerformLayout();
