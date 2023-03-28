@@ -31,6 +31,10 @@ namespace MatchingGame
 
         int parasHelppoSekunti = 99;
         int parasHelppoMinuutti = 99;
+        int parasNormaaliSekunti = 99;
+        int parasNormaaliMinuutti = 99;
+        int parasVaikeaSekunti = 99;
+        int parasVaikeaMinuutti = 99;
 
         int parhaatHelpotYritykset = 9999999;
         int helppoHighScore = 0;
@@ -116,6 +120,7 @@ namespace MatchingGame
             parhaatPisteet1.Font = new Font(omaFontti.Families[0], parhaatPisteet1.Font.Size);
             parhaatPisteet2.Font = new Font(omaFontti.Families[0], parhaatPisteet2.Font.Size);
             parhaatPisteet3.Font = new Font(omaFontti.Families[0], parhaatPisteet3.Font.Size);
+            ParasAikaLabel.Font = new Font(omaFontti.Families[0], ParasAikaLabel.Font.Size);
             uusipeliNappi.Font = new Font(omaFontti.Families[0], uusipeliNappi.Font.Size);
             paavalikkoonNappi.Font = new Font(omaFontti.Families[0], paavalikkoonNappi.Font.Size);
         }
@@ -381,6 +386,7 @@ namespace MatchingGame
             timer.Stop();
             helpotVoitot++;
             score += 200;
+            
 
             if (yritykset < parhaatHelpotYritykset)
             {
@@ -390,7 +396,15 @@ namespace MatchingGame
             {
                 helppoHighScore = score;
             }
-
+            if (minuutit < parasHelppoMinuutti)
+            {
+                parasHelppoMinuutti = minuutit;
+            }
+            if (sekunnit < parasHelppoSekunti) 
+            {
+                parasHelppoSekunti = sekunnit;            
+            }
+            ParasAikaLabel.Text = ("Paras aika: " +parasHelppoMinuutti +":" +parasHelppoSekunti);
             MessageBox.Show("You won!\nYritykset: " + yritykset + "\nScore: " + score, "Congratulations!");
             yritykset = 0;
             score = 0;
@@ -425,6 +439,14 @@ namespace MatchingGame
             if (score > normaaliHighScore)
             {
                 normaaliHighScore = score;
+            }
+            if (minuutit < parasNormaaliMinuutti) 
+            {
+                parasNormaaliMinuutti = minuutit;
+            }
+            if (sekunnit < parasNormaaliSekunti) 
+            {
+                parasNormaaliSekunti = sekunnit;
             }
 
             MessageBox.Show("You won!", "Congratulations");
@@ -463,6 +485,14 @@ namespace MatchingGame
             {
                 vaikeaHighScore = score;
             }
+            if (minuutit < parasVaikeaMinuutti) 
+            {
+                parasVaikeaMinuutti = minuutit;
+            }
+            if (sekunnit < parasVaikeaSekunti) 
+            {
+                parasVaikeaSekunti = sekunnit;            
+            }
 
             MessageBox.Show("You won!", "Congratulations");
             yritykset = 0;
@@ -494,6 +524,7 @@ namespace MatchingGame
             helppopeli.Visible = true;
             helppopeliPelaa = true;
             takaisinnappi.Visible = false;
+
             JaaHelpotKortit();
         }
 
@@ -583,6 +614,7 @@ namespace MatchingGame
             parhaatPisteet1.Visible = true;
             parhaatPisteet2.Visible = true;
             parhaatPisteet3.Visible = true;
+            ParasAikaLabel.Visible = true;  
         }
 
         // Tämä metodi vie käyttäjän takaisin edelliseen valikkoon
@@ -608,6 +640,7 @@ namespace MatchingGame
             parhaatPisteet1.Visible = false;
             parhaatPisteet2.Visible = false;
             parhaatPisteet3.Visible = false;
+            ParasAikaLabel.Visible = false;
         }
 
         private void paavalikkoonNappi_Click(object sender, EventArgs e)
