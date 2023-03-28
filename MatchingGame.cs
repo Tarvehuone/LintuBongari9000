@@ -14,6 +14,9 @@ namespace MatchingGame
 {
     public partial class MatchingGame : Form
     {
+        private Timer timer;
+        private int sekunnit;
+        private int minuutit;
         Label firstClicked = null;
         Label secondClicked = null;
 
@@ -69,8 +72,25 @@ namespace MatchingGame
         {
             InitializeComponent();
             OmaFont();
+            timer = new Timer();
+            timer.Interval = 1000;
+            timer.Tick += Timer_Tick; 
         }
+        
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            sekunnit++;
 
+            if (sekunnit == 60)
+            {
+                sekunnit = 0;
+                minuutit++;
+            }
+
+            string timeString = $"{minuutit:00}:{sekunnit:00}";
+            aikaLabel.Text = timeString;
+        }
+        
         // Lisää projektiin custom fontin ja määrittää haluttujen kontrollien fonttia
         private void OmaFont()
         {
@@ -166,6 +186,7 @@ namespace MatchingGame
 
                 if (firstClicked == null)
                 {
+                    timer.Start();
                     firstClicked = clickedLabel;
                     firstClicked.ForeColor = Color.Black;
 
@@ -340,7 +361,8 @@ namespace MatchingGame
                         return;
                 }
             }
-
+            
+            timer.Stop();
             helpotVoitot++;
             score += 200;
 

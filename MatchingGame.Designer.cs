@@ -1375,7 +1375,7 @@
             this.aikaLabel.Name = "aikaLabel";
             this.aikaLabel.Size = new System.Drawing.Size(61, 37);
             this.aikaLabel.TabIndex = 8;
-            this.aikaLabel.Text = "time";
+            this.aikaLabel.Text = "00:00";
             this.aikaLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.aikaLabel.UseCompatibleTextRendering = true;
             this.aikaLabel.Visible = false;
