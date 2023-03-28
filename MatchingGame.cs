@@ -121,6 +121,8 @@ namespace MatchingGame
             parhaatPisteet2.Font = new Font(omaFontti.Families[0], parhaatPisteet2.Font.Size);
             parhaatPisteet3.Font = new Font(omaFontti.Families[0], parhaatPisteet3.Font.Size);
             ParasAikaLabel.Font = new Font(omaFontti.Families[0], ParasAikaLabel.Font.Size);
+            uusipeliNappi.Font = new Font(omaFontti.Families[0], uusipeliNappi.Font.Size);
+            paavalikkoonNappi.Font = new Font(omaFontti.Families[0], paavalikkoonNappi.Font.Size);
         }
 
         // Antaa korteille satunnaiset kuvat, kun helppo pelimuoto aloitetaan
@@ -134,6 +136,10 @@ namespace MatchingGame
                 Label iconLabel = control as Label;
                 if (iconLabel != null)
                 {
+                    if(helppopeliPelaa == false)
+                    {
+                        iconLabel.ForeColor = iconLabel.BackColor;
+                    }
                     int randomNumber = random.Next(helppoIcons.Count);
                     iconLabel.Text = helppoIcons[randomNumber];
                     iconLabel.ForeColor = iconLabel.BackColor;
@@ -403,7 +409,9 @@ namespace MatchingGame
             yritykset = 0;
             score = 0;
 
-            // LISÄÄ TÄHÄN KOODI, JOKA VIE PELAAJAN TAKAISIN ALOITUSRUUTUUN
+            paavalikkoonNappi.Visible = true;
+            uusipeliNappi.Visible = true;
+              // LISÄÄ TÄHÄN KOODI, JOKA VIE PELAAJAN TAKAISIN ALOITUSRUUTUUN
         }
 
         // Tämä metodi katsoo, onko normaali pelimuoto voitettu
@@ -445,6 +453,8 @@ namespace MatchingGame
             yritykset = 0;
             score = 0;
 
+            paavalikkoonNappi.Visible = true;
+            uusipeliNappi.Visible = true;
             // LISÄÄ TÄHÄN KOODI, JOKA VIE PELAAJAN TAKAISIN ALOITUSRUUTUUN
         }
 
@@ -488,6 +498,8 @@ namespace MatchingGame
             yritykset = 0;
             score = 0;
 
+            paavalikkoonNappi.Visible = true;
+            uusipeliNappi.Visible = true;
             // LISÄÄ TÄHÄN KOODI, JOKA VIE PELAAJAN TAKAISIN ALOITUSRUUTUUN
         }
 
@@ -629,6 +641,43 @@ namespace MatchingGame
             parhaatPisteet2.Visible = false;
             parhaatPisteet3.Visible = false;
             ParasAikaLabel.Visible = false;
+        }
+
+        private void paavalikkoonNappi_Click(object sender, EventArgs e)
+        {
+            tilastotnappi.Visible = true;
+            aloitanappi.Visible = true;
+            paavalikkoonNappi.Visible = false;
+            uusipeliNappi.Visible = false;
+            helppopeli.Visible = false;
+            normaaliPeli.Visible = false;
+            vaikeaPeli.Visible = false;
+            aikaLabel.Visible = false;
+            helppopeliPelaa = false;
+            normaalipeliPelaa = false;
+            vaikeapeliPelaa = false;
+        }
+
+        private void uusipeliNappi_Click(object sender, EventArgs e)
+        {
+            if(helppopeliPelaa == true)
+            {
+                JaaHelpotKortit();
+                paavalikkoonNappi.Visible = false;
+                uusipeliNappi.Visible = false;
+            }
+            if(normaalipeliPelaa == true)
+            {
+                JaaNormaalitKortit();
+                paavalikkoonNappi.Visible=false;
+                uusipeliNappi.Visible = false;
+            }
+            if(vaikeapeliPelaa == true)
+            {
+                JaaVaikeatKortit();
+                paavalikkoonNappi.Visible = false;
+                uusipeliNappi.Visible = false;
+            }
         }
     }
 }
