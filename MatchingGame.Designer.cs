@@ -127,6 +127,8 @@
             this.parhaatPisteet3 = new System.Windows.Forms.Label();
             this.parhaatPisteet2 = new System.Windows.Forms.Label();
             this.parhaatPisteet1 = new System.Windows.Forms.Label();
+            this.uusipeliNappi = new System.Windows.Forms.Button();
+            this.paavalikkoonNappi = new System.Windows.Forms.Button();
             this.helppopeli.SuspendLayout();
             this.normaaliPeli.SuspendLayout();
             this.vaikeaPeli.SuspendLayout();
@@ -1480,12 +1482,40 @@
             this.parhaatPisteet1.UseCompatibleTextRendering = true;
             this.parhaatPisteet1.Visible = false;
             // 
+            // uusipeliNappi
+            // 
+            this.uusipeliNappi.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uusipeliNappi.Location = new System.Drawing.Point(622, 214);
+            this.uusipeliNappi.Name = "uusipeliNappi";
+            this.uusipeliNappi.Size = new System.Drawing.Size(232, 102);
+            this.uusipeliNappi.TabIndex = 18;
+            this.uusipeliNappi.Text = "PELAA UUDESTAAN";
+            this.uusipeliNappi.UseCompatibleTextRendering = true;
+            this.uusipeliNappi.UseVisualStyleBackColor = true;
+            this.uusipeliNappi.Visible = false;
+            this.uusipeliNappi.Click += new System.EventHandler(this.uusipeliNappi_Click);
+            // 
+            // paavalikkoonNappi
+            // 
+            this.paavalikkoonNappi.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.paavalikkoonNappi.Location = new System.Drawing.Point(622, 322);
+            this.paavalikkoonNappi.Name = "paavalikkoonNappi";
+            this.paavalikkoonNappi.Size = new System.Drawing.Size(232, 102);
+            this.paavalikkoonNappi.TabIndex = 19;
+            this.paavalikkoonNappi.Text = "PÄÄVALIKKOON";
+            this.paavalikkoonNappi.UseCompatibleTextRendering = true;
+            this.paavalikkoonNappi.UseVisualStyleBackColor = true;
+            this.paavalikkoonNappi.Visible = false;
+            this.paavalikkoonNappi.Click += new System.EventHandler(this.paavalikkoonNappi_Click);
+            // 
             // MatchingGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CornflowerBlue;
             this.ClientSize = new System.Drawing.Size(924, 528);
+            this.Controls.Add(this.paavalikkoonNappi);
+            this.Controls.Add(this.uusipeliNappi);
             this.Controls.Add(this.parhaatPisteet3);
             this.Controls.Add(this.parhaatPisteet2);
             this.Controls.Add(this.parhaatPisteet1);
@@ -1617,6 +1647,8 @@
         private System.Windows.Forms.Label parhaatPisteet3;
         private System.Windows.Forms.Label parhaatPisteet2;
         private System.Windows.Forms.Label parhaatPisteet1;
+        private System.Windows.Forms.Button uusipeliNappi;
+        private System.Windows.Forms.Button paavalikkoonNappi;
     }
 }
 
