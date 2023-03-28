@@ -1362,11 +1362,11 @@
             // 
             this.aikaLabel.AutoSize = true;
             this.aikaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.aikaLabel.Location = new System.Drawing.Point(847, 9);
+            this.aikaLabel.Location = new System.Drawing.Point(815, 14);
             this.aikaLabel.Name = "aikaLabel";
-            this.aikaLabel.Size = new System.Drawing.Size(65, 31);
+            this.aikaLabel.Size = new System.Drawing.Size(82, 31);
             this.aikaLabel.TabIndex = 8;
-            this.aikaLabel.Text = "time";
+            this.aikaLabel.Text = "00:00";
             this.aikaLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.aikaLabel.Visible = false;
             // 
