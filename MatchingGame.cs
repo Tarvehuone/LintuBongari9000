@@ -50,27 +50,11 @@ namespace MatchingGame
 
         Random random = new Random();
 
-        List<string> helppoIcons = new List<string>()
-        {
-            "a", "a", "b", "b", "c", "c", "d", "d",
-            "e", "e", "f", "f", "g", "g", "h", "h"
-        };
+        List<string> helppoIcons = new List<string>();
 
-        List<string> normaaliIcons = new List<string>()
-        {
-            "a", "a", "b", "b", "c", "c", "d", "d",
-            "e", "e", "f", "f", "g", "g", "h", "h",
-            "i", "i", "j", "j", "k", "k", "l", "l"
-        };
+        List<string> normaaliIcons = new List<string>();
 
-        List<string> vaikeaIcons = new List<string>()
-        {
-            "a", "a", "b", "b", "c", "c", "d", "d",
-            "e", "e", "f", "f", "g", "g", "h", "h",
-            "i", "i", "j", "j", "k", "k", "l", "l",
-            "m", "m", "n", "n", "o", "o", "p", "p",
-            "q", "q", "r", "r"
-        };
+        List<string> vaikeaIcons = new List<string>();
 
         public MatchingGame()
         {
@@ -78,9 +62,9 @@ namespace MatchingGame
             OmaFont();
             timer = new Timer();
             timer.Interval = 1000;
-            timer.Tick += Timer_Tick; 
+            timer.Tick += Timer_Tick;
         }
-        
+
         private void Timer_Tick(object sender, EventArgs e)
         {
             sekunnit++;
@@ -94,7 +78,7 @@ namespace MatchingGame
             string timeString = $"{minuutit:00}:{sekunnit:00}";
             aikaLabel.Text = timeString;
         }
-        
+
         // Lisää projektiin custom fontin ja määrittää haluttujen kontrollien fonttia
         private void OmaFont()
         {
@@ -129,6 +113,7 @@ namespace MatchingGame
         // Tämä metodi kutsutaan helpponappi_Click metodissa
         private void JaaHelpotKortit()
         {
+            HelppoIconsAdd();
             sekunnit = 0;
             minuutit = 0;
             foreach (Control control in helppopeli.Controls)
@@ -136,10 +121,6 @@ namespace MatchingGame
                 Label iconLabel = control as Label;
                 if (iconLabel != null)
                 {
-                    if(helppopeliPelaa == false)
-                    {
-                        iconLabel.ForeColor = iconLabel.BackColor;
-                    }
                     int randomNumber = random.Next(helppoIcons.Count);
                     iconLabel.Text = helppoIcons[randomNumber];
                     iconLabel.ForeColor = iconLabel.BackColor;
@@ -152,6 +133,7 @@ namespace MatchingGame
         // Tämä metodi kutsutaan normaalinappi_Click metodissa
         private void JaaNormaalitKortit()
         {
+            NormaaliIconsAdd();
             sekunnit = 0;
             minuutit = 0;
 
@@ -172,6 +154,7 @@ namespace MatchingGame
         // Tämä metodi kutsutaan vaikeanappi_Click metodissa
         private void JaaVaikeatKortit()
         {
+            VaikeaIconsAdd();
             sekunnit = 0;
             minuutit = 0;
 
@@ -382,7 +365,7 @@ namespace MatchingGame
                         return;
                 }
             }
-            
+
             timer.Stop();
             helpotVoitot++;
             score += 200;
@@ -411,7 +394,7 @@ namespace MatchingGame
 
             paavalikkoonNappi.Visible = true;
             uusipeliNappi.Visible = true;
-              // LISÄÄ TÄHÄN KOODI, JOKA VIE PELAAJAN TAKAISIN ALOITUSRUUTUUN
+            // LISÄÄ TÄHÄN KOODI, JOKA VIE PELAAJAN TAKAISIN ALOITUSRUUTUUN
         }
 
         // Tämä metodi katsoo, onko normaali pelimuoto voitettu
@@ -660,24 +643,112 @@ namespace MatchingGame
 
         private void uusipeliNappi_Click(object sender, EventArgs e)
         {
-            if(helppopeliPelaa == true)
+            if (helppopeliPelaa == true)
             {
                 JaaHelpotKortit();
                 paavalikkoonNappi.Visible = false;
                 uusipeliNappi.Visible = false;
             }
-            if(normaalipeliPelaa == true)
+            if (normaalipeliPelaa == true)
             {
                 JaaNormaalitKortit();
-                paavalikkoonNappi.Visible=false;
+                paavalikkoonNappi.Visible = false;
                 uusipeliNappi.Visible = false;
             }
-            if(vaikeapeliPelaa == true)
+            if (vaikeapeliPelaa == true)
             {
                 JaaVaikeatKortit();
                 paavalikkoonNappi.Visible = false;
                 uusipeliNappi.Visible = false;
             }
+        }
+
+        private void HelppoIconsAdd()
+        {
+            helppoIcons.Add("a");
+            helppoIcons.Add("a");
+            helppoIcons.Add("b");
+            helppoIcons.Add("b");
+            helppoIcons.Add("c");
+            helppoIcons.Add("c");
+            helppoIcons.Add("d");
+            helppoIcons.Add("d");
+            helppoIcons.Add("e");
+            helppoIcons.Add("e");
+            helppoIcons.Add("f");
+            helppoIcons.Add("f");
+            helppoIcons.Add("g");
+            helppoIcons.Add("g");
+            helppoIcons.Add("h");
+            helppoIcons.Add("h");
+        }
+
+        private void NormaaliIconsAdd()
+        {
+            normaaliIcons.Add("a");
+            normaaliIcons.Add("a");
+            normaaliIcons.Add("b");
+            normaaliIcons.Add("b");
+            normaaliIcons.Add("c");
+            normaaliIcons.Add("c");
+            normaaliIcons.Add("d");
+            normaaliIcons.Add("d");
+            normaaliIcons.Add("e");
+            normaaliIcons.Add("e");
+            normaaliIcons.Add("f");
+            normaaliIcons.Add("f");
+            normaaliIcons.Add("g");
+            normaaliIcons.Add("g");
+            normaaliIcons.Add("h");
+            normaaliIcons.Add("h");
+            normaaliIcons.Add("i");
+            normaaliIcons.Add("i");
+            normaaliIcons.Add("j");
+            normaaliIcons.Add("j");
+            normaaliIcons.Add("k");
+            normaaliIcons.Add("k");
+            normaaliIcons.Add("l");
+            normaaliIcons.Add("l");
+        }
+
+        private void VaikeaIconsAdd()
+        {
+            vaikeaIcons.Add("a");
+            vaikeaIcons.Add("a");
+            vaikeaIcons.Add("b");
+            vaikeaIcons.Add("b");
+            vaikeaIcons.Add("c");
+            vaikeaIcons.Add("c");
+            vaikeaIcons.Add("d");
+            vaikeaIcons.Add("d");
+            vaikeaIcons.Add("e");
+            vaikeaIcons.Add("e");
+            vaikeaIcons.Add("f");
+            vaikeaIcons.Add("f");
+            vaikeaIcons.Add("g");
+            vaikeaIcons.Add("g");
+            vaikeaIcons.Add("h");
+            vaikeaIcons.Add("h");
+            vaikeaIcons.Add("i");
+            vaikeaIcons.Add("i");
+            vaikeaIcons.Add("j");
+            vaikeaIcons.Add("j");
+            vaikeaIcons.Add("k");
+            vaikeaIcons.Add("k");
+            vaikeaIcons.Add("l");
+            vaikeaIcons.Add("l");
+            vaikeaIcons.Add("m");
+            vaikeaIcons.Add("m");
+            vaikeaIcons.Add("n");
+            vaikeaIcons.Add("n");
+            vaikeaIcons.Add("o");
+            vaikeaIcons.Add("o");
+            vaikeaIcons.Add("p");
+            vaikeaIcons.Add("p");
+            vaikeaIcons.Add("q");
+            vaikeaIcons.Add("q");
+            vaikeaIcons.Add("r");
+            vaikeaIcons.Add("r");
         }
     }
 }
