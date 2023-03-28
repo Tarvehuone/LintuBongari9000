@@ -26,6 +26,9 @@ namespace MatchingGame
         int score = 0;
         int yritykset = 0;
 
+        int parasHelppoSekunti = 99;
+        int parasHelppoMinuutti = 99;
+
         int parhaatHelpotYritykset = 9999999;
         int helppoHighScore = 0;
         int helpotVoitot = 0;
