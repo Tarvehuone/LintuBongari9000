@@ -431,7 +431,7 @@ namespace MatchingGame
             {
                 parasHelppoSekunti = sekunnit;
             }
-            ParasAikaLabel.Text = ("Paras aika: " + parasHelppoMinuutti + ":" + parasHelppoSekunti);
+            ParasAikaLabel.Text = (parasHelppoMinuutti + ":" + parasHelppoSekunti);
             MessageBox.Show("You won!\nYritykset: " + yritykset + "\nScore: " + score, "Congratulations!");
             yritykset = 0;
             score = 0;
@@ -475,7 +475,7 @@ namespace MatchingGame
             {
                 parasNormaaliSekunti = sekunnit;
             }
-
+            parasnormaaliAikaLabel.Text = (parasNormaaliMinuutti + ":" + parasNormaaliSekunti);
             MessageBox.Show("You won!", "Congratulations");
             yritykset = 0;
             score = 0;
@@ -522,7 +522,7 @@ namespace MatchingGame
             {
                 parasVaikeaSekunti = sekunnit;
             }
-
+            parasvaikeaAikaLabel.Text = (parasVaikeaMinuutti + ":" + parasVaikeaSekunti);
             MessageBox.Show("You won!", "Congratulations");
             yritykset = 0;
             score = 0;
