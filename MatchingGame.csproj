@@ -102,5 +102,11 @@
   <ItemGroup>
     <None Include="bin\Debug\Audio\valikkoNappi.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hp.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\taivasTausta.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
