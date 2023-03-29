@@ -4,7 +4,9 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Text;
+using System.IO;
 using System.Linq;
+using System.Media;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,13 +16,25 @@ namespace MatchingGame
 {
     public partial class MatchingGame : Form
     {
+        string vaikeaMusiikkiPolku = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Audio", "vaikeaMusiikki.wav");
+        string vaikeaJakoPolku = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Audio", "vaikeaKorttienJako.wav");
+        string normaaliJakoPolku = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Audio", "normaaliKorttienJako.wav");
+        string helppoJakoPolku = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Audio", "helppoKorttienJako.wav");
+        SoundPlayer vaikeaMusiikki;
+        SoundPlayer vaikeaJako;
+        SoundPlayer normaaliJako;
+        SoundPlayer helppoJako;
+
         private Timer timer;
         private int sekunnit;
         private int minuutit;
+        string timeString;
         Label firstClicked = null;
         Label secondClicked = null;
 
         PrivateFontCollection omaFontti = new PrivateFontCollection();
+        PrivateFontCollection skullFontti = new PrivateFontCollection();
+        PrivateFontCollection lintuFontti = new PrivateFontCollection();
 
         private bool helppopeliPelaa = false;
         private bool normaalipeliPelaa = false;
@@ -75,11 +89,11 @@ namespace MatchingGame
                 minuutit++;
             }
 
-            string timeString = $"{minuutit:00}:{sekunnit:00}";
+            timeString = $"{minuutit:00}:{sekunnit:00}";
             aikaLabel.Text = timeString;
         }
 
-        // Lisää projektiin custom fontin ja määrittää haluttujen kontrollien fonttia
+        // Lisää projektiin custom fontin ja vaihtaa haluttujen kontrollien fonttia
         private void OmaFont()
         {
             int fontLength = Properties.Resources.NewRocker_Regular.Length;
@@ -113,12 +127,21 @@ namespace MatchingGame
         // Tämä metodi kutsutaan helpponappi_Click metodissa
         private void JaaHelpotKortit()
         {
+            int fontLength = Properties.Resources.bfeather.Length;
+            byte[] fontdata = Properties.Resources.bfeather;
+            System.IntPtr data = Marshal.AllocCoTaskMem(fontLength);
+            Marshal.Copy(fontdata, 0, data, fontLength);
+            lintuFontti.AddMemoryFont(data, fontLength);
+
+            helppoIcons.Clear();
             HelppoIconsAdd();
+            aikaLabel.Text = "00:00";
             sekunnit = 0;
             minuutit = 0;
             foreach (Control control in helppopeli.Controls)
             {
                 Label iconLabel = control as Label;
+                iconLabel.Font = new Font(lintuFontti.Families[0], iconLabel.Font.Size);
                 if (iconLabel != null)
                 {
                     int randomNumber = random.Next(helppoIcons.Count);
@@ -133,13 +156,22 @@ namespace MatchingGame
         // Tämä metodi kutsutaan normaalinappi_Click metodissa
         private void JaaNormaalitKortit()
         {
+            int fontLength = Properties.Resources.bfeather.Length;
+            byte[] fontdata = Properties.Resources.bfeather;
+            System.IntPtr data = Marshal.AllocCoTaskMem(fontLength);
+            Marshal.Copy(fontdata, 0, data, fontLength);
+            lintuFontti.AddMemoryFont(data, fontLength);
+
+            normaaliIcons.Clear();
             NormaaliIconsAdd();
+            aikaLabel.Text = "00:00";
             sekunnit = 0;
             minuutit = 0;
 
             foreach (Control control in normaaliPeli.Controls)
             {
                 Label iconLabel = control as Label;
+                iconLabel.Font = new Font(lintuFontti.Families[0], iconLabel.Font.Size);
                 if (iconLabel != null)
                 {
                     int randomNumber = random.Next(normaaliIcons.Count);
@@ -154,13 +186,25 @@ namespace MatchingGame
         // Tämä metodi kutsutaan vaikeanappi_Click metodissa
         private void JaaVaikeatKortit()
         {
+            elmoFire.Visible = true;
+            int fontLength = Properties.Resources.only_skulls.Length;
+            byte[] fontdata = Properties.Resources.only_skulls;
+            System.IntPtr data = Marshal.AllocCoTaskMem(fontLength);
+            Marshal.Copy(fontdata, 0, data, fontLength);
+            skullFontti.AddMemoryFont(data, fontLength);
+
+            vaikeaMusiikki = new SoundPlayer(vaikeaMusiikkiPolku);
+            vaikeaMusiikki.PlayLooping();
+
             VaikeaIconsAdd();
+            aikaLabel.Text = "00:00";
             sekunnit = 0;
             minuutit = 0;
 
             foreach (Control control in vaikeaPeli.Controls)
             {
                 Label iconLabel = control as Label;
+                iconLabel.Font = new Font(skullFontti.Families[0], iconLabel.Font.Size);
                 if (iconLabel != null)
                 {
                     int randomNumber = random.Next(vaikeaIcons.Count);
@@ -369,7 +413,7 @@ namespace MatchingGame
             timer.Stop();
             helpotVoitot++;
             score += 200;
-            
+
 
             if (yritykset < parhaatHelpotYritykset)
             {
@@ -383,11 +427,11 @@ namespace MatchingGame
             {
                 parasHelppoMinuutti = minuutit;
             }
-            if (sekunnit < parasHelppoSekunti) 
+            if (sekunnit < parasHelppoSekunti)
             {
-                parasHelppoSekunti = sekunnit;            
+                parasHelppoSekunti = sekunnit;
             }
-            ParasAikaLabel.Text = ("Paras aika: " +parasHelppoMinuutti +":" +parasHelppoSekunti);
+            ParasAikaLabel.Text = ("Paras aika: " + parasHelppoMinuutti + ":" + parasHelppoSekunti);
             MessageBox.Show("You won!\nYritykset: " + yritykset + "\nScore: " + score, "Congratulations!");
             yritykset = 0;
             score = 0;
@@ -423,11 +467,11 @@ namespace MatchingGame
             {
                 normaaliHighScore = score;
             }
-            if (minuutit < parasNormaaliMinuutti) 
+            if (minuutit < parasNormaaliMinuutti)
             {
                 parasNormaaliMinuutti = minuutit;
             }
-            if (sekunnit < parasNormaaliSekunti) 
+            if (sekunnit < parasNormaaliSekunti)
             {
                 parasNormaaliSekunti = sekunnit;
             }
@@ -455,7 +499,9 @@ namespace MatchingGame
                         return;
                 }
             }
+
             timer.Stop();
+            vaikeaMusiikki.Stop();
             vaikeatVoitot++;
             score += 200;
 
@@ -468,13 +514,13 @@ namespace MatchingGame
             {
                 vaikeaHighScore = score;
             }
-            if (minuutit < parasVaikeaMinuutti) 
+            if (minuutit < parasVaikeaMinuutti)
             {
                 parasVaikeaMinuutti = minuutit;
             }
-            if (sekunnit < parasVaikeaSekunti) 
+            if (sekunnit < parasVaikeaSekunti)
             {
-                parasVaikeaSekunti = sekunnit;            
+                parasVaikeaSekunti = sekunnit;
             }
 
             MessageBox.Show("You won!", "Congratulations");
@@ -597,7 +643,7 @@ namespace MatchingGame
             parhaatPisteet1.Visible = true;
             parhaatPisteet2.Visible = true;
             parhaatPisteet3.Visible = true;
-            ParasAikaLabel.Visible = true;  
+            ParasAikaLabel.Visible = true;
         }
 
         // Tämä metodi vie käyttäjän takaisin edelliseen valikkoon
@@ -626,6 +672,8 @@ namespace MatchingGame
             ParasAikaLabel.Visible = false;
         }
 
+        // Tämä metodi vie käyttäjän päävalikoon
+        // Painike ilmestyy silloin, kun peli on päästy läpi
         private void paavalikkoonNappi_Click(object sender, EventArgs e)
         {
             tilastotnappi.Visible = true;
@@ -639,8 +687,11 @@ namespace MatchingGame
             helppopeliPelaa = false;
             normaalipeliPelaa = false;
             vaikeapeliPelaa = false;
+            elmoFire.Visible = false;
         }
 
+        // Tämä metodi aloittaa uuden pelin käyttäjän juuri pelaamassa pelimuodossa
+        // Painike ilmestyy silloin, kun peli on päästy läpi
         private void uusipeliNappi_Click(object sender, EventArgs e)
         {
             if (helppopeliPelaa == true)
@@ -663,6 +714,8 @@ namespace MatchingGame
             }
         }
 
+        // Tämä metodi lisää "helppoIcons" listaan arvot uudelleen, jotta uuden pelin aloittaminen onnistuu
+        // Metodi kutsutaan "JaaHelpotKortit" metodin alussa
         private void HelppoIconsAdd()
         {
             helppoIcons.Add("a");
@@ -683,6 +736,8 @@ namespace MatchingGame
             helppoIcons.Add("h");
         }
 
+        // Tämä metodi lisää "normaaliIcons" listaan arvot uudelleen, jotta uuden pelin aloittaminen onnistuu
+        // Metodi kutsutaan "JaaNormaalitKortit" metodin alussa
         private void NormaaliIconsAdd()
         {
             normaaliIcons.Add("a");
@@ -711,6 +766,8 @@ namespace MatchingGame
             normaaliIcons.Add("l");
         }
 
+        // Tämä metodi lisää "vaikeaIcons" listaan arvot uudelleen, jotta uuden pelin aloittaminen onnistuu
+        // Metodi kutsutaan "JaaVaikeatKortit" metodin alussa
         private void VaikeaIconsAdd()
         {
             vaikeaIcons.Add("a");

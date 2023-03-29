@@ -63,9 +63,39 @@ namespace MatchingGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] bfeather {
+            get {
+                object obj = ResourceManager.GetObject("bfeather", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap elmo {
+            get {
+                object obj = ResourceManager.GetObject("elmo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] NewRocker_Regular {
             get {
                 object obj = ResourceManager.GetObject("NewRocker_Regular", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] only_skulls {
+            get {
+                object obj = ResourceManager.GetObject("only_skulls", resourceCulture);
                 return ((byte[])(obj));
             }
         }
