@@ -131,10 +131,12 @@
             this.uusipeliNappi = new System.Windows.Forms.Button();
             this.paavalikkoonNappi = new System.Windows.Forms.Button();
             this.elmoFire = new System.Windows.Forms.PictureBox();
+            this.taivasTausta = new System.Windows.Forms.PictureBox();
             this.helppopeli.SuspendLayout();
             this.normaaliPeli.SuspendLayout();
             this.vaikeaPeli.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.elmoFire)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.taivasTausta)).BeginInit();
             this.SuspendLayout();
             // 
             // helppopeli
@@ -1665,6 +1667,20 @@
             this.elmoFire.TabStop = false;
             this.elmoFire.Visible = false;
             // 
+            // taivasTausta
+            // 
+            this.taivasTausta.BackColor = System.Drawing.Color.Transparent;
+            this.taivasTausta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.taivasTausta.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.taivasTausta.Image = global::MatchingGame.Properties.Resources.taivasTausta;
+            this.taivasTausta.Location = new System.Drawing.Point(0, 0);
+            this.taivasTausta.Name = "taivasTausta";
+            this.taivasTausta.Size = new System.Drawing.Size(924, 528);
+            this.taivasTausta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.taivasTausta.TabIndex = 22;
+            this.taivasTausta.TabStop = false;
+            this.taivasTausta.Visible = false;
+            // 
             // MatchingGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1695,6 +1711,7 @@
             this.Controls.Add(this.aloitanappi);
             this.Controls.Add(this.helppopeli);
             this.Controls.Add(this.elmoFire);
+            this.Controls.Add(this.taivasTausta);
             this.Name = "MatchingGame";
             this.Text = "Matching Game";
             this.helppopeli.ResumeLayout(false);
@@ -1703,6 +1720,7 @@
             this.vaikeaPeli.ResumeLayout(false);
             this.vaikeaPeli.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.elmoFire)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.taivasTausta)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1812,6 +1830,7 @@
         private System.Windows.Forms.Button uusipeliNappi;
         private System.Windows.Forms.Button paavalikkoonNappi;
         private System.Windows.Forms.PictureBox elmoFire;
+        private System.Windows.Forms.PictureBox taivasTausta;
     }
 }
 
