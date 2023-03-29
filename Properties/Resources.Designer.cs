@@ -22,7 +22,7 @@ namespace MatchingGame.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace MatchingGame.Properties {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("MatchingGame.Properties.Resources", typeof(Resources).Assembly);
@@ -51,7 +51,7 @@ namespace MatchingGame.Properties {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace MatchingGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] bfeather {
+        public static byte[] bfeather {
             get {
                 object obj = ResourceManager.GetObject("bfeather", resourceCulture);
                 return ((byte[])(obj));
@@ -73,7 +73,7 @@ namespace MatchingGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap elmo {
+        public static System.Drawing.Bitmap elmo {
             get {
                 object obj = ResourceManager.GetObject("elmo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -81,19 +81,9 @@ namespace MatchingGame.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap hp {
-            get {
-                object obj = ResourceManager.GetObject("hp", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] NewRocker_Regular {
+        public static byte[] NewRocker_Regular {
             get {
                 object obj = ResourceManager.GetObject("NewRocker_Regular", resourceCulture);
                 return ((byte[])(obj));
@@ -103,7 +93,7 @@ namespace MatchingGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] only_skulls {
+        public static byte[] only_skulls {
             get {
                 object obj = ResourceManager.GetObject("only_skulls", resourceCulture);
                 return ((byte[])(obj));
@@ -113,7 +103,7 @@ namespace MatchingGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap taivasTausta {
+        public static System.Drawing.Bitmap taivasTausta {
             get {
                 object obj = ResourceManager.GetObject("taivasTausta", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -123,7 +113,7 @@ namespace MatchingGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream takaisinNappi {
+        public static System.IO.UnmanagedMemoryStream takaisinNappi {
             get {
                 return ResourceManager.GetStream("takaisinNappi", resourceCulture);
             }
@@ -132,7 +122,7 @@ namespace MatchingGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream twentyOne {
+        public static System.IO.UnmanagedMemoryStream twentyOne {
             get {
                 return ResourceManager.GetStream("twentyOne", resourceCulture);
             }
@@ -141,7 +131,7 @@ namespace MatchingGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream vaikeaMusiikki {
+        public static System.IO.UnmanagedMemoryStream vaikeaMusiikki {
             get {
                 return ResourceManager.GetStream("vaikeaMusiikki", resourceCulture);
             }
@@ -150,7 +140,7 @@ namespace MatchingGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream valikkoNappi {
+        public static System.IO.UnmanagedMemoryStream valikkoNappi {
             get {
                 return ResourceManager.GetStream("valikkoNappi", resourceCulture);
             }

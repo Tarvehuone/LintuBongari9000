@@ -46,15 +46,15 @@ namespace MatchingGame
         int parasVaikeaSekunti = 99;
         int parasVaikeaMinuutti = 99;
 
-        int parhaatHelpotYritykset = 9999999;
+        int parhaatHelpotYritykset = 999;
         int helppoHighScore = 0;
         int helpotVoitot = 0;
 
-        int parhaatNormaalitYritykset = 9999999;
+        int parhaatNormaalitYritykset = 999;
         int normaaliHighScore = 0;
         int normaalitVoitot = 0;
 
-        int parhaatVaikeatYritykset = 9999999;
+        int parhaatVaikeatYritykset = 999;
         int vaikeaHighScore = 0;
         int vaikeatVoitot = 0;
 
@@ -73,6 +73,8 @@ namespace MatchingGame
             timer = new Timer();
             timer.Interval = 1000;
             timer.Tick += Timer_Tick;
+            taivasTausta.Image = Properties.Resources.taivasTausta;
+            elmoFire.Image = Properties.Resources.elmo;
         }
 
         private void Timer_Tick(object sender, EventArgs e)
@@ -240,7 +242,7 @@ namespace MatchingGame
 
             if (clickedLabel != null)
             {
-                if (clickedLabel.ForeColor == Color.White)
+                if (clickedLabel.ForeColor == Color.Black)
                 {
                     return;
                 }
@@ -249,13 +251,13 @@ namespace MatchingGame
                 {
                     timer.Start();
                     firstClicked = clickedLabel;
-                    firstClicked.ForeColor = Color.White;
+                    firstClicked.ForeColor = Color.Black;
 
                     return;
                 }
 
                 secondClicked = clickedLabel;
-                secondClicked.ForeColor = Color.White;
+                secondClicked.ForeColor = Color.Black;
 
                 yritykset++;
 
@@ -336,7 +338,7 @@ namespace MatchingGame
 
             if (clickedLabel != null)
             {
-                if (clickedLabel.ForeColor == Color.Black)
+                if (clickedLabel.ForeColor == Color.White)
                 {
                     return;
                 }
@@ -345,13 +347,13 @@ namespace MatchingGame
                 {
                     timer.Start();
                     firstClicked = clickedLabel;
-                    firstClicked.ForeColor = Color.Black;
+                    firstClicked.ForeColor = Color.White;
 
                     return;
                 }
 
                 secondClicked = clickedLabel;
-                secondClicked.ForeColor = Color.Black;
+                secondClicked.ForeColor = Color.White;
 
                 yritykset++;
 
@@ -450,7 +452,8 @@ namespace MatchingGame
             {
                 parasHelppoSekunti = sekunnit;
             }
-            parashelppoAikaLabel.Text = (parasHelppoMinuutti + ":" + parasHelppoSekunti);
+
+            TilastoTiedot();
             MessageBox.Show("You won!\nYritykset: " + yritykset + "\nScore: " + score, "Congratulations!");
             yritykset = 0;
             score = 0;
@@ -494,7 +497,7 @@ namespace MatchingGame
             {
                 parasNormaaliSekunti = sekunnit;
             }
-            parasnormaaliAikaLabel.Text = (parasNormaaliMinuutti + ":" + parasNormaaliSekunti);
+            TilastoTiedot();
             MessageBox.Show("You won!", "Congratulations");
             yritykset = 0;
             score = 0;
@@ -541,7 +544,7 @@ namespace MatchingGame
             {
                 parasVaikeaSekunti = sekunnit;
             }
-            parasvaikeaAikaLabel.Text = (parasVaikeaMinuutti + ":" + parasVaikeaSekunti);
+            TilastoTiedot();
             MessageBox.Show("You won!", "Congratulations");
             yritykset = 0;
             score = 0;
@@ -686,7 +689,7 @@ namespace MatchingGame
             normaaliscoreLabel.Visible = true;
             vaikeascoreLabel.Visible = true;
             helpotvoitotLabel.Visible = true;
-            normaalitvoitotLabel.Visible= true;
+            normaalitvoitotLabel.Visible = true;
             vaikeatvoitotLabel.Visible = true;
             tekijät.Visible = false;
             otsikko.Visible = false;
@@ -879,6 +882,33 @@ namespace MatchingGame
             vaikeaIcons.Add("q");
             vaikeaIcons.Add("r");
             vaikeaIcons.Add("r");
+        }
+
+        private void TilastoTiedot()
+        {
+            if (helpotVoitot != 0)
+            {
+                parashelppoAikaLabel.Text = (parasHelppoMinuutti + ":" + parasHelppoSekunti);
+                helpotvoitotLabel.Text = "" + helpotVoitot;
+                helpotyrityksetLabel.Text = "" + parhaatHelpotYritykset;
+                helpposcoreLabel.Text = "" + helppoHighScore;
+            }
+
+            if (normaalitVoitot != 0)
+            {
+                parasnormaaliAikaLabel.Text = (parasNormaaliMinuutti + ":" + parasNormaaliSekunti);
+                normaalitvoitotLabel.Text = "" + normaalitVoitot;
+                normaalityrityksetLabel.Text = "" + parhaatNormaalitYritykset;
+                normaaliscoreLabel.Text = "" + normaaliHighScore;
+            }
+
+            if (vaikeatVoitot != 0)
+            {
+                parasvaikeaAikaLabel.Text = (parasVaikeaMinuutti + ":" + parasVaikeaSekunti);
+                vaikeatvoitotLabel.Text = "" + vaikeatVoitot;
+                vaikeatyrityksetLabel.Text = "" + parhaatVaikeatYritykset;
+                vaikeascoreLabel.Text = "" + vaikeaHighScore;
+            }
         }
     }
 }

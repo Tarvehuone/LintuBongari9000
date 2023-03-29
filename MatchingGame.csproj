@@ -59,7 +59,7 @@
       <DependentUpon>MatchingGame.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -85,9 +85,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\elmo.gif" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="bin\Debug\Images\taivasTausta.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -103,14 +100,20 @@
     <None Include="bin\Debug\Audio\valikkoNappi.wav" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\hp.jpg" />
+    <None Include="Resources\elmo.gif" />
+    <None Include="Resources\taivasTausta.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\taivasTausta.jpg" />
-    <Content Include="Resources\takaisinNappi.wav" />
-    <Content Include="Resources\twentyOne.wav" />
-    <Content Include="Resources\vaikeaMusiikki.wav" />
-    <Content Include="Resources\valikkoNappi.wav" />
+    <None Include="Resources\twentyOne.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\takaisinNappi.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\valikkoNappi.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vaikeaMusiikki.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
