@@ -87,5 +87,20 @@
   <ItemGroup>
     <None Include="Resources\elmo.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\taivasTausta.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Audio\takaisinNappi.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Audio\twentyOne.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Audio\vaikeaMusiikki.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Audio\valikkoNappi.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
