@@ -118,9 +118,20 @@ namespace MatchingGame
             parhaatPisteet1.Font = new Font(omaFontti.Families[0], parhaatPisteet1.Font.Size);
             parhaatPisteet2.Font = new Font(omaFontti.Families[0], parhaatPisteet2.Font.Size);
             parhaatPisteet3.Font = new Font(omaFontti.Families[0], parhaatPisteet3.Font.Size);
-            ParasAikaLabel.Font = new Font(omaFontti.Families[0], ParasAikaLabel.Font.Size);
+            parashelppoAikaLabel.Font = new Font(omaFontti.Families[0], parashelppoAikaLabel.Font.Size);
+            parasnormaaliAikaLabel.Font = new Font(omaFontti.Families[0], parasnormaaliAikaLabel.Font.Size);
+            parasvaikeaAikaLabel.Font = new Font(omaFontti.Families[0], parasvaikeaAikaLabel.Font.Size);
             uusipeliNappi.Font = new Font(omaFontti.Families[0], uusipeliNappi.Font.Size);
             paavalikkoonNappi.Font = new Font(omaFontti.Families[0], paavalikkoonNappi.Font.Size);
+            yritykset1.Font = new Font(omaFontti.Families[0], yritykset1.Font.Size);
+            yritykset2.Font = new Font(omaFontti.Families[0], yritykset2.Font.Size);
+            yritykset3.Font = new Font(omaFontti.Families[0], yritykset3.Font.Size);
+            parasAika1.Font = new Font(omaFontti.Families[0], parasAika1.Font.Size);
+            parasAika2.Font = new Font(omaFontti.Families[0], parasAika2.Font.Size);
+            parasAika3.Font = new Font(omaFontti.Families[0], parasAika3.Font.Size);
+            helpotyrityksetLabel.Font = new Font(omaFontti.Families[0], helpotyrityksetLabel.Font.Size);
+            normaalityrityksetLabel.Font = new Font(omaFontti.Families[0], normaalityrityksetLabel.Font.Size);
+            vaikeatyrityksetLabel.Font = new Font(omaFontti.Families[0], vaikeatyrityksetLabel.Font.Size);
         }
 
         // Antaa korteille satunnaiset kuvat, kun helppo pelimuoto aloitetaan
@@ -431,7 +442,7 @@ namespace MatchingGame
             {
                 parasHelppoSekunti = sekunnit;
             }
-            ParasAikaLabel.Text = ("Paras aika: " + parasHelppoMinuutti + ":" + parasHelppoSekunti);
+            parashelppoAikaLabel.Text = ("Paras aika: " + parasHelppoMinuutti + ":" + parasHelppoSekunti);
             MessageBox.Show("You won!\nYritykset: " + yritykset + "\nScore: " + score, "Congratulations!");
             yritykset = 0;
             score = 0;
@@ -643,7 +654,18 @@ namespace MatchingGame
             parhaatPisteet1.Visible = true;
             parhaatPisteet2.Visible = true;
             parhaatPisteet3.Visible = true;
-            ParasAikaLabel.Visible = true;
+            yritykset1.Visible = true;
+            yritykset2.Visible = true;
+            yritykset3.Visible = true;
+            parasAika1.Visible = true;
+            parasAika2.Visible = true;
+            parasAika3.Visible = true;
+            parashelppoAikaLabel.Visible = true;
+            parasvaikeaAikaLabel.Visible = true;
+            parasnormaaliAikaLabel.Visible = true;
+            helpotyrityksetLabel.Visible = true;
+            normaalityrityksetLabel.Visible = true;
+            vaikeatyrityksetLabel.Visible = true;
         }
 
         // Tämä metodi vie käyttäjän takaisin edelliseen valikkoon
@@ -669,7 +691,18 @@ namespace MatchingGame
             parhaatPisteet1.Visible = false;
             parhaatPisteet2.Visible = false;
             parhaatPisteet3.Visible = false;
-            ParasAikaLabel.Visible = false;
+            yritykset1.Visible = false;
+            yritykset2.Visible = false;
+            yritykset3.Visible = false;
+            parasAika1.Visible = false;
+            parasAika2.Visible = false;
+            parasAika3.Visible = false;
+            parashelppoAikaLabel.Visible = false;
+            parasvaikeaAikaLabel.Visible = false;
+            parasnormaaliAikaLabel.Visible = false;
+            helpotyrityksetLabel.Visible = false;
+            normaalityrityksetLabel.Visible = false;
+            vaikeatyrityksetLabel.Visible = false;
         }
 
         // Tämä metodi vie käyttäjän päävalikoon

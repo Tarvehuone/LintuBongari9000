@@ -127,10 +127,21 @@
             this.parhaatPisteet3 = new System.Windows.Forms.Label();
             this.parhaatPisteet2 = new System.Windows.Forms.Label();
             this.parhaatPisteet1 = new System.Windows.Forms.Label();
-            this.ParasAikaLabel = new System.Windows.Forms.Label();
+            this.parashelppoAikaLabel = new System.Windows.Forms.Label();
             this.uusipeliNappi = new System.Windows.Forms.Button();
             this.paavalikkoonNappi = new System.Windows.Forms.Button();
             this.elmoFire = new System.Windows.Forms.PictureBox();
+            this.yritykset3 = new System.Windows.Forms.Label();
+            this.yritykset2 = new System.Windows.Forms.Label();
+            this.yritykset1 = new System.Windows.Forms.Label();
+            this.parasAika3 = new System.Windows.Forms.Label();
+            this.parasAika2 = new System.Windows.Forms.Label();
+            this.parasAika1 = new System.Windows.Forms.Label();
+            this.parasvaikeaAikaLabel = new System.Windows.Forms.Label();
+            this.parasnormaaliAikaLabel = new System.Windows.Forms.Label();
+            this.normaalityrityksetLabel = new System.Windows.Forms.Label();
+            this.vaikeatyrityksetLabel = new System.Windows.Forms.Label();
+            this.helpotyrityksetLabel = new System.Windows.Forms.Label();
             this.helppopeli.SuspendLayout();
             this.normaaliPeli.SuspendLayout();
             this.vaikeaPeli.SuspendLayout();
@@ -1520,106 +1531,116 @@
             // 
             // helppoOtsikko
             // 
+            this.helppoOtsikko.BackColor = System.Drawing.Color.Transparent;
             this.helppoOtsikko.Location = new System.Drawing.Point(361, 16);
             this.helppoOtsikko.Name = "helppoOtsikko";
             this.helppoOtsikko.Size = new System.Drawing.Size(200, 20);
             this.helppoOtsikko.TabIndex = 9;
-            this.helppoOtsikko.Text = "Helppojen pelien tulokset:";
+            this.helppoOtsikko.Text = "HELPPO";
             this.helppoOtsikko.UseCompatibleTextRendering = true;
             this.helppoOtsikko.Visible = false;
             // 
             // normaaliOtsikko
             // 
+            this.normaaliOtsikko.BackColor = System.Drawing.Color.Transparent;
             this.normaaliOtsikko.Location = new System.Drawing.Point(361, 186);
             this.normaaliOtsikko.Name = "normaaliOtsikko";
             this.normaaliOtsikko.Size = new System.Drawing.Size(200, 20);
             this.normaaliOtsikko.TabIndex = 10;
-            this.normaaliOtsikko.Text = "Normaalien pelien tulokset:";
+            this.normaaliOtsikko.Text = "NORMAALI";
             this.normaaliOtsikko.UseCompatibleTextRendering = true;
             this.normaaliOtsikko.Visible = false;
             // 
             // vaikeaOtsikko
             // 
+            this.vaikeaOtsikko.BackColor = System.Drawing.Color.Transparent;
             this.vaikeaOtsikko.Location = new System.Drawing.Point(361, 356);
             this.vaikeaOtsikko.Name = "vaikeaOtsikko";
             this.vaikeaOtsikko.Size = new System.Drawing.Size(200, 20);
             this.vaikeaOtsikko.TabIndex = 11;
-            this.vaikeaOtsikko.Text = "Vaikeiden pelien tulokset:";
+            this.vaikeaOtsikko.Text = "BDSM";
             this.vaikeaOtsikko.UseCompatibleTextRendering = true;
             this.vaikeaOtsikko.Visible = false;
             // 
             // voitot1
             // 
+            this.voitot1.BackColor = System.Drawing.Color.Transparent;
             this.voitot1.Location = new System.Drawing.Point(664, 44);
             this.voitot1.Name = "voitot1";
             this.voitot1.Size = new System.Drawing.Size(100, 30);
             this.voitot1.TabIndex = 12;
-            this.voitot1.Text = "Voitot:";
+            this.voitot1.Text = "VOITOT";
             this.voitot1.UseCompatibleTextRendering = true;
             this.voitot1.Visible = false;
             // 
             // voitot2
             // 
+            this.voitot2.BackColor = System.Drawing.Color.Transparent;
             this.voitot2.Location = new System.Drawing.Point(664, 215);
             this.voitot2.Name = "voitot2";
             this.voitot2.Size = new System.Drawing.Size(100, 30);
             this.voitot2.TabIndex = 13;
-            this.voitot2.Text = "Voitot:";
+            this.voitot2.Text = "VOITOT";
             this.voitot2.UseCompatibleTextRendering = true;
             this.voitot2.Visible = false;
             // 
             // voitot3
             // 
+            this.voitot3.BackColor = System.Drawing.Color.Transparent;
             this.voitot3.Location = new System.Drawing.Point(664, 378);
             this.voitot3.Name = "voitot3";
             this.voitot3.Size = new System.Drawing.Size(100, 30);
             this.voitot3.TabIndex = 14;
-            this.voitot3.Text = "Voitot:";
+            this.voitot3.Text = "VOITOT";
             this.voitot3.UseCompatibleTextRendering = true;
             this.voitot3.Visible = false;
             // 
             // parhaatPisteet3
             // 
+            this.parhaatPisteet3.BackColor = System.Drawing.Color.Transparent;
             this.parhaatPisteet3.Location = new System.Drawing.Point(412, 378);
             this.parhaatPisteet3.Name = "parhaatPisteet3";
             this.parhaatPisteet3.Size = new System.Drawing.Size(150, 30);
             this.parhaatPisteet3.TabIndex = 17;
-            this.parhaatPisteet3.Text = "Parhaat pisteet:";
+            this.parhaatPisteet3.Text = "HIGH SCORE";
             this.parhaatPisteet3.UseCompatibleTextRendering = true;
             this.parhaatPisteet3.Visible = false;
             // 
             // parhaatPisteet2
             // 
+            this.parhaatPisteet2.BackColor = System.Drawing.Color.Transparent;
             this.parhaatPisteet2.Location = new System.Drawing.Point(412, 215);
             this.parhaatPisteet2.Name = "parhaatPisteet2";
             this.parhaatPisteet2.Size = new System.Drawing.Size(150, 30);
             this.parhaatPisteet2.TabIndex = 16;
-            this.parhaatPisteet2.Text = "Parhaat pisteet:";
+            this.parhaatPisteet2.Text = "HIGH SCORE";
             this.parhaatPisteet2.UseCompatibleTextRendering = true;
             this.parhaatPisteet2.Visible = false;
             // 
             // parhaatPisteet1
             // 
+            this.parhaatPisteet1.BackColor = System.Drawing.Color.Transparent;
             this.parhaatPisteet1.Location = new System.Drawing.Point(412, 44);
             this.parhaatPisteet1.Name = "parhaatPisteet1";
             this.parhaatPisteet1.Size = new System.Drawing.Size(150, 30);
             this.parhaatPisteet1.TabIndex = 15;
-            this.parhaatPisteet1.Text = "Parhaat pisteet:";
+            this.parhaatPisteet1.Text = "HIGH SCORE";
             this.parhaatPisteet1.UseCompatibleTextRendering = true;
             this.parhaatPisteet1.Visible = false;
             // 
-            // ParasAikaLabel
+            // parashelppoAikaLabel
             // 
-            this.ParasAikaLabel.AutoSize = true;
-            this.ParasAikaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ParasAikaLabel.Location = new System.Drawing.Point(622, 59);
-            this.ParasAikaLabel.Name = "ParasAikaLabel";
-            this.ParasAikaLabel.Size = new System.Drawing.Size(78, 37);
-            this.ParasAikaLabel.TabIndex = 18;
-            this.ParasAikaLabel.Text = "00:00";
-            this.ParasAikaLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.ParasAikaLabel.UseCompatibleTextRendering = true;
-            this.ParasAikaLabel.Visible = false;
+            this.parashelppoAikaLabel.AutoSize = true;
+            this.parashelppoAikaLabel.BackColor = System.Drawing.Color.Transparent;
+            this.parashelppoAikaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.parashelppoAikaLabel.Location = new System.Drawing.Point(210, 100);
+            this.parashelppoAikaLabel.Name = "parashelppoAikaLabel";
+            this.parashelppoAikaLabel.Size = new System.Drawing.Size(78, 37);
+            this.parashelppoAikaLabel.TabIndex = 18;
+            this.parashelppoAikaLabel.Text = "00:00";
+            this.parashelppoAikaLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.parashelppoAikaLabel.UseCompatibleTextRendering = true;
+            this.parashelppoAikaLabel.Visible = false;
             // 
             // uusipeliNappi
             // 
@@ -1665,14 +1686,161 @@
             this.elmoFire.TabStop = false;
             this.elmoFire.Visible = false;
             // 
+            // yritykset3
+            // 
+            this.yritykset3.BackColor = System.Drawing.Color.Transparent;
+            this.yritykset3.Location = new System.Drawing.Point(20, 378);
+            this.yritykset3.Name = "yritykset3";
+            this.yritykset3.Size = new System.Drawing.Size(150, 30);
+            this.yritykset3.TabIndex = 24;
+            this.yritykset3.Text = "YRITYKSET";
+            this.yritykset3.UseCompatibleTextRendering = true;
+            this.yritykset3.Visible = false;
+            // 
+            // yritykset2
+            // 
+            this.yritykset2.BackColor = System.Drawing.Color.Transparent;
+            this.yritykset2.Location = new System.Drawing.Point(20, 215);
+            this.yritykset2.Name = "yritykset2";
+            this.yritykset2.Size = new System.Drawing.Size(150, 30);
+            this.yritykset2.TabIndex = 23;
+            this.yritykset2.Text = "YRITYKSET";
+            this.yritykset2.UseCompatibleTextRendering = true;
+            this.yritykset2.Visible = false;
+            // 
+            // yritykset1
+            // 
+            this.yritykset1.BackColor = System.Drawing.Color.Transparent;
+            this.yritykset1.Location = new System.Drawing.Point(20, 44);
+            this.yritykset1.Name = "yritykset1";
+            this.yritykset1.Size = new System.Drawing.Size(150, 30);
+            this.yritykset1.TabIndex = 22;
+            this.yritykset1.Text = "YRITYKSET";
+            this.yritykset1.UseCompatibleTextRendering = true;
+            this.yritykset1.Visible = false;
+            // 
+            // parasAika3
+            // 
+            this.parasAika3.BackColor = System.Drawing.Color.Transparent;
+            this.parasAika3.Location = new System.Drawing.Point(210, 378);
+            this.parasAika3.Name = "parasAika3";
+            this.parasAika3.Size = new System.Drawing.Size(150, 30);
+            this.parasAika3.TabIndex = 27;
+            this.parasAika3.Text = "PARAS AIKA";
+            this.parasAika3.UseCompatibleTextRendering = true;
+            this.parasAika3.Visible = false;
+            // 
+            // parasAika2
+            // 
+            this.parasAika2.BackColor = System.Drawing.Color.Transparent;
+            this.parasAika2.Location = new System.Drawing.Point(210, 215);
+            this.parasAika2.Name = "parasAika2";
+            this.parasAika2.Size = new System.Drawing.Size(150, 30);
+            this.parasAika2.TabIndex = 26;
+            this.parasAika2.Text = "PARAS AIKA";
+            this.parasAika2.UseCompatibleTextRendering = true;
+            this.parasAika2.Visible = false;
+            // 
+            // parasAika1
+            // 
+            this.parasAika1.BackColor = System.Drawing.Color.Transparent;
+            this.parasAika1.Location = new System.Drawing.Point(210, 44);
+            this.parasAika1.Name = "parasAika1";
+            this.parasAika1.Size = new System.Drawing.Size(150, 30);
+            this.parasAika1.TabIndex = 25;
+            this.parasAika1.Text = "PARAS AIKA";
+            this.parasAika1.UseCompatibleTextRendering = true;
+            this.parasAika1.Visible = false;
+            // 
+            // parasvaikeaAikaLabel
+            // 
+            this.parasvaikeaAikaLabel.AutoSize = true;
+            this.parasvaikeaAikaLabel.BackColor = System.Drawing.Color.Transparent;
+            this.parasvaikeaAikaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.parasvaikeaAikaLabel.Location = new System.Drawing.Point(210, 425);
+            this.parasvaikeaAikaLabel.Name = "parasvaikeaAikaLabel";
+            this.parasvaikeaAikaLabel.Size = new System.Drawing.Size(78, 37);
+            this.parasvaikeaAikaLabel.TabIndex = 28;
+            this.parasvaikeaAikaLabel.Text = "00:00";
+            this.parasvaikeaAikaLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.parasvaikeaAikaLabel.UseCompatibleTextRendering = true;
+            this.parasvaikeaAikaLabel.Visible = false;
+            // 
+            // parasnormaaliAikaLabel
+            // 
+            this.parasnormaaliAikaLabel.AutoSize = true;
+            this.parasnormaaliAikaLabel.BackColor = System.Drawing.Color.Transparent;
+            this.parasnormaaliAikaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.parasnormaaliAikaLabel.Location = new System.Drawing.Point(210, 270);
+            this.parasnormaaliAikaLabel.Name = "parasnormaaliAikaLabel";
+            this.parasnormaaliAikaLabel.Size = new System.Drawing.Size(78, 37);
+            this.parasnormaaliAikaLabel.TabIndex = 29;
+            this.parasnormaaliAikaLabel.Text = "00:00";
+            this.parasnormaaliAikaLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.parasnormaaliAikaLabel.UseCompatibleTextRendering = true;
+            this.parasnormaaliAikaLabel.Visible = false;
+            // 
+            // normaalityrityksetLabel
+            // 
+            this.normaalityrityksetLabel.AutoSize = true;
+            this.normaalityrityksetLabel.BackColor = System.Drawing.Color.Transparent;
+            this.normaalityrityksetLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.normaalityrityksetLabel.Location = new System.Drawing.Point(20, 270);
+            this.normaalityrityksetLabel.Name = "normaalityrityksetLabel";
+            this.normaalityrityksetLabel.Size = new System.Drawing.Size(78, 37);
+            this.normaalityrityksetLabel.TabIndex = 32;
+            this.normaalityrityksetLabel.Text = "00:00";
+            this.normaalityrityksetLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.normaalityrityksetLabel.UseCompatibleTextRendering = true;
+            this.normaalityrityksetLabel.Visible = false;
+            // 
+            // vaikeatyrityksetLabel
+            // 
+            this.vaikeatyrityksetLabel.AutoSize = true;
+            this.vaikeatyrityksetLabel.BackColor = System.Drawing.Color.Transparent;
+            this.vaikeatyrityksetLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vaikeatyrityksetLabel.Location = new System.Drawing.Point(20, 425);
+            this.vaikeatyrityksetLabel.Name = "vaikeatyrityksetLabel";
+            this.vaikeatyrityksetLabel.Size = new System.Drawing.Size(78, 37);
+            this.vaikeatyrityksetLabel.TabIndex = 31;
+            this.vaikeatyrityksetLabel.Text = "00:00";
+            this.vaikeatyrityksetLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.vaikeatyrityksetLabel.UseCompatibleTextRendering = true;
+            this.vaikeatyrityksetLabel.Visible = false;
+            // 
+            // helpotyrityksetLabel
+            // 
+            this.helpotyrityksetLabel.AutoSize = true;
+            this.helpotyrityksetLabel.BackColor = System.Drawing.Color.Transparent;
+            this.helpotyrityksetLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.helpotyrityksetLabel.Location = new System.Drawing.Point(21, 100);
+            this.helpotyrityksetLabel.Name = "helpotyrityksetLabel";
+            this.helpotyrityksetLabel.Size = new System.Drawing.Size(78, 37);
+            this.helpotyrityksetLabel.TabIndex = 30;
+            this.helpotyrityksetLabel.Text = "00:00";
+            this.helpotyrityksetLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.helpotyrityksetLabel.UseCompatibleTextRendering = true;
+            this.helpotyrityksetLabel.Visible = false;
+            // 
             // MatchingGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.BackColor = System.Drawing.Color.Red;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(924, 528);
-            this.Controls.Add(this.ParasAikaLabel);
+            this.Controls.Add(this.normaalityrityksetLabel);
+            this.Controls.Add(this.vaikeatyrityksetLabel);
+            this.Controls.Add(this.helpotyrityksetLabel);
+            this.Controls.Add(this.parasnormaaliAikaLabel);
+            this.Controls.Add(this.parasvaikeaAikaLabel);
+            this.Controls.Add(this.parasAika3);
+            this.Controls.Add(this.parasAika2);
+            this.Controls.Add(this.parasAika1);
+            this.Controls.Add(this.yritykset3);
+            this.Controls.Add(this.yritykset2);
+            this.Controls.Add(this.yritykset1);
+            this.Controls.Add(this.parashelppoAikaLabel);
             this.Controls.Add(this.paavalikkoonNappi);
             this.Controls.Add(this.uusipeliNappi);
             this.Controls.Add(this.parhaatPisteet3);
@@ -1808,10 +1976,21 @@
         private System.Windows.Forms.Label parhaatPisteet3;
         private System.Windows.Forms.Label parhaatPisteet2;
         private System.Windows.Forms.Label parhaatPisteet1;
-        private System.Windows.Forms.Label ParasAikaLabel;
+        private System.Windows.Forms.Label parashelppoAikaLabel;
         private System.Windows.Forms.Button uusipeliNappi;
         private System.Windows.Forms.Button paavalikkoonNappi;
         private System.Windows.Forms.PictureBox elmoFire;
+        private System.Windows.Forms.Label yritykset3;
+        private System.Windows.Forms.Label yritykset2;
+        private System.Windows.Forms.Label yritykset1;
+        private System.Windows.Forms.Label parasAika3;
+        private System.Windows.Forms.Label parasAika2;
+        private System.Windows.Forms.Label parasAika1;
+        private System.Windows.Forms.Label parasvaikeaAikaLabel;
+        private System.Windows.Forms.Label parasnormaaliAikaLabel;
+        private System.Windows.Forms.Label normaalityrityksetLabel;
+        private System.Windows.Forms.Label vaikeatyrityksetLabel;
+        private System.Windows.Forms.Label helpotyrityksetLabel;
     }
 }
 
