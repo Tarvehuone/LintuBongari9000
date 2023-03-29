@@ -128,6 +128,14 @@ namespace MatchingGame
             helpotyrityksetLabel.Font = new Font(omaFontti.Families[0], helpotyrityksetLabel.Font.Size);
             normaalityrityksetLabel.Font = new Font(omaFontti.Families[0], normaalityrityksetLabel.Font.Size);
             vaikeatyrityksetLabel.Font = new Font(omaFontti.Families[0], vaikeatyrityksetLabel.Font.Size);
+            helpotvoitotLabel.Font = new Font(omaFontti.Families[0], helpotvoitotLabel.Font.Size);
+            normaalitvoitotLabel.Font = new Font(omaFontti.Families[0], normaalitvoitotLabel.Font.Size);
+            vaikeatvoitotLabel.Font = new Font(omaFontti.Families[0], vaikeatvoitotLabel.Font.Size);
+            helpposcoreLabel.Font = new Font(omaFontti.Families[0], helpposcoreLabel.Font.Size);
+            normaaliscoreLabel.Font = new Font(omaFontti.Families[0], normaaliscoreLabel.Font.Size);
+            vaikeascoreLabel.Font = new Font(omaFontti.Families[0], vaikeascoreLabel.Font.Size);
+            tekijät.Font = new Font(omaFontti.Families[0], tekijät.Font.Size);
+            otsikko.Font = new Font(omaFontti.Families[0], otsikko.Font.Size);
         }
 
         // Antaa korteille satunnaiset kuvat, kun helppo pelimuoto aloitetaan
@@ -554,6 +562,8 @@ namespace MatchingGame
             aloitanappi.Visible = false;
             tilastotnappi.Visible = false;
             takaisinnappi.Visible = true;
+            tekijät.Visible = false;
+            otsikko.Visible = false;
         }
 
         // Aloittaa helpon pelimuodon ja piilottaa valikon painikkeet
@@ -672,6 +682,14 @@ namespace MatchingGame
             helpotyrityksetLabel.Visible = true;
             normaalityrityksetLabel.Visible = true;
             vaikeatyrityksetLabel.Visible = true;
+            helpposcoreLabel.Visible = true;
+            normaaliscoreLabel.Visible = true;
+            vaikeascoreLabel.Visible = true;
+            helpotvoitotLabel.Visible = true;
+            normaalitvoitotLabel.Visible= true;
+            vaikeatvoitotLabel.Visible = true;
+            tekijät.Visible = false;
+            otsikko.Visible = false;
         }
 
         // Tämä metodi vie käyttäjän takaisin edelliseen valikkoon
@@ -713,6 +731,14 @@ namespace MatchingGame
             helpotyrityksetLabel.Visible = false;
             normaalityrityksetLabel.Visible = false;
             vaikeatyrityksetLabel.Visible = false;
+            helpposcoreLabel.Visible = false;
+            normaaliscoreLabel.Visible = false;
+            vaikeascoreLabel.Visible = false;
+            helpotvoitotLabel.Visible = false;
+            normaalitvoitotLabel.Visible = false;
+            vaikeatvoitotLabel.Visible = false;
+            tekijät.Visible = true;
+            otsikko.Visible = true;
         }
 
         // Tämä metodi vie käyttäjän päävalikoon
@@ -733,6 +759,8 @@ namespace MatchingGame
             normaalipeliPelaa = false;
             vaikeapeliPelaa = false;
             elmoFire.Visible = false;
+            tekijät.Visible = true;
+            otsikko.Visible = true;
         }
 
         // Tämä metodi aloittaa uuden pelin käyttäjän juuri pelaamassa pelimuodossa

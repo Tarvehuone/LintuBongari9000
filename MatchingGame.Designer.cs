@@ -143,6 +143,14 @@
             this.vaikeatyrityksetLabel = new System.Windows.Forms.Label();
             this.helpotyrityksetLabel = new System.Windows.Forms.Label();
             this.taivasTausta = new System.Windows.Forms.PictureBox();
+            this.normaaliscoreLabel = new System.Windows.Forms.Label();
+            this.vaikeascoreLabel = new System.Windows.Forms.Label();
+            this.helpposcoreLabel = new System.Windows.Forms.Label();
+            this.normaalitvoitotLabel = new System.Windows.Forms.Label();
+            this.vaikeatvoitotLabel = new System.Windows.Forms.Label();
+            this.helpotvoitotLabel = new System.Windows.Forms.Label();
+            this.otsikko = new System.Windows.Forms.Label();
+            this.tekijät = new System.Windows.Forms.Label();
             this.helppopeli.SuspendLayout();
             this.normaaliPeli.SuspendLayout();
             this.vaikeaPeli.SuspendLayout();
@@ -1679,7 +1687,6 @@
             this.elmoFire.BackColor = System.Drawing.Color.Transparent;
             this.elmoFire.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.elmoFire.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.elmoFire.Image = global::MatchingGame.Properties.Resources.elmo;
             this.elmoFire.Location = new System.Drawing.Point(0, 0);
             this.elmoFire.Name = "elmoFire";
             this.elmoFire.Size = new System.Drawing.Size(924, 528);
@@ -1829,7 +1836,6 @@
             this.taivasTausta.BackColor = System.Drawing.Color.Transparent;
             this.taivasTausta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.taivasTausta.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.taivasTausta.Image = global::MatchingGame.Properties.Resources.taivasTausta;
             this.taivasTausta.Location = new System.Drawing.Point(0, 0);
             this.taivasTausta.Name = "taivasTausta";
             this.taivasTausta.Size = new System.Drawing.Size(924, 528);
@@ -1837,6 +1843,111 @@
             this.taivasTausta.TabIndex = 22;
             this.taivasTausta.TabStop = false;
             this.taivasTausta.Visible = false;
+            // 
+            // normaaliscoreLabel
+            // 
+            this.normaaliscoreLabel.AutoSize = true;
+            this.normaaliscoreLabel.BackColor = System.Drawing.Color.Transparent;
+            this.normaaliscoreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.normaaliscoreLabel.Location = new System.Drawing.Point(412, 270);
+            this.normaaliscoreLabel.Name = "normaaliscoreLabel";
+            this.normaaliscoreLabel.Size = new System.Drawing.Size(78, 37);
+            this.normaaliscoreLabel.TabIndex = 35;
+            this.normaaliscoreLabel.Text = "00:00";
+            this.normaaliscoreLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.normaaliscoreLabel.UseCompatibleTextRendering = true;
+            this.normaaliscoreLabel.Visible = false;
+            // 
+            // vaikeascoreLabel
+            // 
+            this.vaikeascoreLabel.AutoSize = true;
+            this.vaikeascoreLabel.BackColor = System.Drawing.Color.Transparent;
+            this.vaikeascoreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vaikeascoreLabel.Location = new System.Drawing.Point(412, 425);
+            this.vaikeascoreLabel.Name = "vaikeascoreLabel";
+            this.vaikeascoreLabel.Size = new System.Drawing.Size(78, 37);
+            this.vaikeascoreLabel.TabIndex = 34;
+            this.vaikeascoreLabel.Text = "00:00";
+            this.vaikeascoreLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.vaikeascoreLabel.UseCompatibleTextRendering = true;
+            this.vaikeascoreLabel.Visible = false;
+            // 
+            // helpposcoreLabel
+            // 
+            this.helpposcoreLabel.AutoSize = true;
+            this.helpposcoreLabel.BackColor = System.Drawing.Color.Transparent;
+            this.helpposcoreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.helpposcoreLabel.Location = new System.Drawing.Point(412, 100);
+            this.helpposcoreLabel.Name = "helpposcoreLabel";
+            this.helpposcoreLabel.Size = new System.Drawing.Size(78, 37);
+            this.helpposcoreLabel.TabIndex = 33;
+            this.helpposcoreLabel.Text = "00:00";
+            this.helpposcoreLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.helpposcoreLabel.UseCompatibleTextRendering = true;
+            this.helpposcoreLabel.Visible = false;
+            // 
+            // normaalitvoitotLabel
+            // 
+            this.normaalitvoitotLabel.AutoSize = true;
+            this.normaalitvoitotLabel.BackColor = System.Drawing.Color.Transparent;
+            this.normaalitvoitotLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.normaalitvoitotLabel.Location = new System.Drawing.Point(664, 270);
+            this.normaalitvoitotLabel.Name = "normaalitvoitotLabel";
+            this.normaalitvoitotLabel.Size = new System.Drawing.Size(78, 37);
+            this.normaalitvoitotLabel.TabIndex = 38;
+            this.normaalitvoitotLabel.Text = "00:00";
+            this.normaalitvoitotLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.normaalitvoitotLabel.UseCompatibleTextRendering = true;
+            this.normaalitvoitotLabel.Visible = false;
+            // 
+            // vaikeatvoitotLabel
+            // 
+            this.vaikeatvoitotLabel.AutoSize = true;
+            this.vaikeatvoitotLabel.BackColor = System.Drawing.Color.Transparent;
+            this.vaikeatvoitotLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vaikeatvoitotLabel.Location = new System.Drawing.Point(664, 425);
+            this.vaikeatvoitotLabel.Name = "vaikeatvoitotLabel";
+            this.vaikeatvoitotLabel.Size = new System.Drawing.Size(78, 37);
+            this.vaikeatvoitotLabel.TabIndex = 37;
+            this.vaikeatvoitotLabel.Text = "00:00";
+            this.vaikeatvoitotLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.vaikeatvoitotLabel.UseCompatibleTextRendering = true;
+            this.vaikeatvoitotLabel.Visible = false;
+            // 
+            // helpotvoitotLabel
+            // 
+            this.helpotvoitotLabel.AutoSize = true;
+            this.helpotvoitotLabel.BackColor = System.Drawing.Color.Transparent;
+            this.helpotvoitotLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.helpotvoitotLabel.Location = new System.Drawing.Point(664, 100);
+            this.helpotvoitotLabel.Name = "helpotvoitotLabel";
+            this.helpotvoitotLabel.Size = new System.Drawing.Size(78, 37);
+            this.helpotvoitotLabel.TabIndex = 36;
+            this.helpotvoitotLabel.Text = "00:00";
+            this.helpotvoitotLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.helpotvoitotLabel.UseCompatibleTextRendering = true;
+            this.helpotvoitotLabel.Visible = false;
+            // 
+            // otsikko
+            // 
+            this.otsikko.BackColor = System.Drawing.Color.Transparent;
+            this.otsikko.Font = new System.Drawing.Font("Ravie", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.otsikko.Location = new System.Drawing.Point(14, 79);
+            this.otsikko.Name = "otsikko";
+            this.otsikko.Size = new System.Drawing.Size(602, 191);
+            this.otsikko.TabIndex = 39;
+            this.otsikko.Text = "LINTUBONGARI 9000";
+            this.otsikko.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tekijät
+            // 
+            this.tekijät.BackColor = System.Drawing.Color.Transparent;
+            this.tekijät.Location = new System.Drawing.Point(9, 362);
+            this.tekijät.Name = "tekijät";
+            this.tekijät.Size = new System.Drawing.Size(607, 65);
+            this.tekijät.TabIndex = 40;
+            this.tekijät.Text = "Anton Markki          Aapo Harjunpää          Pasi Hautamäki";
+            this.tekijät.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // MatchingGame
             // 
@@ -1846,6 +1957,14 @@
             this.BackgroundImage = global::MatchingGame.Properties.Resources.taivasTausta;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(924, 528);
+            this.Controls.Add(this.tekijät);
+            this.Controls.Add(this.otsikko);
+            this.Controls.Add(this.normaalitvoitotLabel);
+            this.Controls.Add(this.vaikeatvoitotLabel);
+            this.Controls.Add(this.helpotvoitotLabel);
+            this.Controls.Add(this.normaaliscoreLabel);
+            this.Controls.Add(this.vaikeascoreLabel);
+            this.Controls.Add(this.helpposcoreLabel);
             this.Controls.Add(this.normaalityrityksetLabel);
             this.Controls.Add(this.vaikeatyrityksetLabel);
             this.Controls.Add(this.helpotyrityksetLabel);
@@ -2011,6 +2130,14 @@
         private System.Windows.Forms.Label vaikeatyrityksetLabel;
         private System.Windows.Forms.Label helpotyrityksetLabel;
         private System.Windows.Forms.PictureBox taivasTausta;
+        private System.Windows.Forms.Label normaaliscoreLabel;
+        private System.Windows.Forms.Label vaikeascoreLabel;
+        private System.Windows.Forms.Label helpposcoreLabel;
+        private System.Windows.Forms.Label normaalitvoitotLabel;
+        private System.Windows.Forms.Label vaikeatvoitotLabel;
+        private System.Windows.Forms.Label helpotvoitotLabel;
+        private System.Windows.Forms.Label otsikko;
+        private System.Windows.Forms.Label tekijät;
     }
 }
 
