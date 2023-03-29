@@ -232,7 +232,7 @@ namespace MatchingGame
 
             if (clickedLabel != null)
             {
-                if (clickedLabel.ForeColor == Color.Black)
+                if (clickedLabel.ForeColor == Color.White)
                 {
                     return;
                 }
@@ -241,13 +241,13 @@ namespace MatchingGame
                 {
                     timer.Start();
                     firstClicked = clickedLabel;
-                    firstClicked.ForeColor = Color.Black;
+                    firstClicked.ForeColor = Color.White;
 
                     return;
                 }
 
                 secondClicked = clickedLabel;
-                secondClicked.ForeColor = Color.Black;
+                secondClicked.ForeColor = Color.White;
 
                 yritykset++;
 

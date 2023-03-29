@@ -1823,7 +1823,7 @@
             this.helpotyrityksetLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.helpotyrityksetLabel.UseCompatibleTextRendering = true;
             this.helpotyrityksetLabel.Visible = false;
-            //
+            // 
             // taivasTausta
             // 
             this.taivasTausta.BackColor = System.Drawing.Color.Transparent;
@@ -1842,7 +1842,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Red;
+            this.BackColor = System.Drawing.Color.Black;
+            this.BackgroundImage = global::MatchingGame.Properties.Resources.taivasTausta;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(924, 528);
             this.Controls.Add(this.normaalityrityksetLabel);
