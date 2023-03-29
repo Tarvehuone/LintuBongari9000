@@ -107,6 +107,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\taivasTausta.jpg" />
+    <Content Include="Resources\takaisinNappi.wav" />
+    <Content Include="Resources\twentyOne.wav" />
+    <Content Include="Resources\vaikeaMusiikki.wav" />
+    <Content Include="Resources\valikkoNappi.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
