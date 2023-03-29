@@ -16,14 +16,10 @@ namespace MatchingGame
 {
     public partial class MatchingGame : Form
     {
-        string vaikeaMusiikkiPolku = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Audio", "vaikeaMusiikki.wav");
-        string vaikeaJakoPolku = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Audio", "vaikeaKorttienJako.wav");
-        string normaaliJakoPolku = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Audio", "normaaliKorttienJako.wav");
-        string helppoJakoPolku = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Audio", "helppoKorttienJako.wav");
-        SoundPlayer vaikeaMusiikki;
-        SoundPlayer vaikeaJako;
-        SoundPlayer normaaliJako;
-        SoundPlayer helppoJako;
+        SoundPlayer hardcoreMusic;
+        SoundPlayer twentyOne;
+        SoundPlayer valikkoSFX;
+        SoundPlayer takaisinSFX;
 
         private Timer timer;
         private int sekunnit;
@@ -118,9 +114,20 @@ namespace MatchingGame
             parhaatPisteet1.Font = new Font(omaFontti.Families[0], parhaatPisteet1.Font.Size);
             parhaatPisteet2.Font = new Font(omaFontti.Families[0], parhaatPisteet2.Font.Size);
             parhaatPisteet3.Font = new Font(omaFontti.Families[0], parhaatPisteet3.Font.Size);
-            ParasAikaLabel.Font = new Font(omaFontti.Families[0], ParasAikaLabel.Font.Size);
+            parashelppoAikaLabel.Font = new Font(omaFontti.Families[0], parashelppoAikaLabel.Font.Size);
+            parasnormaaliAikaLabel.Font = new Font(omaFontti.Families[0], parasnormaaliAikaLabel.Font.Size);
+            parasvaikeaAikaLabel.Font = new Font(omaFontti.Families[0], parasvaikeaAikaLabel.Font.Size);
             uusipeliNappi.Font = new Font(omaFontti.Families[0], uusipeliNappi.Font.Size);
             paavalikkoonNappi.Font = new Font(omaFontti.Families[0], paavalikkoonNappi.Font.Size);
+            yritykset1.Font = new Font(omaFontti.Families[0], yritykset1.Font.Size);
+            yritykset2.Font = new Font(omaFontti.Families[0], yritykset2.Font.Size);
+            yritykset3.Font = new Font(omaFontti.Families[0], yritykset3.Font.Size);
+            parasAika1.Font = new Font(omaFontti.Families[0], parasAika1.Font.Size);
+            parasAika2.Font = new Font(omaFontti.Families[0], parasAika2.Font.Size);
+            parasAika3.Font = new Font(omaFontti.Families[0], parasAika3.Font.Size);
+            helpotyrityksetLabel.Font = new Font(omaFontti.Families[0], helpotyrityksetLabel.Font.Size);
+            normaalityrityksetLabel.Font = new Font(omaFontti.Families[0], normaalityrityksetLabel.Font.Size);
+            vaikeatyrityksetLabel.Font = new Font(omaFontti.Families[0], vaikeatyrityksetLabel.Font.Size);
         }
 
         // Antaa korteille satunnaiset kuvat, kun helppo pelimuoto aloitetaan
@@ -193,8 +200,8 @@ namespace MatchingGame
             Marshal.Copy(fontdata, 0, data, fontLength);
             skullFontti.AddMemoryFont(data, fontLength);
 
-            vaikeaMusiikki = new SoundPlayer(vaikeaMusiikkiPolku);
-            vaikeaMusiikki.PlayLooping();
+            hardcoreMusic = new SoundPlayer(Properties.Resources.vaikeaMusiikki);
+            hardcoreMusic.PlayLooping();
 
             VaikeaIconsAdd();
             aikaLabel.Text = "00:00";
@@ -414,7 +421,11 @@ namespace MatchingGame
             helpotVoitot++;
             score += 200;
 
-
+            if (yritykset == 19)
+            {
+                twentyOne = new SoundPlayer(Properties.Resources.twentyOne);
+                twentyOne.Play();
+            }
             if (yritykset < parhaatHelpotYritykset)
             {
                 parhaatHelpotYritykset = yritykset;
@@ -431,7 +442,7 @@ namespace MatchingGame
             {
                 parasHelppoSekunti = sekunnit;
             }
-            ParasAikaLabel.Text = (parasHelppoMinuutti + ":" + parasHelppoSekunti);
+            parashelppoAikaLabel.Text = (parasHelppoMinuutti + ":" + parasHelppoSekunti);
             MessageBox.Show("You won!\nYritykset: " + yritykset + "\nScore: " + score, "Congratulations!");
             yritykset = 0;
             score = 0;
@@ -501,7 +512,7 @@ namespace MatchingGame
             }
 
             timer.Stop();
-            vaikeaMusiikki.Stop();
+            hardcoreMusic.Stop();
             vaikeatVoitot++;
             score += 200;
 
@@ -535,6 +546,8 @@ namespace MatchingGame
         // Näyttää pelimuodot, kun "Aloita peli" painiketta painetaan
         private void aloitanappi_Click(object sender, EventArgs e)
         {
+            valikkoSFX = new SoundPlayer(Properties.Resources.valikkoNappi);
+            valikkoSFX.Play();
             helpponappi.Visible = true;
             normaalinappi.Visible = true;
             vaikeanappi.Visible = true;
@@ -631,6 +644,10 @@ namespace MatchingGame
         // Tämä metodi vie käyttäjän tilastoihin, piilottaa valikon painikkeet ja näyttää "takaisin" painikkeen
         private void tilastotnappi_Click(object sender, EventArgs e)
         {
+
+            valikkoSFX = new SoundPlayer(Properties.Resources.valikkoNappi);
+            valikkoSFX.Play();
+            taivasTausta.Visible = true;
             aloitanappi.Visible = false;
             tilastotnappi.Visible = false;
             takaisinnappi.Visible = true;
@@ -643,12 +660,27 @@ namespace MatchingGame
             parhaatPisteet1.Visible = true;
             parhaatPisteet2.Visible = true;
             parhaatPisteet3.Visible = true;
-            ParasAikaLabel.Visible = true;
+            yritykset1.Visible = true;
+            yritykset2.Visible = true;
+            yritykset3.Visible = true;
+            parasAika1.Visible = true;
+            parasAika2.Visible = true;
+            parasAika3.Visible = true;
+            parashelppoAikaLabel.Visible = true;
+            parasvaikeaAikaLabel.Visible = true;
+            parasnormaaliAikaLabel.Visible = true;
+            helpotyrityksetLabel.Visible = true;
+            normaalityrityksetLabel.Visible = true;
+            vaikeatyrityksetLabel.Visible = true;
         }
 
         // Tämä metodi vie käyttäjän takaisin edelliseen valikkoon
         private void takaisinnappi_Click(object sender, EventArgs e)
         {
+            takaisinSFX = new SoundPlayer(Properties.Resources.takaisinNappi);
+            takaisinSFX.Play();
+
+            taivasTausta.Visible = false;
             takaisinnappi.Visible = false;
             aloitanappi.Visible = true;
             tilastotnappi.Visible = true;
@@ -669,13 +701,26 @@ namespace MatchingGame
             parhaatPisteet1.Visible = false;
             parhaatPisteet2.Visible = false;
             parhaatPisteet3.Visible = false;
-            ParasAikaLabel.Visible = false;
+            yritykset1.Visible = false;
+            yritykset2.Visible = false;
+            yritykset3.Visible = false;
+            parasAika1.Visible = false;
+            parasAika2.Visible = false;
+            parasAika3.Visible = false;
+            parashelppoAikaLabel.Visible = false;
+            parasvaikeaAikaLabel.Visible = false;
+            parasnormaaliAikaLabel.Visible = false;
+            helpotyrityksetLabel.Visible = false;
+            normaalityrityksetLabel.Visible = false;
+            vaikeatyrityksetLabel.Visible = false;
         }
 
         // Tämä metodi vie käyttäjän päävalikoon
         // Painike ilmestyy silloin, kun peli on päästy läpi
         private void paavalikkoonNappi_Click(object sender, EventArgs e)
         {
+            takaisinSFX = new SoundPlayer(Properties.Resources.takaisinNappi);
+            takaisinSFX.Play();
             tilastotnappi.Visible = true;
             aloitanappi.Visible = true;
             paavalikkoonNappi.Visible = false;
