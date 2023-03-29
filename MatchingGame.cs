@@ -138,6 +138,8 @@ namespace MatchingGame
             vaikeascoreLabel.Font = new Font(omaFontti.Families[0], vaikeascoreLabel.Font.Size);
             tekijät.Font = new Font(omaFontti.Families[0], tekijät.Font.Size);
             otsikko.Font = new Font(omaFontti.Families[0], otsikko.Font.Size);
+            scorePelissa.Font = new Font(omaFontti.Families[0], scorePelissa.Font.Size);
+            yrityksetPelissa.Font = new Font(omaFontti.Families[0], yrityksetPelissa.Font.Size);
         }
 
         // Antaa korteille satunnaiset kuvat, kun helppo pelimuoto aloitetaan
@@ -573,6 +575,8 @@ namespace MatchingGame
         private void helpponappi_Click(object sender, EventArgs e)
         {
             aikaLabel.Visible = true;
+            scorePelissa.Visible = true;
+            yrityksetPelissa.Visible = true;
             helpponappi.Visible = false;
             normaalinappi.Visible = false;
             vaikeanappi.Visible = false;
@@ -587,6 +591,8 @@ namespace MatchingGame
         private void normaalinappi_Click(object sender, EventArgs e)
         {
             aikaLabel.Visible = true;
+            scorePelissa.Visible = true;
+            yrityksetPelissa.Visible = true;
             helpponappi.Visible = false;
             normaalinappi.Visible = false;
             vaikeanappi.Visible = false;
@@ -600,6 +606,8 @@ namespace MatchingGame
         private void vaikeanappi_Click(object sender, EventArgs e)
         {
             aikaLabel.Visible = true;
+            scorePelissa.Visible = true;
+            yrityksetPelissa.Visible=true;
             helpponappi.Visible = false;
             normaalinappi.Visible = false;
             vaikeanappi.Visible = false;
@@ -758,6 +766,8 @@ namespace MatchingGame
             normaaliPeli.Visible = false;
             vaikeaPeli.Visible = false;
             aikaLabel.Visible = false;
+            scorePelissa.Visible = false;
+            yrityksetPelissa.Visible = false;
             helppopeliPelaa = false;
             normaalipeliPelaa = false;
             vaikeapeliPelaa = false;
@@ -910,5 +920,7 @@ namespace MatchingGame
                 vaikeascoreLabel.Text = "" + vaikeaHighScore;
             }
         }
+
+        
     }
 }

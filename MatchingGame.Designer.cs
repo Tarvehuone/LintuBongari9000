@@ -151,6 +151,8 @@
             this.helpotvoitotLabel = new System.Windows.Forms.Label();
             this.otsikko = new System.Windows.Forms.Label();
             this.tekijät = new System.Windows.Forms.Label();
+            this.scorePelissa = new System.Windows.Forms.Label();
+            this.yrityksetPelissa = new System.Windows.Forms.Label();
             this.helppopeli.SuspendLayout();
             this.normaaliPeli.SuspendLayout();
             this.vaikeaPeli.SuspendLayout();
@@ -1979,6 +1981,7 @@
             this.vaikeatvoitotLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.vaikeatvoitotLabel.UseCompatibleTextRendering = true;
             this.vaikeatvoitotLabel.Visible = false;
+            this.vaikeatvoitotLabel.Click += new System.EventHandler(this.vaikeatvoitotLabel_Click);
             // 
             // helpotvoitotLabel
             // 
@@ -2019,6 +2022,26 @@
             this.tekijät.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.tekijät.UseCompatibleTextRendering = true;
             // 
+            // scorePelissa
+            // 
+            this.scorePelissa.BackColor = System.Drawing.Color.Transparent;
+            this.scorePelissa.Location = new System.Drawing.Point(622, 74);
+            this.scorePelissa.Name = "scorePelissa";
+            this.scorePelissa.Size = new System.Drawing.Size(142, 43);
+            this.scorePelissa.TabIndex = 41;
+            this.scorePelissa.Text = "SCORE\r\n";
+            this.scorePelissa.Visible = false;
+            // 
+            // yrityksetPelissa
+            // 
+            this.yrityksetPelissa.BackColor = System.Drawing.Color.Transparent;
+            this.yrityksetPelissa.Location = new System.Drawing.Point(619, 135);
+            this.yrityksetPelissa.Name = "yrityksetPelissa";
+            this.yrityksetPelissa.Size = new System.Drawing.Size(145, 43);
+            this.yrityksetPelissa.TabIndex = 42;
+            this.yrityksetPelissa.Text = "YRITYKSET";
+            this.yrityksetPelissa.Visible = false;
+            // 
             // MatchingGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -2027,6 +2050,8 @@
             this.BackgroundImage = global::MatchingGame.Properties.Resources.taivasTausta;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(924, 528);
+            this.Controls.Add(this.yrityksetPelissa);
+            this.Controls.Add(this.scorePelissa);
             this.Controls.Add(this.helppopeli);
             this.Controls.Add(this.normaaliPeli);
             this.Controls.Add(this.tekijät);
@@ -2208,6 +2233,8 @@
         private System.Windows.Forms.Label helpotvoitotLabel;
         private System.Windows.Forms.Label otsikko;
         private System.Windows.Forms.Label tekijät;
+        private System.Windows.Forms.Label scorePelissa;
+        private System.Windows.Forms.Label yrityksetPelissa;
     }
 }
 
