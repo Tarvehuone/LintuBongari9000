@@ -115,5 +115,14 @@
   <ItemGroup>
     <None Include="Resources\vaikeaMusiikki.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\voitto.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hardcoreWin.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lintuBongariTheme.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

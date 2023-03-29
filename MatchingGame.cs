@@ -20,6 +20,9 @@ namespace MatchingGame
         SoundPlayer twentyOne;
         SoundPlayer valikkoSFX;
         SoundPlayer takaisinSFX;
+        SoundPlayer hardcoreVoitto;
+        SoundPlayer voittoSFX;
+        SoundPlayer rauhaMusic;
 
         private Timer timer;
         private int sekunnit;
@@ -46,26 +49,25 @@ namespace MatchingGame
         int parasVaikeaSekunti = 99;
         int parasVaikeaMinuutti = 99;
 
-        int parhaatHelpotYritykset = 999;
+        int parhaatHelpotYritykset = 9999;
         int helppoHighScore = 0;
         int helpotVoitot = 0;
 
-        int parhaatNormaalitYritykset = 999;
+        int parhaatNormaalitYritykset = 9999;
         int normaaliHighScore = 0;
         int normaalitVoitot = 0;
 
-        int parhaatVaikeatYritykset = 999;
+        int parhaatVaikeatYritykset = 9999;
         int vaikeaHighScore = 0;
         int vaikeatVoitot = 0;
 
         Random random = new Random();
 
         List<string> helppoIcons = new List<string>();
-
         List<string> normaaliIcons = new List<string>();
-
         List<string> vaikeaIcons = new List<string>();
 
+        // Määrittää halutut tapahtumat sovelluksen avattaessa
         public MatchingGame()
         {
             InitializeComponent();
@@ -77,6 +79,7 @@ namespace MatchingGame
             elmoFire.Image = Properties.Resources.elmo;
         }
 
+        // Pelin sekuntikellon koodi, tekee asioita sekunnin välein
         private void Timer_Tick(object sender, EventArgs e)
         {
             sekunnit++;
@@ -89,6 +92,12 @@ namespace MatchingGame
 
             timeString = $"{minuutit:00}:{sekunnit:00}";
             aikaLabel.Text = timeString;
+
+            if (score > 0)
+            {
+                score -= 5;
+            }
+            scorePelissa.Text = "PISTEET: " + score;
         }
 
         // Lisää projektiin custom fontin ja vaihtaa haluttujen kontrollien fonttia
@@ -152,6 +161,9 @@ namespace MatchingGame
             Marshal.Copy(fontdata, 0, data, fontLength);
             lintuFontti.AddMemoryFont(data, fontLength);
 
+            rauhaMusic = new SoundPlayer(Properties.Resources.lintuBongariTheme);
+            rauhaMusic.PlayLooping();
+
             helppoIcons.Clear();
             HelppoIconsAdd();
             aikaLabel.Text = "00:00";
@@ -180,6 +192,9 @@ namespace MatchingGame
             System.IntPtr data = Marshal.AllocCoTaskMem(fontLength);
             Marshal.Copy(fontdata, 0, data, fontLength);
             lintuFontti.AddMemoryFont(data, fontLength);
+
+            rauhaMusic = new SoundPlayer(Properties.Resources.lintuBongariTheme);
+            rauhaMusic.PlayLooping();
 
             normaaliIcons.Clear();
             NormaaliIconsAdd();
@@ -262,19 +277,22 @@ namespace MatchingGame
                 secondClicked.ForeColor = Color.Black;
 
                 yritykset++;
+                yrityksetPelissa.Text = "YRITYKSET: " + yritykset;
 
-                CheckForEasyWinner();
 
                 if (firstClicked.Text != secondClicked.Text)
                 {
                     score -= 25;
+                    scorePelissa.Text = "PISTEET: " + score;
                 }
 
                 if (firstClicked.Text == secondClicked.Text)
                 {
                     score += 100;
+                    scorePelissa.Text = "PISTEET: " + score;
                     firstClicked = null;
                     secondClicked = null;
+                    CheckForEasyWinner();
                     return;
                 }
 
@@ -311,18 +329,20 @@ namespace MatchingGame
 
                 yritykset++;
 
-                CheckForNormalWinner();
 
                 if (firstClicked.Text != secondClicked.Text)
                 {
                     score -= 25;
+                    scorePelissa.Text = "PISTEET: " + score;
                 }
 
                 if (firstClicked.Text == secondClicked.Text)
                 {
-                    score += 100;
+                    score += 125;
+                    scorePelissa.Text = "PISTEET: " + score;
                     firstClicked = null;
                     secondClicked = null;
+                    CheckForNormalWinner();
                     return;
                 }
 
@@ -358,19 +378,22 @@ namespace MatchingGame
                 secondClicked.ForeColor = Color.White;
 
                 yritykset++;
+                yrityksetPelissa.Text = "YRITYKSET: " + yritykset;
 
-                CheckForHardWinner();
 
                 if (firstClicked.Text != secondClicked.Text)
                 {
-                    score -= 25;
+                    score -= 20;
+                    scorePelissa.Text = "PISTEET: " + score;
                 }
 
                 if (firstClicked.Text == secondClicked.Text)
                 {
-                    score += 100;
+                    score += 150;
+                    scorePelissa.Text = "PISTEET: " + score;
                     firstClicked = null;
                     secondClicked = null;
+                    CheckForHardWinner();
                     return;
                 }
 
@@ -429,15 +452,28 @@ namespace MatchingGame
                 }
             }
 
+            rauhaMusic.Stop();
             timer.Stop();
             helpotVoitot++;
             score += 200;
+            scorePelissa.Text = "PISTEET: " + score;
+
+            voittoSFX = new SoundPlayer(Properties.Resources.voitto);
+            voittoSFX.Play();
+
+            MessageBox.Show("You won!", "Congratulations!");
 
             if (yritykset == 19)
             {
+                score += 210;
+                scorePelissa.Text = "PISTEET: " + score;
+
                 twentyOne = new SoundPlayer(Properties.Resources.twentyOne);
                 twentyOne.Play();
+
+                MessageBox.Show("9 + 10 = 21\nSait 210 lisäpistettä!", "Bonus points!");
             }
+
             if (yritykset < parhaatHelpotYritykset)
             {
                 parhaatHelpotYritykset = yritykset;
@@ -456,13 +492,13 @@ namespace MatchingGame
             }
 
             TilastoTiedot();
-            MessageBox.Show("You won!\nYritykset: " + yritykset + "\nScore: " + score, "Congratulations!");
+
+
             yritykset = 0;
             score = 0;
 
             paavalikkoonNappi.Visible = true;
             uusipeliNappi.Visible = true;
-            // LISÄÄ TÄHÄN KOODI, JOKA VIE PELAAJAN TAKAISIN ALOITUSRUUTUUN
         }
 
         // Tämä metodi katsoo, onko normaali pelimuoto voitettu
@@ -479,9 +515,12 @@ namespace MatchingGame
                         return;
                 }
             }
+
             timer.Stop();
+            rauhaMusic.Stop();
             normaalitVoitot++;
-            score += 200;
+            score += 300;
+            scorePelissa.Text = "PISTEET: " + score;
 
             if (yritykset < parhaatNormaalitYritykset)
             {
@@ -499,14 +538,18 @@ namespace MatchingGame
             {
                 parasNormaaliSekunti = sekunnit;
             }
+
             TilastoTiedot();
+
+            voittoSFX = new SoundPlayer(Properties.Resources.voitto);
+            voittoSFX.Play();
+
             MessageBox.Show("You won!", "Congratulations");
             yritykset = 0;
             score = 0;
 
             paavalikkoonNappi.Visible = true;
             uusipeliNappi.Visible = true;
-            // LISÄÄ TÄHÄN KOODI, JOKA VIE PELAAJAN TAKAISIN ALOITUSRUUTUUN
         }
 
         // Tämä metodi katsoo, onko vaikea pelimuoto voitettu
@@ -527,13 +570,13 @@ namespace MatchingGame
             timer.Stop();
             hardcoreMusic.Stop();
             vaikeatVoitot++;
-            score += 200;
+            score += 400;
+            scorePelissa.Text = "PISTEET: " + score;
 
             if (yritykset < parhaatVaikeatYritykset)
             {
                 parhaatVaikeatYritykset = yritykset;
             }
-
             if (score > vaikeaHighScore)
             {
                 vaikeaHighScore = score;
@@ -546,14 +589,18 @@ namespace MatchingGame
             {
                 parasVaikeaSekunti = sekunnit;
             }
+
             TilastoTiedot();
+
+            hardcoreVoitto = new SoundPlayer(Properties.Resources.hardcoreWin);
+            hardcoreVoitto.Play();
+
             MessageBox.Show("You won!", "Congratulations");
             yritykset = 0;
             score = 0;
 
             paavalikkoonNappi.Visible = true;
             uusipeliNappi.Visible = true;
-            // LISÄÄ TÄHÄN KOODI, JOKA VIE PELAAJAN TAKAISIN ALOITUSRUUTUUN
         }
 
         // Näyttää pelimuodot, kun "Aloita peli" painiketta painetaan
@@ -607,7 +654,7 @@ namespace MatchingGame
         {
             aikaLabel.Visible = true;
             scorePelissa.Visible = true;
-            yrityksetPelissa.Visible=true;
+            yrityksetPelissa.Visible = true;
             helpponappi.Visible = false;
             normaalinappi.Visible = false;
             vaikeanappi.Visible = false;
@@ -894,6 +941,8 @@ namespace MatchingGame
             vaikeaIcons.Add("r");
         }
 
+        // Määrittää tilastojen tiedot "tilastot" valikkoon
+        // Pitää huolen siitä, että tulokset eivät muutu ennen kuin ensimmäinen pelimuodon peli on voitettu
         private void TilastoTiedot()
         {
             if (helpotVoitot != 0)
@@ -920,7 +969,5 @@ namespace MatchingGame
                 vaikeascoreLabel.Text = "" + vaikeaHighScore;
             }
         }
-
-        
     }
 }
