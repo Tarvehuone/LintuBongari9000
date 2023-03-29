@@ -16,14 +16,10 @@ namespace MatchingGame
 {
     public partial class MatchingGame : Form
     {
-        string vaikeaMusiikkiPolku = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Audio", "vaikeaMusiikki.wav");
-        string vaikeaJakoPolku = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Audio", "vaikeaKorttienJako.wav");
-        string normaaliJakoPolku = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Audio", "normaaliKorttienJako.wav");
-        string helppoJakoPolku = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Audio", "helppoKorttienJako.wav");
-        SoundPlayer vaikeaMusiikki;
-        SoundPlayer vaikeaJako;
-        SoundPlayer normaaliJako;
-        SoundPlayer helppoJako;
+        SoundPlayer hardcoreMusic;
+        SoundPlayer twentyOne;
+        SoundPlayer valikkoSFX;
+        SoundPlayer takaisinSFX;
 
         private Timer timer;
         private int sekunnit;
@@ -193,8 +189,8 @@ namespace MatchingGame
             Marshal.Copy(fontdata, 0, data, fontLength);
             skullFontti.AddMemoryFont(data, fontLength);
 
-            vaikeaMusiikki = new SoundPlayer(vaikeaMusiikkiPolku);
-            vaikeaMusiikki.PlayLooping();
+            hardcoreMusic = new SoundPlayer(Properties.Resources.vaikeaMusiikki);
+            hardcoreMusic.PlayLooping();
 
             VaikeaIconsAdd();
             aikaLabel.Text = "00:00";
@@ -414,7 +410,11 @@ namespace MatchingGame
             helpotVoitot++;
             score += 200;
 
-
+            if (yritykset == 19)
+            {
+                twentyOne = new SoundPlayer(Properties.Resources.twentyOne);
+                twentyOne.Play();
+            }
             if (yritykset < parhaatHelpotYritykset)
             {
                 parhaatHelpotYritykset = yritykset;
@@ -501,7 +501,7 @@ namespace MatchingGame
             }
 
             timer.Stop();
-            vaikeaMusiikki.Stop();
+            hardcoreMusic.Stop();
             vaikeatVoitot++;
             score += 200;
 
@@ -535,6 +535,8 @@ namespace MatchingGame
         // Näyttää pelimuodot, kun "Aloita peli" painiketta painetaan
         private void aloitanappi_Click(object sender, EventArgs e)
         {
+            valikkoSFX = new SoundPlayer(Properties.Resources.valikkoNappi);
+            valikkoSFX.Play();
             helpponappi.Visible = true;
             normaalinappi.Visible = true;
             vaikeanappi.Visible = true;
@@ -631,6 +633,10 @@ namespace MatchingGame
         // Tämä metodi vie käyttäjän tilastoihin, piilottaa valikon painikkeet ja näyttää "takaisin" painikkeen
         private void tilastotnappi_Click(object sender, EventArgs e)
         {
+
+            valikkoSFX = new SoundPlayer(Properties.Resources.valikkoNappi);
+            valikkoSFX.Play();
+            taivasTausta.Visible = true;
             aloitanappi.Visible = false;
             tilastotnappi.Visible = false;
             takaisinnappi.Visible = true;
@@ -649,6 +655,10 @@ namespace MatchingGame
         // Tämä metodi vie käyttäjän takaisin edelliseen valikkoon
         private void takaisinnappi_Click(object sender, EventArgs e)
         {
+            takaisinSFX = new SoundPlayer(Properties.Resources.takaisinNappi);
+            takaisinSFX.Play();
+
+            taivasTausta.Visible = false;
             takaisinnappi.Visible = false;
             aloitanappi.Visible = true;
             tilastotnappi.Visible = true;
@@ -676,6 +686,8 @@ namespace MatchingGame
         // Painike ilmestyy silloin, kun peli on päästy läpi
         private void paavalikkoonNappi_Click(object sender, EventArgs e)
         {
+            takaisinSFX = new SoundPlayer(Properties.Resources.takaisinNappi);
+            takaisinSFX.Play();
             tilastotnappi.Visible = true;
             aloitanappi.Visible = true;
             paavalikkoonNappi.Visible = false;
