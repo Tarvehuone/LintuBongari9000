@@ -200,7 +200,7 @@
             // 
             this.label16.BackColor = System.Drawing.Color.SkyBlue;
             this.label16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.Location = new System.Drawing.Point(398, 377);
             this.label16.Margin = new System.Windows.Forms.Padding(0);
             this.label16.Name = "label16";
@@ -214,7 +214,7 @@
             // 
             this.label15.BackColor = System.Drawing.Color.FloralWhite;
             this.label15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(266, 377);
             this.label15.Margin = new System.Windows.Forms.Padding(0);
             this.label15.Name = "label15";
@@ -228,7 +228,7 @@
             // 
             this.label14.BackColor = System.Drawing.Color.SkyBlue;
             this.label14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(134, 377);
             this.label14.Margin = new System.Windows.Forms.Padding(0);
             this.label14.Name = "label14";
@@ -242,7 +242,7 @@
             // 
             this.label13.BackColor = System.Drawing.Color.FloralWhite;
             this.label13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(2, 377);
             this.label13.Margin = new System.Windows.Forms.Padding(0);
             this.label13.Name = "label13";
@@ -256,7 +256,7 @@
             // 
             this.label12.BackColor = System.Drawing.Color.FloralWhite;
             this.label12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(398, 252);
             this.label12.Margin = new System.Windows.Forms.Padding(0);
             this.label12.Name = "label12";
@@ -270,7 +270,7 @@
             // 
             this.label11.BackColor = System.Drawing.Color.SkyBlue;
             this.label11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(266, 252);
             this.label11.Margin = new System.Windows.Forms.Padding(0);
             this.label11.Name = "label11";
@@ -284,7 +284,7 @@
             // 
             this.label10.BackColor = System.Drawing.Color.FloralWhite;
             this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(134, 252);
             this.label10.Margin = new System.Windows.Forms.Padding(0);
             this.label10.Name = "label10";
@@ -298,7 +298,7 @@
             // 
             this.label9.BackColor = System.Drawing.Color.SkyBlue;
             this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(2, 252);
             this.label9.Margin = new System.Windows.Forms.Padding(0);
             this.label9.Name = "label9";
@@ -312,7 +312,7 @@
             // 
             this.label8.BackColor = System.Drawing.Color.SkyBlue;
             this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(398, 127);
             this.label8.Margin = new System.Windows.Forms.Padding(0);
             this.label8.Name = "label8";
@@ -326,7 +326,7 @@
             // 
             this.label7.BackColor = System.Drawing.Color.FloralWhite;
             this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(266, 127);
             this.label7.Margin = new System.Windows.Forms.Padding(0);
             this.label7.Name = "label7";
@@ -340,7 +340,7 @@
             // 
             this.label6.BackColor = System.Drawing.Color.SkyBlue;
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(134, 127);
             this.label6.Margin = new System.Windows.Forms.Padding(0);
             this.label6.Name = "label6";
@@ -354,7 +354,7 @@
             // 
             this.label5.BackColor = System.Drawing.Color.FloralWhite;
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(2, 127);
             this.label5.Margin = new System.Windows.Forms.Padding(0);
             this.label5.Name = "label5";
@@ -368,7 +368,7 @@
             // 
             this.label4.BackColor = System.Drawing.Color.FloralWhite;
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(398, 2);
             this.label4.Margin = new System.Windows.Forms.Padding(0);
             this.label4.Name = "label4";
@@ -382,7 +382,7 @@
             // 
             this.label3.BackColor = System.Drawing.Color.SkyBlue;
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(266, 2);
             this.label3.Margin = new System.Windows.Forms.Padding(0);
             this.label3.Name = "label3";
@@ -396,7 +396,7 @@
             // 
             this.label2.BackColor = System.Drawing.Color.FloralWhite;
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(134, 2);
             this.label2.Margin = new System.Windows.Forms.Padding(0);
             this.label2.Name = "label2";
@@ -410,7 +410,7 @@
             // 
             this.label1.BackColor = System.Drawing.Color.SkyBlue;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(2, 2);
             this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.Name = "label1";
@@ -1705,9 +1705,8 @@
             this.parashelppoAikaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.parashelppoAikaLabel.Location = new System.Drawing.Point(210, 100);
             this.parashelppoAikaLabel.Name = "parashelppoAikaLabel";
-            this.parashelppoAikaLabel.Size = new System.Drawing.Size(78, 37);
+            this.parashelppoAikaLabel.Size = new System.Drawing.Size(0, 34);
             this.parashelppoAikaLabel.TabIndex = 18;
-            this.parashelppoAikaLabel.Text = "00:00";
             this.parashelppoAikaLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.parashelppoAikaLabel.UseCompatibleTextRendering = true;
             this.parashelppoAikaLabel.Visible = false;
@@ -1836,9 +1835,8 @@
             this.parasvaikeaAikaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.parasvaikeaAikaLabel.Location = new System.Drawing.Point(210, 425);
             this.parasvaikeaAikaLabel.Name = "parasvaikeaAikaLabel";
-            this.parasvaikeaAikaLabel.Size = new System.Drawing.Size(78, 37);
+            this.parasvaikeaAikaLabel.Size = new System.Drawing.Size(0, 34);
             this.parasvaikeaAikaLabel.TabIndex = 28;
-            this.parasvaikeaAikaLabel.Text = "00:00";
             this.parasvaikeaAikaLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.parasvaikeaAikaLabel.UseCompatibleTextRendering = true;
             this.parasvaikeaAikaLabel.Visible = false;
@@ -1850,9 +1848,8 @@
             this.parasnormaaliAikaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.parasnormaaliAikaLabel.Location = new System.Drawing.Point(210, 270);
             this.parasnormaaliAikaLabel.Name = "parasnormaaliAikaLabel";
-            this.parasnormaaliAikaLabel.Size = new System.Drawing.Size(78, 37);
+            this.parasnormaaliAikaLabel.Size = new System.Drawing.Size(0, 34);
             this.parasnormaaliAikaLabel.TabIndex = 29;
-            this.parasnormaaliAikaLabel.Text = "00:00";
             this.parasnormaaliAikaLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.parasnormaaliAikaLabel.UseCompatibleTextRendering = true;
             this.parasnormaaliAikaLabel.Visible = false;
@@ -1864,9 +1861,9 @@
             this.normaalityrityksetLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.normaalityrityksetLabel.Location = new System.Drawing.Point(20, 270);
             this.normaalityrityksetLabel.Name = "normaalityrityksetLabel";
-            this.normaalityrityksetLabel.Size = new System.Drawing.Size(78, 37);
+            this.normaalityrityksetLabel.Size = new System.Drawing.Size(25, 37);
             this.normaalityrityksetLabel.TabIndex = 32;
-            this.normaalityrityksetLabel.Text = "00:00";
+            this.normaalityrityksetLabel.Text = "0";
             this.normaalityrityksetLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.normaalityrityksetLabel.UseCompatibleTextRendering = true;
             this.normaalityrityksetLabel.Visible = false;
@@ -1878,9 +1875,9 @@
             this.vaikeatyrityksetLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.vaikeatyrityksetLabel.Location = new System.Drawing.Point(20, 425);
             this.vaikeatyrityksetLabel.Name = "vaikeatyrityksetLabel";
-            this.vaikeatyrityksetLabel.Size = new System.Drawing.Size(78, 37);
+            this.vaikeatyrityksetLabel.Size = new System.Drawing.Size(25, 37);
             this.vaikeatyrityksetLabel.TabIndex = 31;
-            this.vaikeatyrityksetLabel.Text = "00:00";
+            this.vaikeatyrityksetLabel.Text = "0";
             this.vaikeatyrityksetLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.vaikeatyrityksetLabel.UseCompatibleTextRendering = true;
             this.vaikeatyrityksetLabel.Visible = false;
@@ -1892,9 +1889,9 @@
             this.helpotyrityksetLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.helpotyrityksetLabel.Location = new System.Drawing.Point(21, 100);
             this.helpotyrityksetLabel.Name = "helpotyrityksetLabel";
-            this.helpotyrityksetLabel.Size = new System.Drawing.Size(78, 37);
+            this.helpotyrityksetLabel.Size = new System.Drawing.Size(25, 37);
             this.helpotyrityksetLabel.TabIndex = 30;
-            this.helpotyrityksetLabel.Text = "00:00";
+            this.helpotyrityksetLabel.Text = "0";
             this.helpotyrityksetLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.helpotyrityksetLabel.UseCompatibleTextRendering = true;
             this.helpotyrityksetLabel.Visible = false;
@@ -1919,9 +1916,9 @@
             this.normaaliscoreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.normaaliscoreLabel.Location = new System.Drawing.Point(412, 270);
             this.normaaliscoreLabel.Name = "normaaliscoreLabel";
-            this.normaaliscoreLabel.Size = new System.Drawing.Size(78, 37);
+            this.normaaliscoreLabel.Size = new System.Drawing.Size(25, 37);
             this.normaaliscoreLabel.TabIndex = 35;
-            this.normaaliscoreLabel.Text = "00:00";
+            this.normaaliscoreLabel.Text = "0";
             this.normaaliscoreLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.normaaliscoreLabel.UseCompatibleTextRendering = true;
             this.normaaliscoreLabel.Visible = false;
@@ -1933,9 +1930,9 @@
             this.vaikeascoreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.vaikeascoreLabel.Location = new System.Drawing.Point(412, 425);
             this.vaikeascoreLabel.Name = "vaikeascoreLabel";
-            this.vaikeascoreLabel.Size = new System.Drawing.Size(78, 37);
+            this.vaikeascoreLabel.Size = new System.Drawing.Size(25, 37);
             this.vaikeascoreLabel.TabIndex = 34;
-            this.vaikeascoreLabel.Text = "00:00";
+            this.vaikeascoreLabel.Text = "0";
             this.vaikeascoreLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.vaikeascoreLabel.UseCompatibleTextRendering = true;
             this.vaikeascoreLabel.Visible = false;
@@ -1947,9 +1944,9 @@
             this.helpposcoreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.helpposcoreLabel.Location = new System.Drawing.Point(412, 100);
             this.helpposcoreLabel.Name = "helpposcoreLabel";
-            this.helpposcoreLabel.Size = new System.Drawing.Size(78, 37);
+            this.helpposcoreLabel.Size = new System.Drawing.Size(25, 37);
             this.helpposcoreLabel.TabIndex = 33;
-            this.helpposcoreLabel.Text = "00:00";
+            this.helpposcoreLabel.Text = "0";
             this.helpposcoreLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.helpposcoreLabel.UseCompatibleTextRendering = true;
             this.helpposcoreLabel.Visible = false;
@@ -1961,9 +1958,9 @@
             this.normaalitvoitotLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.normaalitvoitotLabel.Location = new System.Drawing.Point(664, 270);
             this.normaalitvoitotLabel.Name = "normaalitvoitotLabel";
-            this.normaalitvoitotLabel.Size = new System.Drawing.Size(78, 37);
+            this.normaalitvoitotLabel.Size = new System.Drawing.Size(25, 37);
             this.normaalitvoitotLabel.TabIndex = 38;
-            this.normaalitvoitotLabel.Text = "00:00";
+            this.normaalitvoitotLabel.Text = "0";
             this.normaalitvoitotLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.normaalitvoitotLabel.UseCompatibleTextRendering = true;
             this.normaalitvoitotLabel.Visible = false;
@@ -1975,13 +1972,12 @@
             this.vaikeatvoitotLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.vaikeatvoitotLabel.Location = new System.Drawing.Point(664, 425);
             this.vaikeatvoitotLabel.Name = "vaikeatvoitotLabel";
-            this.vaikeatvoitotLabel.Size = new System.Drawing.Size(78, 37);
+            this.vaikeatvoitotLabel.Size = new System.Drawing.Size(25, 37);
             this.vaikeatvoitotLabel.TabIndex = 37;
-            this.vaikeatvoitotLabel.Text = "00:00";
+            this.vaikeatvoitotLabel.Text = "0";
             this.vaikeatvoitotLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.vaikeatvoitotLabel.UseCompatibleTextRendering = true;
             this.vaikeatvoitotLabel.Visible = false;
-            this.vaikeatvoitotLabel.Click += new System.EventHandler(this.vaikeatvoitotLabel_Click);
             // 
             // helpotvoitotLabel
             // 
@@ -1990,9 +1986,9 @@
             this.helpotvoitotLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.helpotvoitotLabel.Location = new System.Drawing.Point(664, 100);
             this.helpotvoitotLabel.Name = "helpotvoitotLabel";
-            this.helpotvoitotLabel.Size = new System.Drawing.Size(78, 37);
+            this.helpotvoitotLabel.Size = new System.Drawing.Size(25, 37);
             this.helpotvoitotLabel.TabIndex = 36;
-            this.helpotvoitotLabel.Text = "00:00";
+            this.helpotvoitotLabel.Text = "0";
             this.helpotvoitotLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.helpotvoitotLabel.UseCompatibleTextRendering = true;
             this.helpotvoitotLabel.Visible = false;
@@ -2025,21 +2021,25 @@
             // scorePelissa
             // 
             this.scorePelissa.BackColor = System.Drawing.Color.Transparent;
+            this.scorePelissa.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.scorePelissa.Location = new System.Drawing.Point(622, 74);
             this.scorePelissa.Name = "scorePelissa";
-            this.scorePelissa.Size = new System.Drawing.Size(142, 43);
+            this.scorePelissa.Size = new System.Drawing.Size(232, 43);
             this.scorePelissa.TabIndex = 41;
-            this.scorePelissa.Text = "SCORE\r\n";
+            this.scorePelissa.Text = "PISTEET: 0";
+            this.scorePelissa.UseCompatibleTextRendering = true;
             this.scorePelissa.Visible = false;
             // 
             // yrityksetPelissa
             // 
             this.yrityksetPelissa.BackColor = System.Drawing.Color.Transparent;
+            this.yrityksetPelissa.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.yrityksetPelissa.Location = new System.Drawing.Point(619, 135);
             this.yrityksetPelissa.Name = "yrityksetPelissa";
-            this.yrityksetPelissa.Size = new System.Drawing.Size(145, 43);
+            this.yrityksetPelissa.Size = new System.Drawing.Size(235, 43);
             this.yrityksetPelissa.TabIndex = 42;
-            this.yrityksetPelissa.Text = "YRITYKSET";
+            this.yrityksetPelissa.Text = "YRITYKSET: 0";
+            this.yrityksetPelissa.UseCompatibleTextRendering = true;
             this.yrityksetPelissa.Visible = false;
             // 
             // MatchingGame

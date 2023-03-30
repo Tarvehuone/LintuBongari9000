@@ -81,6 +81,24 @@ namespace MatchingGame.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream hardcoreWin {
+            get {
+                return ResourceManager.GetStream("hardcoreWin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream lintuBongariTheme {
+            get {
+                return ResourceManager.GetStream("lintuBongariTheme", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
         public static byte[] NewRocker_Regular {
@@ -143,6 +161,15 @@ namespace MatchingGame.Properties {
         public static System.IO.UnmanagedMemoryStream valikkoNappi {
             get {
                 return ResourceManager.GetStream("valikkoNappi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream voitto {
+            get {
+                return ResourceManager.GetStream("voitto", resourceCulture);
             }
         }
     }

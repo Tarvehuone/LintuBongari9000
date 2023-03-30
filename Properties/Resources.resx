@@ -145,4 +145,13 @@
   <data name="valikkoNappi" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\valikkoNappi.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="hardcoreWin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hardcoreWin.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="voitto" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\voitto.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lintuBongariTheme" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lintuBongariTheme.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>
