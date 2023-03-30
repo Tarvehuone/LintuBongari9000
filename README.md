@@ -1,4 +1,4 @@
-# MatchingGame
+# Lintubongari 9000
 Pelin tarkoituksena on bongata lintuparit ja päihittää omia ennätyksiä.  
   
 Pelistä löytyy kolme vaikeustasoa - Helppo, Normaali, ja BDSM  
