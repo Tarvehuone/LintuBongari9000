@@ -1981,7 +1981,6 @@
             this.vaikeatvoitotLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.vaikeatvoitotLabel.UseCompatibleTextRendering = true;
             this.vaikeatvoitotLabel.Visible = false;
-            this.vaikeatvoitotLabel.Click += new System.EventHandler(this.vaikeatvoitotLabel_Click);
             // 
             // helpotvoitotLabel
             // 
