@@ -8,7 +8,7 @@ BDSM pelimuoto on tarkoitettu heille, joiden juttu ei ole lintujen bongaus, vaan
   
   
 ## Tekijät
-Aapo harjunpää, Pasi Hautamäki, Anton Markki
+Aapo Harjunpää, Pasi Hautamäki, Anton Markki
   
 Valikot - Anton Markki  
 Pelin ulkonäkö - Kaikki  
