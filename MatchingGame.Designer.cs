@@ -567,7 +567,7 @@
             this.label39.AutoSize = true;
             this.label39.BackColor = System.Drawing.Color.SkyBlue;
             this.label39.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label39.Location = new System.Drawing.Point(442, 377);
             this.label39.Margin = new System.Windows.Forms.Padding(0);
             this.label39.Name = "label39";
@@ -582,7 +582,7 @@
             this.label38.AutoSize = true;
             this.label38.BackColor = System.Drawing.Color.FloralWhite;
             this.label38.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label38.Location = new System.Drawing.Point(354, 377);
             this.label38.Margin = new System.Windows.Forms.Padding(0);
             this.label38.Name = "label38";
@@ -597,7 +597,7 @@
             this.label37.AutoSize = true;
             this.label37.BackColor = System.Drawing.Color.SkyBlue;
             this.label37.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label37.Location = new System.Drawing.Point(266, 377);
             this.label37.Margin = new System.Windows.Forms.Padding(0);
             this.label37.Name = "label37";
@@ -612,7 +612,7 @@
             this.label36.AutoSize = true;
             this.label36.BackColor = System.Drawing.Color.FloralWhite;
             this.label36.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label36.Location = new System.Drawing.Point(178, 377);
             this.label36.Margin = new System.Windows.Forms.Padding(0);
             this.label36.Name = "label36";
@@ -627,7 +627,7 @@
             this.label35.AutoSize = true;
             this.label35.BackColor = System.Drawing.Color.SkyBlue;
             this.label35.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label35.Location = new System.Drawing.Point(90, 377);
             this.label35.Margin = new System.Windows.Forms.Padding(0);
             this.label35.Name = "label35";
@@ -642,7 +642,7 @@
             this.label34.AutoSize = true;
             this.label34.BackColor = System.Drawing.Color.FloralWhite;
             this.label34.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label34.Location = new System.Drawing.Point(2, 377);
             this.label34.Margin = new System.Windows.Forms.Padding(0);
             this.label34.Name = "label34";
@@ -657,7 +657,7 @@
             this.label33.AutoSize = true;
             this.label33.BackColor = System.Drawing.Color.FloralWhite;
             this.label33.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label33.Location = new System.Drawing.Point(442, 252);
             this.label33.Margin = new System.Windows.Forms.Padding(0);
             this.label33.Name = "label33";
@@ -672,7 +672,7 @@
             this.label32.AutoSize = true;
             this.label32.BackColor = System.Drawing.Color.SkyBlue;
             this.label32.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label32.Location = new System.Drawing.Point(354, 252);
             this.label32.Margin = new System.Windows.Forms.Padding(0);
             this.label32.Name = "label32";
@@ -687,7 +687,7 @@
             this.label31.AutoSize = true;
             this.label31.BackColor = System.Drawing.Color.FloralWhite;
             this.label31.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label31.Location = new System.Drawing.Point(266, 252);
             this.label31.Margin = new System.Windows.Forms.Padding(0);
             this.label31.Name = "label31";
@@ -702,7 +702,7 @@
             this.label30.AutoSize = true;
             this.label30.BackColor = System.Drawing.Color.SkyBlue;
             this.label30.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label30.Location = new System.Drawing.Point(178, 252);
             this.label30.Margin = new System.Windows.Forms.Padding(0);
             this.label30.Name = "label30";
@@ -717,7 +717,7 @@
             this.label29.AutoSize = true;
             this.label29.BackColor = System.Drawing.Color.FloralWhite;
             this.label29.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label29.Location = new System.Drawing.Point(90, 252);
             this.label29.Margin = new System.Windows.Forms.Padding(0);
             this.label29.Name = "label29";
@@ -732,7 +732,7 @@
             this.label28.AutoSize = true;
             this.label28.BackColor = System.Drawing.Color.SkyBlue;
             this.label28.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label28.Location = new System.Drawing.Point(2, 252);
             this.label28.Margin = new System.Windows.Forms.Padding(0);
             this.label28.Name = "label28";
@@ -747,7 +747,7 @@
             this.label27.AutoSize = true;
             this.label27.BackColor = System.Drawing.Color.SkyBlue;
             this.label27.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label27.Location = new System.Drawing.Point(442, 127);
             this.label27.Margin = new System.Windows.Forms.Padding(0);
             this.label27.Name = "label27";
@@ -762,7 +762,7 @@
             this.label26.AutoSize = true;
             this.label26.BackColor = System.Drawing.Color.FloralWhite;
             this.label26.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.Location = new System.Drawing.Point(354, 127);
             this.label26.Margin = new System.Windows.Forms.Padding(0);
             this.label26.Name = "label26";
@@ -777,7 +777,7 @@
             this.label25.AutoSize = true;
             this.label25.BackColor = System.Drawing.Color.SkyBlue;
             this.label25.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.Location = new System.Drawing.Point(266, 127);
             this.label25.Margin = new System.Windows.Forms.Padding(0);
             this.label25.Name = "label25";
@@ -792,7 +792,7 @@
             this.label24.AutoSize = true;
             this.label24.BackColor = System.Drawing.Color.FloralWhite;
             this.label24.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.Location = new System.Drawing.Point(178, 127);
             this.label24.Margin = new System.Windows.Forms.Padding(0);
             this.label24.Name = "label24";
@@ -807,7 +807,7 @@
             this.label23.AutoSize = true;
             this.label23.BackColor = System.Drawing.Color.SkyBlue;
             this.label23.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.Location = new System.Drawing.Point(90, 127);
             this.label23.Margin = new System.Windows.Forms.Padding(0);
             this.label23.Name = "label23";
@@ -822,7 +822,7 @@
             this.label22.AutoSize = true;
             this.label22.BackColor = System.Drawing.Color.FloralWhite;
             this.label22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.Location = new System.Drawing.Point(2, 127);
             this.label22.Margin = new System.Windows.Forms.Padding(0);
             this.label22.Name = "label22";
@@ -837,7 +837,7 @@
             this.label21.AutoSize = true;
             this.label21.BackColor = System.Drawing.Color.FloralWhite;
             this.label21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.Location = new System.Drawing.Point(442, 2);
             this.label21.Margin = new System.Windows.Forms.Padding(0);
             this.label21.Name = "label21";
@@ -852,7 +852,7 @@
             this.label20.AutoSize = true;
             this.label20.BackColor = System.Drawing.Color.SkyBlue;
             this.label20.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.Location = new System.Drawing.Point(354, 2);
             this.label20.Margin = new System.Windows.Forms.Padding(0);
             this.label20.Name = "label20";
@@ -867,7 +867,7 @@
             this.label19.AutoSize = true;
             this.label19.BackColor = System.Drawing.Color.FloralWhite;
             this.label19.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.Location = new System.Drawing.Point(266, 2);
             this.label19.Margin = new System.Windows.Forms.Padding(0);
             this.label19.Name = "label19";
@@ -882,7 +882,7 @@
             this.label18.AutoSize = true;
             this.label18.BackColor = System.Drawing.Color.SkyBlue;
             this.label18.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.Location = new System.Drawing.Point(178, 2);
             this.label18.Margin = new System.Windows.Forms.Padding(0);
             this.label18.Name = "label18";
@@ -897,7 +897,7 @@
             this.label17.AutoSize = true;
             this.label17.BackColor = System.Drawing.Color.FloralWhite;
             this.label17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.Location = new System.Drawing.Point(90, 2);
             this.label17.Margin = new System.Windows.Forms.Padding(0);
             this.label17.Name = "label17";
@@ -912,7 +912,7 @@
             this.normaaliKortti.AutoSize = true;
             this.normaaliKortti.BackColor = System.Drawing.Color.SkyBlue;
             this.normaaliKortti.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.normaaliKortti.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.normaaliKortti.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.normaaliKortti.Location = new System.Drawing.Point(2, 2);
             this.normaaliKortti.Margin = new System.Windows.Forms.Padding(0);
             this.normaaliKortti.Name = "normaaliKortti";
@@ -2052,7 +2052,6 @@
             this.ClientSize = new System.Drawing.Size(924, 528);
             this.Controls.Add(this.yrityksetPelissa);
             this.Controls.Add(this.scorePelissa);
-            this.Controls.Add(this.helppopeli);
             this.Controls.Add(this.normaaliPeli);
             this.Controls.Add(this.tekijät);
             this.Controls.Add(this.otsikko);
@@ -2095,6 +2094,7 @@
             this.Controls.Add(this.aloitanappi);
             this.Controls.Add(this.taivasTausta);
             this.Controls.Add(this.elmoFire);
+            this.Controls.Add(this.helppopeli);
             this.Name = "MatchingGame";
             this.Text = "Matching Game";
             this.helppopeli.ResumeLayout(false);
