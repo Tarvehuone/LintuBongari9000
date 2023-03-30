@@ -328,7 +328,7 @@ namespace MatchingGame
                 secondClicked.ForeColor = Color.Black;
 
                 yritykset++;
-
+                yrityksetPelissa.Text = "YRITYKSET: " + yritykset;
 
                 if (firstClicked.Text != secondClicked.Text)
                 {
@@ -851,50 +851,50 @@ namespace MatchingGame
         // Metodi kutsutaan "JaaHelpotKortit" metodin alussa
         private void HelppoIconsAdd()
         {
-            helppoIcons.Add("a");
-            helppoIcons.Add("a");
-            helppoIcons.Add("b");
-            helppoIcons.Add("b");
-            helppoIcons.Add("c");
-            helppoIcons.Add("c");
-            helppoIcons.Add("d");
-            helppoIcons.Add("d");
-            helppoIcons.Add("e");
-            helppoIcons.Add("e");
-            helppoIcons.Add("f");
-            helppoIcons.Add("f");
-            helppoIcons.Add("g");
-            helppoIcons.Add("g");
-            helppoIcons.Add("h");
-            helppoIcons.Add("h");
+            helppoIcons.Add("6");
+            helppoIcons.Add("6");
+            helppoIcons.Add("n");
+            helppoIcons.Add("n");
+            helppoIcons.Add("!");
+            helppoIcons.Add("!");
+            helppoIcons.Add("j");
+            helppoIcons.Add("j");
+            helppoIcons.Add("o");
+            helppoIcons.Add("o");
+            helppoIcons.Add("{");
+            helppoIcons.Add("{");
+            helppoIcons.Add("/");
+            helppoIcons.Add("/");
+            helppoIcons.Add("*");
+            helppoIcons.Add("*");
         }
 
         // Tämä metodi lisää "normaaliIcons" listaan arvot uudelleen, jotta uuden pelin aloittaminen onnistuu
         // Metodi kutsutaan "JaaNormaalitKortit" metodin alussa
         private void NormaaliIconsAdd()
         {
-            normaaliIcons.Add("a");
-            normaaliIcons.Add("a");
-            normaaliIcons.Add("b");
-            normaaliIcons.Add("b");
-            normaaliIcons.Add("c");
-            normaaliIcons.Add("c");
-            normaaliIcons.Add("d");
-            normaaliIcons.Add("d");
-            normaaliIcons.Add("e");
-            normaaliIcons.Add("e");
-            normaaliIcons.Add("f");
-            normaaliIcons.Add("f");
-            normaaliIcons.Add("g");
-            normaaliIcons.Add("g");
-            normaaliIcons.Add("h");
-            normaaliIcons.Add("h");
-            normaaliIcons.Add("i");
-            normaaliIcons.Add("i");
+            normaaliIcons.Add("6");
+            normaaliIcons.Add("6");
+            normaaliIcons.Add("n");
+            normaaliIcons.Add("n");
+            normaaliIcons.Add("!");
+            normaaliIcons.Add("!");
             normaaliIcons.Add("j");
             normaaliIcons.Add("j");
-            normaaliIcons.Add("k");
-            normaaliIcons.Add("k");
+            normaaliIcons.Add("o");
+            normaaliIcons.Add("o");
+            normaaliIcons.Add("{");
+            normaaliIcons.Add("{");
+            normaaliIcons.Add(",");
+            normaaliIcons.Add(",");
+            normaaliIcons.Add("*");
+            normaaliIcons.Add("*");
+            normaaliIcons.Add("v");
+            normaaliIcons.Add("v");
+            normaaliIcons.Add("q");
+            normaaliIcons.Add("q");
+            normaaliIcons.Add("f");
+            normaaliIcons.Add("f");
             normaaliIcons.Add("l");
             normaaliIcons.Add("l");
         }
