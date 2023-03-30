@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MatchingGame));
             this.helppopeli = new System.Windows.Forms.TableLayoutPanel();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -2095,8 +2096,9 @@
             this.Controls.Add(this.taivasTausta);
             this.Controls.Add(this.elmoFire);
             this.Controls.Add(this.helppopeli);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MatchingGame";
-            this.Text = "Matching Game";
+            this.Text = "LINTUBONGARI 9000";
             this.helppopeli.ResumeLayout(false);
             this.normaaliPeli.ResumeLayout(false);
             this.normaaliPeli.PerformLayout();
