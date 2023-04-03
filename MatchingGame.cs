@@ -482,14 +482,19 @@ namespace MatchingGame
             {
                 helppoHighScore = score;
             }
-            if (minuutit < parasHelppoMinuutti)
+            if (minuutit == parasHelppoMinuutti)
+            {
+                if (sekunnit < parasHelppoSekunti)
+                {
+                    parasHelppoSekunti = sekunnit;
+                }
+            }
+            else if (minuutit < parasHelppoMinuutti)
             {
                 parasHelppoMinuutti = minuutit;
-            }
-            if (sekunnit < parasHelppoSekunti)
-            {
                 parasHelppoSekunti = sekunnit;
             }
+
 
             TilastoTiedot();
 
@@ -530,12 +535,16 @@ namespace MatchingGame
             {
                 normaaliHighScore = score;
             }
-            if (minuutit < parasNormaaliMinuutti)
+            if (minuutit == parasNormaaliMinuutti)
+            {
+                if (sekunnit < parasNormaaliSekunti)
+                {
+                    parasNormaaliSekunti = sekunnit;
+                }
+            }
+            else if (minuutit < parasNormaaliMinuutti)
             {
                 parasNormaaliMinuutti = minuutit;
-            }
-            if (sekunnit < parasNormaaliSekunti)
-            {
                 parasNormaaliSekunti = sekunnit;
             }
 
@@ -581,13 +590,17 @@ namespace MatchingGame
             {
                 vaikeaHighScore = score;
             }
-            if (minuutit < parasVaikeaMinuutti)
+            if (minuutit == parasVaikeaMinuutti)
             {
-                parasVaikeaMinuutti = minuutit;
+                if (sekunnit < parasVaikeaSekunti)
+                {
+                    parasVaikeaSekunti = sekunnit;
+                }
             }
-            if (sekunnit < parasVaikeaSekunti)
+            else if (minuutit < parasVaikeaMinuutti)
             {
                 parasVaikeaSekunti = sekunnit;
+                parasVaikeaMinuutti = minuutit;
             }
 
             TilastoTiedot();
@@ -947,7 +960,7 @@ namespace MatchingGame
         {
             if (helpotVoitot != 0)
             {
-                parashelppoAikaLabel.Text = (parasHelppoMinuutti + ":" + parasHelppoSekunti);
+                parashelppoAikaLabel.Text = (parasHelppoMinuutti + "min " + parasHelppoSekunti + "s");
                 helpotvoitotLabel.Text = "" + helpotVoitot;
                 helpotyrityksetLabel.Text = "" + parhaatHelpotYritykset;
                 helpposcoreLabel.Text = "" + helppoHighScore;
@@ -955,7 +968,7 @@ namespace MatchingGame
 
             if (normaalitVoitot != 0)
             {
-                parasnormaaliAikaLabel.Text = (parasNormaaliMinuutti + ":" + parasNormaaliSekunti);
+                parasnormaaliAikaLabel.Text = (parasNormaaliMinuutti + "min " + parasNormaaliSekunti + "s");
                 normaalitvoitotLabel.Text = "" + normaalitVoitot;
                 normaalityrityksetLabel.Text = "" + parhaatNormaalitYritykset;
                 normaaliscoreLabel.Text = "" + normaaliHighScore;
@@ -963,7 +976,7 @@ namespace MatchingGame
 
             if (vaikeatVoitot != 0)
             {
-                parasvaikeaAikaLabel.Text = (parasVaikeaMinuutti + ":" + parasVaikeaSekunti);
+                parasvaikeaAikaLabel.Text = (parasVaikeaMinuutti + "min " + parasVaikeaSekunti + "s");
                 vaikeatvoitotLabel.Text = "" + vaikeatVoitot;
                 vaikeatyrityksetLabel.Text = "" + parhaatVaikeatYritykset;
                 vaikeascoreLabel.Text = "" + vaikeaHighScore;
